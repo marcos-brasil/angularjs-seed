@@ -1,5 +1,5 @@
 ##### Features
-| [ES6](https://github.com/sebmck/6to5)| [browserify](http://browserify.org/)| [Web Stater Kit](https://github.com/google/web-starter-kit)| [Jade](http://jade-lang.com/)| [less](http://lesscss.org/) [sass](https://github.com/sass/node-sass)
+| [ES6](https://github.com/sebmck/6to5)| [browserify](http://browserify.org/)| [Web Stater Kit](https://github.com/google/web-starter-kit)| [Jade](http://jade-lang.com/)| [less](http://lesscss.org/)| [sass](https://github.com/sass/node-sass)
 |--- |--- |--- |--- |--- |--- |--- |--- |---
 
 #### Quickstart
