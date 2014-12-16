@@ -1,3 +1,12 @@
-node_modules
+**/node_modules/**
+**/bower_components/**
+.sass-cache
 dist
 .tmp
+tmp
+.DS_Store
+*-bak
+bak
+npm-debug.log
+vendors
+.npmignore
