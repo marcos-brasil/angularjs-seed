@@ -26,15 +26,15 @@ function runTasks () {
 function assets () {
   log("Starting '"+ cyan('watch:assets') +"'...")
 
-  gulp.watch(CFG.files.js.src, runTasks(['commonjs', 'browserify'], 'reload'))
-  gulp.watch(CFG.files.less.src, runTasks('less', 'reload'))
-  gulp.watch(CFG.files.sass.src, runTasks('sass', 'reload'))
-  gulp.watch(CFG.files.jade.src, runTasks('jade', 'reload'))
+  gulp.watch(CFG.js.src, runTasks(['commonjs', 'browserify'], 'reload'))
+  gulp.watch(CFG.less.src, runTasks('less', 'reload'))
+  gulp.watch(CFG.sass.src, runTasks('sass', 'reload'))
+  gulp.watch(CFG.jade.src, runTasks('jade', 'reload'))
 }
 
 function gulpfile () {
   log("Starting '"+ cyan('watch:gulpfile') +"'...")
-  gulp.watch(CFG.files.tasks.src, runTasks('restart'))
+  gulp.watch(CFG.tasks.src, runTasks('restart'))
 }
 
 module.exports = {

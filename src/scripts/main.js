@@ -17,15 +17,15 @@
  *
  */
 'use strict';
-import { readFileSync } from 'fs'
+import { readFileSync } from 'fs';
 
-import {close as closeMenu} from './close'
-import {toggle as toggleMenu} from './toggle'
+import {close as closeMenu} from './close';
+import {toggle as toggleMenu} from './toggle';
 
-console.log(readFileSync('./LICENSE', 'utf8'))
+console.log(readFileSync('./LICENSE', 'utf8'));
 
-main()
-function main () {
+init();
+function init () {
 
   var querySelector = document.querySelector.bind(document);
   var navdrawerContainer = querySelector('.navdrawer-container');

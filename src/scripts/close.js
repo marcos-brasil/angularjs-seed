@@ -17,6 +17,7 @@
  *
  */
 
+'use strict';
 
 var body = document.body;
 var querySelector = document.querySelector.bind(document);

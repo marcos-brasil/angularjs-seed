@@ -46,6 +46,7 @@ function bundleClosure (opt, next) {
     }))
     .on('error', next)
     .transform(brfs)
+    .on('error', next)
     .require(opt.entry, {entry: true})
     .bundle()
     .on('error', next)
@@ -59,7 +60,7 @@ function bundleClosure (opt, next) {
     .pipe($.gzip())
     .pipe($.size({title: 'gz: '+ opt.title}))
     .pipe(gulp.dest(opt.dest +'/gzip'))
-    .pipe(thr(function (){ next() }))
+    .pipe(thr(function (vfs){ next(null, vfs) }))
 }
 
 module.exports.bundleNamespace = bundleNamespace
@@ -106,16 +107,16 @@ function bundleNamespace (opt, next) {
 module.exports.compileJs = compileJs
 function compileJs (cfg) {
   return thr(function _compileJs (vfs, enc, next){
-      if (cfg.files.js.browserify.standalone) {
-        return bundleNamespace(cfg.browserify, function (err) {
+      if (cfg.standalone) {
+        return bundleNamespace(cfg, function (err, _vfs) {
           if (err) console.error(err)
-          next(null, vfs)
+          next(null, _vfs)
         })
       }
 
-      bundleClosure(cfg.files.js.browserify, function (err) {
+      bundleClosure(cfg, function (err, _vfs) {
         if (err) console.error(err)
-        next(null, vfs)
+        next(null, _vfs)
       })
     })
 }

@@ -3,32 +3,13 @@
 var path = require('path')
 var fs = require('fs')
 
-var PATH_OFFSET = ''
-var CFG = {}
+var PATH_OFFSET = './'
+var TMP = './tmp'
+var BUILD = './build'
+var PUBLIC = './public'
+var SRC = './src'
 
-if (process.env.ORI_PATH) {
-  PATH_OFFSET = path.relative(process.cwd(), fs.realpathSync(process.env.ORI_PATH))
-  CFG = require('../'+ PATH_OFFSET +'/config.js')
-}
-
-CFG.throw = console.error.bind(console)
-CFG.dest = './tmp'
-CFG.build = './build'
-
-CFG.PATH_OFFSET = PATH_OFFSET
-CFG.cssBrowserPrefix = [
-  'ie >= 10',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
-]
-
-CFG.files = {
+var CFG = {
   tasks: {
     src: [
       'gulpfile.js',
@@ -43,7 +24,7 @@ CFG.files = {
       entry: './src/scripts/main.js',
       basename: 'app-closure',
       sourcemaps: true,
-      dest: CFG.dest,
+      dest: TMP,
       aliases: {},
     },
   },
@@ -62,25 +43,72 @@ CFG.files = {
     src: ['./src/**/*.jade'],
     opt: {pretty: true,},
   },
+  html: {
+    src: ['./src/**/*.html', './public/**/*.html'],
+  },
+  css: {
+    src: ['./src/**/*.css', './public/**/*.css'],
+  },
+  copy: {
+    src: [
+      './src/**/*.{ttf,eot,woff,woff2}',
+      './src/**/hamburger.svg'
+    ],
+  },
   images: {
     src: [
       './src/**/*.{svg,ttf,eot,woff,woff2,png,jpg,jpeg}',
-      '!./src/**/hamburger.svg', // buggy image
+      '!./src/**/hamburger.svg', // buggy svg image
      ],
     opt: {
       progressive: true,
       interlaced: true,
     },
   },
+  useref:{searchPath: '{'+ TMP +','+ SRC +'}'},
+  uglify: {
+    preserveComments: 'some',
+  },
+  uncss: {
+    html: [
+      SRC +'/**/*.html',
+      TMP +'/**/*.html',
+    ],
+    // CSS Selectors for UnCSS to ignore
+    ignore: [
+      /.navdrawer-container.open/,
+      /.app-bar.open/
+    ]
+  },
 }
+
+CFG.throw = console.error.bind(console)
+
+CFG.tmp = TMP
+CFG.src = SRC
+CFG.build = BUILD
+CFG.public = PUBLIC
+
+CFG.PATH_OFFSET = PATH_OFFSET
+CFG.cssBrowserPrefix = [
+  'ie >= 10',
+  'ie_mob >= 10',
+  'ff >= 30',
+  'chrome >= 34',
+  'safari >= 7',
+  'opera >= 23',
+  'ios >= 7',
+  'android >= 4.4',
+  'bb >= 10'
+]
 
 CFG.browserSync = {
   server: {
     baseDir: [
       path.join(PATH_OFFSET, CFG.build),
-      path.join(PATH_OFFSET, CFG.dest),
-      path.join(PATH_OFFSET, './public'),
-      path.join(PATH_OFFSET, './src'),
+      path.join(PATH_OFFSET, CFG.tmp),
+      path.join(PATH_OFFSET, CFG.public),
+      path.join(PATH_OFFSET, CFG.src),
     ]
   },
   ghostMode: false,
@@ -97,5 +125,10 @@ CFG.browserSync = {
   //       will present a certificate warning in the browser.
   // https: true,
 }
+
+// if (process.env.ORI_PATH) {
+//   PATH_OFFSET = path.relative(process.cwd(), fs.realpathSync(process.env.ORI_PATH))
+//   CFG = require('../'+ PATH_OFFSET +'/config.js')
+// }
 
 module.exports = CFG

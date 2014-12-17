@@ -22,23 +22,32 @@ var SERVE = false
 try { require('require-dir')('etc'); } catch (err) { console.error(err) }
 
 // Clean Output Directory
-gulp.task('clean', del.bind(null, [CFG.dest, CFG.build], {force: true}));
+gulp.task('clean', del.bind(null, [CFG.tmp, CFG.build], {force: true}));
 
 // TODO: add comments
 gulp.task('default', ['build'])
 
 // TODO: add comments
-gulp.task('build', ['clean'], function(next){
+gulp.task('dev', ['clean'], function(next){
   runSequence('assets', function(){
     if (browserSync.active) { gulp.start('reload') }
     next()
   })
 })
 
+// Lint JavaScript
+gulp.task('jshint', function () {
+  return gulp.src(CFG.js.src)
+    .pipe(reload({stream: true, once: true}))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
+
 // TODO: add comments
 gulp.task('serve', function (next) {
-  CFG.browserSync.browser = CFG.browserSync.browser || 'skip'
   SERVE = true
+  CFG.browserSync.browser = CFG.browserSync.browser || 'skip'
   browserSync(CFG.browserSync, function(err, bs){
     if (err) {throw err}
     BS = bs
