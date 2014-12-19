@@ -2,7 +2,7 @@
   "name": "wsk",
   "version": "0.0.1",
   "description": "es6 builder",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "author": {
     "name": "markuz brasil"
   },
@@ -42,6 +42,7 @@
     "gulp-useref": ">=1.0.2",
     "gulp-util": ">=3.0.0",
     "jshint-stylish": "^1.0.0",
+    "object-assign": "^2.0.0",
     "opn": ">=1.0.0",
     "pm2": ">=0.12.1",
     "psi": ">=0.1.6",

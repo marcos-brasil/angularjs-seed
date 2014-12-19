@@ -4,6 +4,7 @@
 dist
 .tmp
 tmp
+build
 .DS_Store
 *-bak
 bak
