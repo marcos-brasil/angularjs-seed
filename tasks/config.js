@@ -4,9 +4,7 @@ var path = require('path')
 var fs = require('fs')
 var assign = require('object-assign')
 
-var PATH_OFFSET = path.relative(__dirname, process.cwd())
-PATH_OFFSET = PATH_OFFSET.replace(/^\.\./, '.')
-
+var PATH_OFFSET = '.'
 var TMP = './tmp'
 var BUILD = './build'
 var PUBLIC = './public'
@@ -15,10 +13,10 @@ var SRC = './src'
 var CFG = {}
 CFG.throw = console.error.bind(console)
 
-CFG.tmp = path.join(PATH_OFFSET, TMP)
-CFG.src = path.join(PATH_OFFSET, SRC)
-CFG.build = path.join(PATH_OFFSET, BUILD)
-CFG.public = path.join(PATH_OFFSET, PUBLIC)
+CFG.tmp = TMP
+CFG.src = SRC
+CFG.build = BUILD
+CFG.public = PUBLIC
 
 CFG.PATH_OFFSET = PATH_OFFSET
 CFG.cssBrowserPrefix = [
@@ -36,10 +34,10 @@ CFG.cssBrowserPrefix = [
 CFG.browserSync = {
   server: {
     baseDir: [
-      path.join(PATH_OFFSET, CFG.build),
-      path.join(PATH_OFFSET, CFG.tmp),
-      path.join(PATH_OFFSET, CFG.public),
-      path.join(PATH_OFFSET, CFG.src),
+      CFG.build,
+      CFG.tmp,
+      CFG.public,
+      CFG.src,
     ]
   },
   ghostMode: false,
@@ -70,11 +68,11 @@ module.exports = assign(CFG, {
     ],
   },
   js: {
-    src: [path.join(PATH_OFFSET, './src/**/*.{js,jsx,es6,ajs}')],
+    src: ['./src/**/*.{js,jsx,es6,ajs}'],
     commonjs: {},
     browserify: {
       // standalone: 'APP_NAMESPACE',
-      entry: './' + path.join(PATH_OFFSET, './src/scripts/main.js'),
+      entry: './' + './src/scripts/main.js',
       basename: 'app-closure',
       sourcemaps: true,
       dest: CFG.tmp,
@@ -82,34 +80,34 @@ module.exports = assign(CFG, {
     },
   },
   sass: {
-    src: [path.join(PATH_OFFSET, './src/**/*.{sass,scss}')],
+    src: ['./src/**/*.{sass,scss}'],
     opt: { precision: 10,},
   },
   less: {
-    src: [path.join(PATH_OFFSET, './src/**/*.less')],
+    src: ['./src/**/*.less'],
     opt: {
       compress: false,
       // paths: [path.join(CFG.PATH_OFFSET, './node_modules/bootstrap/less')],
     },
   },
   jade: {
-    src: [path.join(PATH_OFFSET, './src/**/*.jade')],
+    src: ['./src/**/*.jade'],
     opt: {pretty: true,},
   },
   html: {
-    src: [path.join(PATH_OFFSET, './src/**/*.html', './public/**/*.html')],
+    src: ['./src/**/*.html', './public/**/*.html'],
   },
   css: {
-    src: [path.join(PATH_OFFSET, './src/**/*.css', './public/**/*.css')],
+    src: ['./src/**/*.css', './public/**/*.css'],
   },
   copy: {
     src: [
-      path.join(PATH_OFFSET, './src/**/*.{ttf,eot,woff,woff2}'),
+      './src/**/*.{ttf,eot,woff,woff2}',
     ],
   },
   images: {
     src: [
-      path.join(PATH_OFFSET, './src/**/*.{svg,ttf,eot,woff,woff2,png,jpg,jpeg}'),
+      './src/**/*.{svg,ttf,eot,woff,woff2,png,jpg,jpeg}',
      ],
     opt: {
       progressive: true,
@@ -133,5 +131,4 @@ module.exports = assign(CFG, {
   },
 })
 
-// console.log(CFG)
 

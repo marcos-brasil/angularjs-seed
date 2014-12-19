@@ -17,11 +17,6 @@ var red = $.util.colors.red
 var cyan = $.util.colors.cyan
 var mag = $.util.colors.magenta
 
-// TODO: add comments
-gulp.task('build', function(next){
-  runSequence('dev', ['images', 'copy', 'styles', 'html'], next)
-})
-
 // Optimize Images
 gulp.task('images', function () {
   return gulp.src(CFG.images.src)

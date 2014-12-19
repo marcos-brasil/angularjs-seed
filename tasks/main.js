@@ -29,10 +29,12 @@ gulp.task('default', ['build'])
 
 // TODO: add comments
 gulp.task('dev', function(next){
-  runSequence('clean', 'assets', function(){
-    if (browserSync.active) { gulp.start('reload') }
-    next()
-  })
+  runSequence('clean', 'assets', 'reload', next)
+})
+
+// TODO: add comments
+gulp.task('build', function(next){
+  runSequence('dev', ['images', 'copy', 'styles', 'html'], 'reload', next)
 })
 
 // Lint JavaScript
@@ -60,10 +62,13 @@ gulp.task('serve', function (next) {
 gulp.task('reload', function(next){
   if (!SERVE) return next()
 
-  browserSync.reload()
-  BS.logger.info('Local URL: '+ mag(BS.options.urls.local))
-  BS.logger.info('External URL: '+ mag(BS.options.urls.external))
-  next()
+  setTimeout(function () {
+    browserSync.reload()
+    BS.logger.info('Local URL: '+ mag(BS.options.urls.local))
+    BS.logger.info('External URL: '+ mag(BS.options.urls.external))
+    next()
+  }, 100)
+
 });
 
 // TODO: add comments
