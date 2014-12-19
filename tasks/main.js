@@ -34,7 +34,7 @@ gulp.task('dev', function(next){
 
 // TODO: add comments
 gulp.task('build', function(next){
-  runSequence('dev', ['images', 'copy', 'styles', 'html'], 'reload', next)
+  runSequence('dev', ['jshint', 'images', 'copy', 'styles', 'html'], 'reload', next)
 })
 
 // Lint JavaScript
