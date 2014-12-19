@@ -11,7 +11,7 @@ var runSequence = require('run-sequence')
 var thr = require('through2').obj
 
 var browserify =  require('browserify')
-var to5Browserify = require('6to5-browserify')
+var to5Browserify = require('6to5ify')
 var aliasify = require('aliasify')
 var brfs = require('brfs')
 var vinylify = require('vinyl-source-stream2')
