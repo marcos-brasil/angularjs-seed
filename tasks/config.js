@@ -4,7 +4,6 @@ var path = require('path')
 var fs = require('fs')
 var assign = require('object-assign')
 
-var PATH_OFFSET = '.'
 var TMP = './tmp'
 var BUILD = './build'
 var PUBLIC = './public'
@@ -18,7 +17,6 @@ CFG.src = SRC
 CFG.build = BUILD
 CFG.public = PUBLIC
 
-CFG.PATH_OFFSET = PATH_OFFSET
 CFG.cssBrowserPrefix = [
   'ie >= 10',
   'ie_mob >= 10',
@@ -47,7 +45,7 @@ CFG.browserSync = {
   // browser: 'chrome',
 
   // forces full page reload on css changes.
-  // injectChanges: false,
+  injectChanges: false,
 
   // Run as an https by uncommenting 'https: true'
   // Note: this uses an unsigned certificate which on first access
@@ -55,23 +53,18 @@ CFG.browserSync = {
   // https: true,
 }
 
-// if (process.env.ORI_PATH) {
-//   PATH_OFFSET = path.relative(process.cwd(), fs.realpathSync(process.env.ORI_PATH))
-//   CFG = require('../'+ PATH_OFFSET +'/config.js')
-// }
-
 module.exports = assign(CFG, {
   tasks: {
     src: [
       'gulpfile.js',
-      'etc/**/*.js',
+      'tasks/**/*.js',
     ],
   },
   js: {
     src: ['./src/**/*.{js,jsx,es6,ajs}'],
     commonjs: {},
     browserify: {
-      // standalone: 'APP_NAMESPACE',
+      // standalone: 'APP',
       entry: './' + './src/scripts/main.js',
       basename: 'app-closure',
       sourcemaps: true,
@@ -130,5 +123,3 @@ module.exports = assign(CFG, {
     ]
   },
 })
-
-

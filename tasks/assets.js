@@ -7,10 +7,10 @@ var gulp = require('gulp')
 var $ = require('gulp-load-plugins')()
 var runSequence = require('run-sequence')
 var thr = require('through2').obj
-var readdir = require('recursive-readdir')
-var collapse = require('bundle-collapser')
 
-var compileJs = require('./utils').compileJs
+var transpiler = require('./utils').transpiler
+var collapser = require('./utils').collapser
+
 var CFG = require('./config');
 
 // TODO: add comments
@@ -37,7 +37,6 @@ gulp.task('less', function(){
     .pipe($.sourcemaps.init())
     .pipe($.less(CFG.less.opt))
     .on('error', CFG.throw)
-    // .pipe($.autoprefixer(CFG.cssBrowserPrefix))
     .pipe($.sourcemaps.write('./maps'))
     .pipe(gulp.dest(CFG.tmp))
     .pipe($.size({title: 'css: less'}))
@@ -51,7 +50,6 @@ gulp.task('sass', function () {
       .pipe($.sourcemaps.init({loadMaps: true}))
       .pipe($.sass(CFG.sass.opt))
       .on('error', CFG.throw)
-      // .pipe($.autoprefixer(CFG.cssBrowserPrefix))
       .pipe($.sourcemaps.write('./maps'))
       .pipe(gulp.dest(CFG.tmp))
       .pipe($.size({title: 'css: sass'}))
@@ -76,33 +74,11 @@ gulp.task('commonjs', function (next) {
 })
 
 // TODO: explain this
-gulp.task('collapse', function(next){
-  var re = /\.js$/
-  var re2 = /-collapsed\.js$/
-
-  readdir(CFG.tmp, function (err, files) {
-    if (!files) {return next()}
-
-    files.filter(function(f){
-      if (f.match(re2)) {
-        return false
-      }
-      return f.match(re)
-    }).map(function (f) {
-      var stream = fs.createWriteStream(f.replace(re,'-collapsed.js'));
-
-      try {
-        collapse(fs.readFileSync(f)).pipe(stream)
-      }
-      catch(e){}
-    })
-    next()
-  })
-})
-
+// this is hack, it would be better if it was a browserify transform
+gulp.task('collapse', collapser(CFG))
 
 // TODO: add comments
 gulp.task('browserify', function (next) {
   return gulp.src(CFG.js.browserify.entry)
-    .pipe(compileJs(CFG.js.browserify))
+    .pipe(transpiler(CFG.js.browserify))
 })

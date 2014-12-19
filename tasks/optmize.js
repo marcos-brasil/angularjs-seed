@@ -1,13 +1,9 @@
 'use strict'
 
-var path = require('path')
-
 var gulp = require('gulp')
 var $ = require('gulp-load-plugins')()
 var del = require('del')
 var runSequence = require('run-sequence')
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 
 var thr = require('through2').obj
 var CFG = require('./config');
