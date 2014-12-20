@@ -108,9 +108,7 @@ module.exports = assign(CFG, {
     },
   },
   useref:{searchPath: '{'+ CFG.tmp +','+ CFG.src +'}'},
-  uglify: {
-    preserveComments: 'some',
-  },
+  uglify: {},
   uncss: {
     html: [
       CFG.src +'/**/*.html',
