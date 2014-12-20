@@ -60,7 +60,7 @@ module.exports = assign(CFG, {
       'tasks/**/*.js',
     ],
   },
-  js: {
+  es6: {
     src: ['./src/**/*.{js,jsx,es6,ajs}'],
     commonjs: {},
     browserify: {
@@ -80,7 +80,6 @@ module.exports = assign(CFG, {
     src: ['./src/**/*.less'],
     opt: {
       compress: false,
-      // paths: [path.join(CFG.PATH_OFFSET, './node_modules/bootstrap/less')],
     },
   },
   jade: {
@@ -88,10 +87,25 @@ module.exports = assign(CFG, {
     opt: {pretty: true,},
   },
   html: {
-    src: ['./src/**/*.html', './public/**/*.html'],
+    src: [
+      './src/**/*.html',
+      './public/**/*.html',
+      CFG.tmp + '/**/*.html',
+    ],
   },
   css: {
-    src: ['./src/**/*.css', './public/**/*.css'],
+    src: [
+      './src/**/*.css',
+      './public/**/*.css',
+      CFG.tmp + '/**/*.css',
+    ],
+  },
+  js: {
+    src: [
+      './src/**/*.js',
+      './public/**/*.js',
+      CFG.tmp + '/**/*.js',
+    ],
   },
   copy: {
     src: [
@@ -108,11 +122,13 @@ module.exports = assign(CFG, {
     },
   },
   useref:{searchPath: '{'+ CFG.tmp +','+ CFG.src +'}'},
-  uglify: {},
+  uglify: {
+  },
   uncss: {
     html: [
       CFG.src +'/**/*.html',
       CFG.tmp +'/**/*.html',
+      CFG.public +'/**/*.html',
     ],
     // CSS Selectors for UnCSS to ignore
     ignore: [

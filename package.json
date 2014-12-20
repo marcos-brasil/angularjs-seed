@@ -57,5 +57,12 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "private": true
+  "private": true,
+  "gitHead": "b3a6185c8c5b91223b46e46dbb4c2dc9c74a1f9a",
+  "readme": "##### Features\n| [ES6](https://github.com/sebmck/6to5)| [browserify](http://browserify.org/)| [Web Stater Kit](https://github.com/google/web-starter-kit)| [Jade](http://jade-lang.com/)| [less](http://lesscss.org/)| [sass](https://github.com/sass/node-sass)\n|--- |--- |--- |--- |--- |--- |--- |--- |---\n\n#### Quickstart\n\n```sh\nnpm install --global gulp\n```\n\nThis will install Gulp globally. Depending on your user account, you may need to gain elevated permissions using `sudo` (i.e `sudo npm install --global gulp`). Next, install the local dependencies wsk-react-di requires:\n\n```sh\nnpm install\n```\n\nThat's it! You should now have everything needed to begin hacking on wsk.\n\n#### Gulp Commands\n\nYou can now use Gulp with the following commands to stay productive during development:\n\n##### Build & Optimize\n\n```sh\ngulp\n```\n\n##### Watch For Changes & Automatically Refresh Across Devices\n\n```sh\ngulp watch serve build\n```\n\nNow direct your browser to `http://localhost:3000/`\n\n#### License\n[MIT](https://github.com/markuz-brasil/wsk/blob/master/LICENSE)\n",
+  "readmeFilename": "README.md",
+  "_id": "wsk@0.0.1",
+  "_shasum": "45f4d665f0ca74f5c81ccf6fb3c26448e0fabbfd",
+  "_from": "../../../../var/folders/4g/tf993ky57rj_8ylpfb9vqtlh0000gp/T/npm-9560-b8a38c43/1419046058126-0.8622859118040651/b3a6185c8c5b91223b46e46dbb4c2dc9c74a1f9a",
+  "_resolved": "git://github.com/markuz-brasil/wsk#b3a6185c8c5b91223b46e46dbb4c2dc9c74a1f9a"
 }

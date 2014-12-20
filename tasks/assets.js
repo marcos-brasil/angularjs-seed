@@ -15,7 +15,8 @@ var CFG = require('./config');
 
 // TODO: add comments
 gulp.task('assets', function(next){
-  runSequence(['jade', 'less', 'sass', 'commonjs', 'browserify'], 'collapse', next)
+  // runSequence(['jade', 'less', 'sass', 'commonjs', 'browserify'], 'collapse', next)
+  runSequence(['jade', 'less', 'sass', 'commonjs', 'browserify'], next)
 })
 
 // TODO: add comments
@@ -60,25 +61,25 @@ gulp.task('sass', function () {
 
 // Compile ES6 -> ES5
 gulp.task('commonjs', function (next) {
-  return gulp.src(CFG.js.src)
+  return gulp.src(CFG.es6.src)
     .pipe($.cached('compile', {optimizeMemory: true}))
     .pipe($.sourcemaps.init({loadMaps: true}))
-    .pipe($['6to5'](CFG.js.commonjs)).on('error', next)
+    .pipe($['6to5'](CFG.es6.commonjs)).on('error', next)
     .on('error', CFG.throw)
     .pipe($.sourcemaps.write('./maps'))
     .pipe(gulp.dest(CFG.tmp))
     .pipe($.size({title: 'commonjs'}))
-    .pipe($.gzip())
-    .pipe($.size({title: 'gz: commonjs'}))
-    .pipe(gulp.dest(CFG.tmp +'/gzip'))
+    // .pipe($.gzip())
+    // .pipe($.size({title: 'gz: commonjs'}))
+    // .pipe(gulp.dest(CFG.tmp +'/gzip'))
 })
 
 // TODO: explain this
 // this is hack, it would be better if it was a browserify transform
-gulp.task('collapse', collapser(CFG))
+// gulp.task('collapse', collapser(CFG))
 
 // TODO: add comments
 gulp.task('browserify', function (next) {
-  return gulp.src(CFG.js.browserify.entry)
-    .pipe(transpiler(CFG.js.browserify))
+  return gulp.src(CFG.es6.browserify.entry)
+    .pipe(transpiler(CFG.es6.browserify))
 })

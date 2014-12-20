@@ -30,10 +30,10 @@ gulp.task('copy', function () {
 });
 
 gulp.task('styles', function () {
-  var src = [].slice.call(CFG.css.src)
-  src.push(CFG.tmp + '/**/*.css')
+  // var src = [].slice.call(CFG.css.src)
+  // src.push(CFG.tmp + '/**/*.css')
   // For best performance, don't add Sass partials to `gulp.src`
-  return gulp.src(src)
+  return gulp.src(CFG.css.src)
     .pipe($.autoprefixer({browsers: CFG.cssBrowserPrefix}))
     // Concatenate And Minify Styles
     .pipe($.if('*.css', $.csso()))
@@ -43,10 +43,10 @@ gulp.task('styles', function () {
 
 gulp.task('html', function () {
   var assets = $.useref.assets(CFG.useref)
-  var src = [].slice.call(CFG.html.src)
-  src.push(CFG.tmp + '/**/*.html')
+  // var src = [].slice.call(CFG.html.src)
+  // src.push(CFG.tmp + '/**/*.html')
 
-  return gulp.src(src)
+  return gulp.src(CFG.html.src)
     .pipe(assets)
     // Concatenate And Minify JavaScript
     .pipe($.if('*.js', $.uglify(CFG.uglify)))

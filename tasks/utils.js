@@ -53,9 +53,9 @@ function bundleClosure (opt, next) {
     .pipe($.sourcemaps.write('./maps'))
     .pipe(gulp.dest(opt.dest))
     .pipe($.size({title: 'js: '+ opt.title}))
-    .pipe($.gzip())
-    .pipe($.size({title: 'gz: '+ opt.title}))
-    .pipe(gulp.dest(opt.dest +'/gzip'))
+    // .pipe($.gzip())
+    // .pipe($.size({title: 'gz: '+ opt.title}))
+    // .pipe(gulp.dest(opt.dest +'/gzip'))
     .pipe(thr(function (vfs){ next(null, vfs) }))
 }
 
@@ -93,9 +93,9 @@ function bundleNamespace (opt, next) {
     .pipe($.sourcemaps.write('./maps'))
     .pipe(gulp.dest(opt.dest))
     .pipe($.size({title: 'js: '+ opt.title}))
-    .pipe($.gzip())
-    .pipe($.size({title: 'gz: '+ opt.title}))
-    .pipe(gulp.dest(opt.dest +'/gzip'))
+    // .pipe($.gzip())
+    // .pipe($.size({title: 'gz: '+ opt.title}))
+    // .pipe(gulp.dest(opt.dest +'/gzip'))
     .pipe(thr(function (){ next() }))
 }
 

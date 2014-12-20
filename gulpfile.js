@@ -44,7 +44,7 @@ gulp.task('build', function(next){
 
 // Lint JavaScript
 gulp.task('jshint', function () {
-  return gulp.src(CFG.js.src)
+  return gulp.src(CFG.es6.src)
     .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
@@ -64,8 +64,14 @@ gulp.task('serve', function (next) {
 });
 
 // TODO: add comments
+var skipReload = true
 gulp.task('reload', function(next){
   if (!SERVE) return next()
+
+  if (process.argv.indexOf('build') > -1 && skipReload) {
+    skipReload = false
+    return next()
+  }
 
   setTimeout(function () {
     browserSync.reload()
@@ -83,8 +89,23 @@ gulp.task('restart', function(){
 })
 
 // // TODO: add comments
+gulp.task('watch:optmize', function(next){
+
+
+
+  next()
+})
+
+// // TODO: add comments
 gulp.task('watch', function(next){
   watch.gulpfile()
-  watch.assets()
+
+  if (process.argv.indexOf('build') > -1) {
+    watch.optmize()
+  }
+  else {
+    watch.assets()
+  }
+
   next()
 })

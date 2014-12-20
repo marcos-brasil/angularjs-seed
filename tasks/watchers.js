@@ -26,10 +26,24 @@ function runTasks () {
 function assets () {
   log("Starting '"+ cyan('watch:assets') +"'...")
 
-  gulp.watch(CFG.js.src, runTasks(['commonjs', 'browserify'], 'reload'))
+  gulp.watch(CFG.es6.src, runTasks(['commonjs', 'browserify'], 'reload'))
   gulp.watch(CFG.less.src, runTasks('less', 'reload'))
   gulp.watch(CFG.sass.src, runTasks('sass', 'reload'))
   gulp.watch(CFG.jade.src, runTasks('jade', 'reload'))
+}
+
+function optmize () {
+  log("Starting '"+ cyan('watch:optmize') +"'...")
+
+
+  gulp.watch(CFG.es6.src, runTasks(['commonjs', 'browserify'], 'html', 'reload'))
+  gulp.watch(CFG.less.src, runTasks('less', 'styles', 'html','reload'))
+  gulp.watch(CFG.sass.src, runTasks('sass', 'styles', 'html', 'reload'))
+  gulp.watch(CFG.jade.src, runTasks('jade', 'html', 'reload'))
+
+  gulp.watch(CFG.copy.src, runTasks('copy', 'html', 'reload'))
+  gulp.watch(CFG.images.src, runTasks('images', 'html', 'reload'))
+
 }
 
 function gulpfile () {
@@ -39,5 +53,6 @@ function gulpfile () {
 
 module.exports = {
   assets: assets,
+  optmize: optmize,
   gulpfile: gulpfile,
 }
