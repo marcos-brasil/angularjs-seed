@@ -16,8 +16,9 @@ var red = $.util.colors.red
 var cyan = $.util.colors.cyan
 var mag = $.util.colors.magenta
 
-module.exports = function wsk (userGulp) {
+module.exports = function wsk (userGulp, userCfg) {
   assign(userGulp, gulp)
+  assign(CFG, userCfg)
 }
 
 // Load custom tasks from the `tasks` directory
