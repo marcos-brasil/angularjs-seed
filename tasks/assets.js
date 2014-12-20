@@ -20,43 +20,43 @@ gulp.task('assets', function(next){
 })
 
 // TODO: add comments
-gulp.task('jade', function(){
+gulp.task('jade', function(next){
   return gulp.src(CFG.jade.src)
     .pipe($.cached('jade', {optimizeMemory: true}))
     .pipe($.jade(CFG.jade.opt))
-    .on('error', CFG.throw)
+    .on('error', next)
     .pipe(gulp.dest(CFG.tmp))
     .pipe($.size({title: 'jade'}))
-    .pipe($.gzip())
-    .pipe($.size({title: 'gz: jade'}))
-    .pipe(gulp.dest(CFG.tmp +'/gzip'))
+    // .pipe($.gzip())
+    // .pipe($.size({title: 'gz: jade'}))
+    // .pipe(gulp.dest(CFG.tmp +'/gzip'))
 });
 
 // TODO: add comments
-gulp.task('less', function(){
+gulp.task('less', function(next){
   return gulp.src(CFG.less.src)
     .pipe($.sourcemaps.init())
     .pipe($.less(CFG.less.opt))
-    .on('error', CFG.throw)
+    .on('error', next)
     .pipe($.sourcemaps.write('./maps'))
     .pipe(gulp.dest(CFG.tmp))
     .pipe($.size({title: 'css: less'}))
-    .pipe($.gzip())
-    .pipe($.size({title: 'gz: less'}))
-    .pipe(gulp.dest(CFG.tmp +'/gzip'))
+    // .pipe($.gzip())
+    // .pipe($.size({title: 'gz: less'}))
+    // .pipe(gulp.dest(CFG.tmp +'/gzip'))
 });
 
-gulp.task('sass', function () {
+gulp.task('sass', function (next) {
   return gulp.src(CFG.sass.src)
       .pipe($.sourcemaps.init({loadMaps: true}))
       .pipe($.sass(CFG.sass.opt))
-      .on('error', CFG.throw)
+      .on('error', next)
       .pipe($.sourcemaps.write('./maps'))
       .pipe(gulp.dest(CFG.tmp))
       .pipe($.size({title: 'css: sass'}))
-      .pipe($.gzip())
-      .pipe($.size({title: 'gz: sass'}))
-      .pipe(gulp.dest(CFG.tmp +'/gzip'))
+      // .pipe($.gzip())
+      // .pipe($.size({title: 'gz: sass'}))
+      // .pipe(gulp.dest(CFG.tmp +'/gzip'))
 });
 
 // Compile ES6 -> ES5
@@ -65,7 +65,7 @@ gulp.task('commonjs', function (next) {
     .pipe($.cached('compile', {optimizeMemory: true}))
     .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($['6to5'](CFG.es6.commonjs)).on('error', next)
-    .on('error', CFG.throw)
+    .on('error', next)
     .pipe($.sourcemaps.write('./maps'))
     .pipe(gulp.dest(CFG.tmp))
     .pipe($.size({title: 'commonjs'}))
@@ -82,4 +82,5 @@ gulp.task('commonjs', function (next) {
 gulp.task('browserify', function (next) {
   return gulp.src(CFG.es6.browserify.entry)
     .pipe(transpiler(CFG.es6.browserify))
+    .on('error', next)
 })
