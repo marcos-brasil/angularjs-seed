@@ -80,7 +80,7 @@ gulp.task('commonjs', function (next) {
 
 // TODO: add comments
 gulp.task('browserify', function (next) {
-  return gulp.src(CFG.es6.browserify.entry)
+  return gulp.src(CFG.es6.browserify.entries)
     .pipe(transpiler(CFG.es6.browserify))
     .on('error', next)
 })

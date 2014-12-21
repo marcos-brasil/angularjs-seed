@@ -11,6 +11,7 @@ var runSequence = require('run-sequence')
 var thr = require('through2').obj
 var readdir = require('recursive-readdir')
 var collapse = require('bundle-collapser')
+var assign = require('object-assign')
 
 var browserify =  require('browserify')
 var to5Browserify = require('6to5ify')
@@ -26,9 +27,8 @@ function bundleClosure (opt, next) {
   opt.sourcemaps = opt.sourcemaps || true
   opt.aliases = opt.aliases || {}
   opt.entry = opt.entry || './index.js'
-  opt.basename = opt.basename || 'index.js'
   opt.dest = opt.dest || '.'
-  opt.title = opt.title || opt.basename
+  opt.title = path.relative(process.cwd(), opt.entry)
   opt.extensions = opt.extensions || ['.js', '.jsx', 'es6']
 
   return browserify({
@@ -47,11 +47,11 @@ function bundleClosure (opt, next) {
     .require(opt.entry, {entry: true})
     .bundle()
     .on('error', next)
-    .pipe(vinylify(opt.basename))
+    .pipe(vinylify(opt.entry))
     .pipe($.rename(function (p){ p.extname = '.js'}))
     .pipe($.sourcemaps.init({loadMaps: opt.sourcemaps}))
     .pipe($.sourcemaps.write('./maps'))
-    .pipe(gulp.dest(opt.dest))
+    .pipe(gulp.dest(path.dirname(path.join(opt.dest, opt.title))))
     .pipe($.size({title: 'js: '+ opt.title}))
     // .pipe($.gzip())
     // .pipe($.size({title: 'gz: '+ opt.title}))
@@ -101,7 +101,11 @@ function bundleNamespace (opt, next) {
 
 module.exports.transpiler = transpiler
 function transpiler (cfg) {
+  var cfg = assign({}, cfg)
+
   return thr(function _transpiler (vfs, enc, next){
+      cfg.entry = vfs.path
+
       if (cfg.standalone) {
         return bundleNamespace(cfg, function (err, _vfs) {
           if (err) console.error(err)

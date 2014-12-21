@@ -38,6 +38,8 @@ CFG.browserSync = {
       CFG.src,
     ]
   },
+  logFileChanges: true,
+  // reloadDelay: 5000,
   ghostMode: false,
   notify: false,
   port: 3000,
@@ -65,8 +67,7 @@ module.exports = assign(CFG, {
     commonjs: {},
     browserify: {
       // standalone: 'APP',
-      entry: './' + './src/scripts/main.js',
-      basename: 'app-closure',
+      entries: ['./src/scripts/main.js'],
       sourcemaps: true,
       dest: CFG.tmp,
       aliases: {},
