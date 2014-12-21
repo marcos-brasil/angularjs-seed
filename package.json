@@ -1,5 +1,5 @@
 {
-  "name": "wsk",
+  "name": "tau-wsk",
   "version": "0.0.1",
   "description": "es6 builder",
   "main": "gulpfile.js",
