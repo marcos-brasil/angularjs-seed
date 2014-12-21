@@ -8,6 +8,8 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var assign = require('object-assign')
 
+var EE = new require('events').EventEmitter
+
 var watch = require('./tasks/watchers');
 var CFG = require('./tasks/config');
 
@@ -15,6 +17,8 @@ var log = $.util.log
 var red = $.util.colors.red
 var cyan = $.util.colors.cyan
 var mag = $.util.colors.magenta
+
+var evt = new EE()
 
 module.exports = function wsk (userGulp, userCfg) {
   assign(userGulp, gulp)
@@ -46,7 +50,6 @@ gulp.task('build', function(next){
 // Lint JavaScript
 gulp.task('jshint', function () {
   return gulp.src(CFG.es6.src)
-    .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
@@ -56,12 +59,14 @@ gulp.task('jshint', function () {
 gulp.task('serve', function (next) {
   SERVE = true
   CFG.browserSync.browser = CFG.browserSync.browser || 'skip'
-  browserSync(CFG.browserSync, function(err, bs){
-    if (err) {throw err}
-    BS = bs
-    log("Loaded '"+ cyan('browserSync') +"'...")
-    next()
-  });
+  evt.on('done', function () {
+    browserSync(CFG.browserSync, function(err, bs){
+      if (err) {throw err}
+      BS = bs
+      log("Loaded '"+ cyan('browserSync') +"'...")
+      next()
+    });
+  })
 });
 
 // TODO: add comments
@@ -72,6 +77,11 @@ gulp.task('reload', function(next){
   if (process.argv.indexOf('build') > -1 && skipReload) {
     skipReload = false
     return next()
+  }
+
+  if (!BS) {
+    next()
+    return evt.emit('done')
   }
 
   setTimeout(function () {
