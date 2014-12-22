@@ -4,7 +4,7 @@ var path = require('path')
 var fs = require('fs')
 var assign = require('object-assign')
 
-var TMP = './tmp'
+var DEV = './dev'
 var BUILD = './build'
 var PUBLIC = './public'
 var SRC = './src'
@@ -12,7 +12,7 @@ var SRC = './src'
 var CFG = {}
 CFG.throw = console.error.bind(console)
 
-CFG.tmp = TMP
+CFG.dev = DEV
 CFG.src = SRC
 CFG.build = BUILD
 CFG.public = PUBLIC
@@ -33,10 +33,53 @@ CFG.browserSync = {
   server: {
     baseDir: [
       CFG.build,
-      CFG.tmp,
+      CFG.dev,
       CFG.public,
       CFG.src,
-    ]
+    ],
+    middleware: [
+      function (req, res, next) {
+        // TODO: explain the reason for this middleware
+
+        if ('GET' !== req.method && 'HEAD' !== req.method ) {
+          return next()
+        }
+
+        var base = path.basename(req.url)
+        var dir = path.dirname(req.url)
+
+        if ('/tests/tests' === dir) {
+          req.url = path.join('/tests', base)
+        }
+
+        if ('mocha.css' === base) {
+          res.setHeader('Content-Type', 'text/css; charset=utf-8')
+          res.end(fs.readFileSync('./node_modules/mocha/mocha.css', 'utf8'))
+        }
+
+        if ('mocha.js' === base) {
+          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+          res.end(fs.readFileSync('./node_modules/mocha/mocha.js', 'utf8'))
+        }
+
+        if ('chai.js' === base) {
+          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+          res.end(fs.readFileSync('./node_modules/chai/chai.js', 'utf8'))
+        }
+
+        if ('sinon-chai.js' === base) {
+          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+          res.end(fs.readFileSync('./node_modules/sinon-chai/lib/sinon-chai.js', 'utf8'))
+        }
+
+        if ('sinon.js' === base) {
+          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+          res.end(fs.readFileSync('./node_modules/sinon/pkg/sinon.js', 'utf8'))
+        }
+
+        next()
+      },
+    ],
   },
   logFileChanges: true,
   // reloadDelay: 5000,
@@ -53,6 +96,7 @@ CFG.browserSync = {
   // Note: this uses an unsigned certificate which on first access
   //       will present a certificate warning in the browser.
   // https: true,
+
 }
 
 module.exports = assign(CFG, {
@@ -63,73 +107,81 @@ module.exports = assign(CFG, {
     ],
   },
   es6: {
-    src: ['./src/**/*.{js,jsx,es6,ajs}'],
-    commonjs: {},
+    src: [CFG.src +'/**/*.{js,jsx,es6,ajs}'],
+    commonjs: {
+      dest: './commonjs'
+    },
     browserify: {
       // standalone: 'APP',
-      entries: ['./src/scripts/init.js'],
+      entries: [
+        CFG.src +'/scripts/init.js',
+        CFG.src +'/tests/index.js',
+      ],
       sourcemaps: true,
-      dest: CFG.tmp,
+      dest: CFG.dev,
       aliases: {},
     },
   },
   sass: {
-    src: ['./src/**/*.{sass,scss}'],
+    src: [CFG.src +'/**/*.{sass,scss}'],
     opt: { precision: 10,},
   },
   less: {
-    src: ['./src/**/*.less'],
+    src: [CFG.src +'/**/*.less'],
     opt: {
       compress: false,
     },
   },
   jade: {
-    src: ['./src/**/*.jade'],
+    src: [
+      CFG.src +'/**/*.jade',
+      '!'+ CFG.src +'/partials/**/*',
+    ],
     opt: {pretty: true,},
   },
   html: {
     src: [
-      './src/**/*.html',
-      './public/**/*.html',
-      CFG.tmp + '/**/*.html',
+      CFG.src +'/**/*.html',
+      CFG.public +'/**/*.html',
+      CFG.dev +'/**/*.html',
     ],
   },
   css: {
     src: [
-      './src/**/*.css',
-      './public/**/*.css',
-      CFG.tmp + '/**/*.css',
+      CFG.src +'/**/*.css',
+      CFG.public +'/**/*.css',
+      CFG.dev +'/**/*.css',
     ],
   },
   js: {
     src: [
-      './src/**/*.js',
-      './public/**/*.js',
-      CFG.tmp + '/**/*.js',
+      CFG.src +'/**/*.js',
+      CFG.public +'/**/*.js',
+      CFG.dev +'/**/*.js',
     ],
   },
   copy: {
     src: [
-      './src/**/*.{ttf,eot,woff,woff2}',
-      './public/**/*',
+      CFG.src +'/**/*.{ttf,eot,woff,woff2}',
+      CFG.public +'/**/*',
     ],
   },
   images: {
     src: [
-      './src/**/*.{svg,ttf,eot,woff,woff2,png,jpg,jpeg}',
+      CFG.src +'/**/*.{svg,ttf,eot,woff,woff2,png,jpg,jpeg}',
      ],
     opt: {
       progressive: true,
       interlaced: true,
     },
   },
-  useref:{searchPath: '{'+ CFG.tmp +','+ CFG.src +'}'},
+  useref:{searchPath: '{'+ CFG.dev +','+ CFG.src +'}'},
   uglify: {
   },
   uncss: {
     html: [
       CFG.src +'/**/*.html',
-      CFG.tmp +'/**/*.html',
+      CFG.dev +'/**/*.html',
       CFG.public +'/**/*.html',
     ],
     // CSS Selectors for UnCSS to ignore

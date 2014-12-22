@@ -25,11 +25,11 @@ gulp.task('jade', function(next){
     .pipe($.cached('jade', {optimizeMemory: true}))
     .pipe($.jade(CFG.jade.opt))
     .on('error', next)
-    .pipe(gulp.dest(CFG.tmp))
+    .pipe(gulp.dest(CFG.dev))
     .pipe($.size({title: 'jade'}))
     // .pipe($.gzip())
     // .pipe($.size({title: 'gz: jade'}))
-    // .pipe(gulp.dest(CFG.tmp +'/gzip'))
+    // .pipe(gulp.dest(CFG.dev +'/gzip'))
 });
 
 // TODO: add comments
@@ -39,11 +39,11 @@ gulp.task('less', function(next){
     .pipe($.less(CFG.less.opt))
     .on('error', next)
     .pipe($.sourcemaps.write('./maps'))
-    .pipe(gulp.dest(CFG.tmp))
+    .pipe(gulp.dest(CFG.dev))
     .pipe($.size({title: 'css: less'}))
     // .pipe($.gzip())
     // .pipe($.size({title: 'gz: less'}))
-    // .pipe(gulp.dest(CFG.tmp +'/gzip'))
+    // .pipe(gulp.dest(CFG.dev +'/gzip'))
 });
 
 gulp.task('sass', function (next) {
@@ -52,11 +52,11 @@ gulp.task('sass', function (next) {
       .pipe($.sass(CFG.sass.opt))
       .on('error', next)
       .pipe($.sourcemaps.write('./maps'))
-      .pipe(gulp.dest(CFG.tmp))
+      .pipe(gulp.dest(CFG.dev))
       .pipe($.size({title: 'css: sass'}))
       // .pipe($.gzip())
       // .pipe($.size({title: 'gz: sass'}))
-      // .pipe(gulp.dest(CFG.tmp +'/gzip'))
+      // .pipe(gulp.dest(CFG.dev +'/gzip'))
 });
 
 // Compile ES6 -> ES5
@@ -64,14 +64,14 @@ gulp.task('commonjs', function (next) {
   return gulp.src(CFG.es6.src)
     .pipe($.cached('compile', {optimizeMemory: true}))
     .pipe($.sourcemaps.init({loadMaps: true}))
-    .pipe($['6to5'](CFG.es6.commonjs)).on('error', next)
+    .pipe($['6to5'](CFG.es6.commonjs))
     .on('error', next)
     .pipe($.sourcemaps.write('./maps'))
-    .pipe(gulp.dest(CFG.tmp))
+    .pipe(gulp.dest(CFG.es6.commonjs.dest))
     .pipe($.size({title: 'commonjs'}))
     // .pipe($.gzip())
     // .pipe($.size({title: 'gz: commonjs'}))
-    // .pipe(gulp.dest(CFG.tmp +'/gzip'))
+    // .pipe(gulp.dest(CFG.dev +'/gzip'))
 })
 
 // TODO: explain this
@@ -83,4 +83,5 @@ gulp.task('browserify', function (next) {
   return gulp.src(CFG.es6.browserify.entries)
     .pipe(transpiler(CFG.es6.browserify))
     .on('error', next)
+    .pipe(thr(function(vfs, env, _next){setTimeout(_next, 50)}))
 })

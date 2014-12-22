@@ -4,10 +4,13 @@
 dist
 .tmp
 tmp
+dev
+.dev
 build
+.build
+commonjs
 .DS_Store
 *-bak
 bak
 npm-debug.log
-vendors
 .npmignore

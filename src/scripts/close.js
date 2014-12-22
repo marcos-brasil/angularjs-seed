@@ -18,15 +18,18 @@
  */
 
 'use strict';
+export function close ($doc) {
 
-var body = document.body;
-var querySelector = document.querySelector.bind(document);
-var navdrawerContainer = querySelector('.navdrawer-container');
-var appbarElement = querySelector('.app-bar');
+  var body = $doc.body;
+  var querySelector = $doc.querySelector.bind($doc);
+  var navdrawerContainer = querySelector('.navdrawer-container');
+  var appbarElement = querySelector('.app-bar');
 
-export function close () {
-  body.classList.remove('open');
-  appbarElement.classList.remove('open');
-  navdrawerContainer.classList.remove('open');
+  return () => {
+    body.classList.remove('open');
+    appbarElement.classList.remove('open');
+    navdrawerContainer.classList.remove('open');
+  };
 }
+
 

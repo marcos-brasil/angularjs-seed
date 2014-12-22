@@ -32,7 +32,7 @@ var BS
 var SERVE = false
 
 // Clean Output Directory
-gulp.task('clean', del.bind(null, [CFG.tmp, CFG.build], {force: true}));
+gulp.task('clean', del.bind(null, [CFG.dev, CFG.build], {force: true}));
 
 // TODO: add comments
 gulp.task('default', ['build'])

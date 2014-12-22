@@ -31,6 +31,9 @@ function bundleClosure (opt, next) {
   opt.title = path.relative(process.cwd(), opt.entry)
   opt.extensions = opt.extensions || ['.js', '.jsx', 'es6']
 
+  // TODO: explain this
+  var _dest = path.dirname(path.join(opt.dest, opt.title.replace(/^[^/]*\//,'') ))
+
   return browserify({
       debug: opt.sourcemaps,
       extensions: opt.extensions
@@ -51,7 +54,7 @@ function bundleClosure (opt, next) {
     .pipe($.rename(function (p){ p.extname = '.js'}))
     .pipe($.sourcemaps.init({loadMaps: opt.sourcemaps}))
     .pipe($.sourcemaps.write('./maps'))
-    .pipe(gulp.dest(path.dirname(path.join(opt.dest, opt.title))))
+    .pipe(gulp.dest(_dest))
     .pipe($.size({title: 'js: '+ opt.title}))
     // .pipe($.gzip())
     // .pipe($.size({title: 'gz: '+ opt.title}))

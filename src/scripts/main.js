@@ -18,17 +18,22 @@
  */
 'use strict';
 
-import {close as closeMenu} from './close';
-import {toggle as toggleMenu} from './toggle';
+import {close} from './close';
+import {toggle} from './toggle';
 
-export function main () {
+export function main ($doc) {
 
-  var querySelector = document.querySelector.bind(document);
+  var querySelector = $doc.querySelector.bind($doc);
   var navdrawerContainer = querySelector('.navdrawer-container');
   var menuBtn = querySelector('.menu');
-  var main = querySelector('main');
+  var mainEl = querySelector('main');
 
-  main.addEventListener('click', closeMenu);
+  if (!mainEl) { return; }
+
+  var closeMenu = close($doc);
+  var toggleMenu = toggle($doc);
+
+  mainEl.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
   navdrawerContainer.addEventListener('click', (event) => {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
