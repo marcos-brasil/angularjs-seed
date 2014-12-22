@@ -18,24 +18,10 @@
  */
 'use strict';
 
-import {close as closeMenu} from './close';
-import {toggle as toggleMenu} from './toggle';
+import { readFileSync } from 'fs';
+import { main } from './main';
 
-export function main () {
-
-  var querySelector = document.querySelector.bind(document);
-  var navdrawerContainer = querySelector('.navdrawer-container');
-  var menuBtn = querySelector('.menu');
-  var main = querySelector('main');
-
-  main.addEventListener('click', closeMenu);
-  menuBtn.addEventListener('click', toggleMenu);
-  navdrawerContainer.addEventListener('click', (event) => {
-    if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-      closeMenu();
-    }
-  });
-
-}
+console.log(readFileSync('./LICENSE', 'utf8'));
+main();
 
 

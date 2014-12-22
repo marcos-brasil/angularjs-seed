@@ -67,7 +67,7 @@ module.exports = assign(CFG, {
     commonjs: {},
     browserify: {
       // standalone: 'APP',
-      entries: ['./src/scripts/main.js'],
+      entries: ['./src/scripts/init.js'],
       sourcemaps: true,
       dest: CFG.tmp,
       aliases: {},
