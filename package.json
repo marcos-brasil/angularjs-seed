@@ -1,7 +1,7 @@
 {
-  "name": "tau-wsk",
+  "name": "seed",
   "version": "0.0.1",
-  "description": "es6 builder",
+  "description": "es6 builder && seed app",
   "main": "gulpfile.js",
   "author": {
     "name": "markuz brasil"
