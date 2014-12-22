@@ -6,6 +6,10 @@
   "author": {
     "name": "markuz brasil"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markuz-brasil/seed.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
