@@ -52,7 +52,6 @@ gulp.task('jshint', function () {
   return gulp.src(CFG.es6.src)
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
 // TODO: add comments

@@ -16,7 +16,7 @@ var CFG = require('./config');
 // TODO: add comments
 gulp.task('assets', function(next){
   // runSequence(['jade', 'less', 'sass', 'commonjs', 'browserify'], 'collapse', next)
-  runSequence(['jade', 'less', 'sass', 'commonjs', 'browserify'], next)
+  runSequence(['jade', 'less', 'sass', 'browserify'], next)
 })
 
 // TODO: add comments

@@ -111,6 +111,7 @@ module.exports = assign(CFG, {
   copy: {
     src: [
       './src/**/*.{ttf,eot,woff,woff2}',
+      './public/**/*',
     ],
   },
   images: {

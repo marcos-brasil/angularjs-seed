@@ -26,7 +26,7 @@ function runTasks () {
 function assets () {
   log("Starting '"+ cyan('watch:assets') +"'...")
 
-  gulp.watch(CFG.es6.src, runTasks(['commonjs', 'browserify'], 'reload'))
+  gulp.watch(CFG.es6.src, runTasks('browserify', 'reload'))
   gulp.watch(CFG.less.src, runTasks('less', 'reload'))
   gulp.watch(CFG.sass.src, runTasks('sass', 'reload'))
   gulp.watch(CFG.jade.src, runTasks('jade', 'reload'))
@@ -35,7 +35,7 @@ function assets () {
 function optmize () {
   log("Starting '"+ cyan('watch:optmize') +"'...")
 
-  gulp.watch(CFG.es6.src, runTasks(['commonjs', 'browserify', 'jshint'], 'html', 'reload'))
+  gulp.watch(CFG.es6.src, runTasks(['browserify', 'jshint'], 'html', 'reload'))
   gulp.watch(CFG.less.src, runTasks('less', 'styles', 'html','reload'))
   gulp.watch(CFG.sass.src, runTasks('sass', 'styles', 'html', 'reload'))
   gulp.watch(CFG.jade.src, runTasks('jade', 'html', 'reload'))
