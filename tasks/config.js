@@ -114,6 +114,7 @@ module.exports = assign(CFG, {
     browserify: {
       // standalone: 'APP',
       entries: [
+        CFG.src +'/index.js',
         CFG.src +'/scripts/init.js',
         CFG.src +'/tests/index.js',
       ],

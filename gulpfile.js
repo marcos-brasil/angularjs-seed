@@ -21,8 +21,8 @@ var mag = $.util.colors.magenta
 var evt = new EE()
 
 module.exports = function wsk (userGulp, userCfg) {
-  assign(userGulp, gulp)
-  assign(CFG, userCfg)
+  assign(userGulp || {}, gulp)
+  assign(CFG, userCfg || {})
 }
 
 // Load custom tasks from the `tasks` directory
