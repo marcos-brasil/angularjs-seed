@@ -57,12 +57,5 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "private": true,
-  "gitHead": "1b2f30b157eb429d77b687d695ef5eacd5921140",
-  "readme": "##### Features\n| [ES6](https://github.com/sebmck/6to5)| [browserify](http://browserify.org/)| [Web Stater Kit](https://github.com/google/web-starter-kit)| [Jade](http://jade-lang.com/)| [less](http://lesscss.org/)| [sass](https://github.com/sass/node-sass)\n|--- |--- |--- |--- |--- |--- |--- |--- |---\n\n#### Quickstart\n\n```sh\nnpm install --global gulp\n```\n\nThis will install Gulp globally. Depending on your user account, you may need to gain elevated permissions using `sudo` (i.e `sudo npm install --global gulp`). Next, install the local dependencies wsk requires:\n\n```sh\nnpm install\n```\n\nThat's it! You should now have everything needed to begin hacking on wsk.\n\n#### Gulp Commands\n\nYou can now use Gulp with the following commands to stay productive during development:\n\n##### Build & Optimize\n\n```sh\ngulp\n```\n\n##### Watch For Changes & Automatically Refresh Across Devices\n\n```sh\ngulp watch serve build\n```\n\nNow direct your browser to `http://localhost:3000/`\n\n#### License\n[MIT](https://github.com/markuz-brasil/wsk/blob/master/LICENSE)\n",
-  "readmeFilename": "README.md",
-  "_id": "tau-wsk@0.0.1",
-  "_shasum": "b255683dd10c1e903d174f919e8d97a4aa72a7de",
-  "_from": "../../../../var/folders/4g/tf993ky57rj_8ylpfb9vqtlh0000gp/T/npm-8366-e8b2c698/1419189963220-0.2034427602775395/97ef98db68d85131b3269ed507f205e5d783820f",
-  "_resolved": "git://github.com/markuz-brasil/tau-wsk#97ef98db68d85131b3269ed507f205e5d783820f"
+  "private": true
 }
