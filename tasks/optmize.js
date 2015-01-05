@@ -82,11 +82,7 @@ gulp.task('html', function (next) {
     .pipe($.useref())
     .on('error', next)
     // Minify Any HTML
-    .pipe($.if('*.html', $.minifyHtml({
-      empty: true,
-      quotes: true,
-      spare: true
-    })))
+    .pipe($.if('*.html', $.minifyHtml()))
     .on('error', next)
     .pipe($.sourcemaps.write('./maps'))
     // Output Files
