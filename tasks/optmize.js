@@ -1,4 +1,6 @@
 'use strict'
+var fs = require('fs')
+var path = require('path')
 
 var gulp = require('gulp')
 var $ = require('gulp-load-plugins')()
@@ -12,6 +14,22 @@ var log = $.util.log
 var red = $.util.colors.red
 var cyan = $.util.colors.cyan
 var mag = $.util.colors.magenta
+
+gulp.task('inline', function (next){
+
+  return gulp.src(CFG.html.src)
+    .pipe($.rename(function (p){ p.extname = '-inlined.html'}))
+    .pipe($.inlineSource({
+      rootpath: CFG.dev,
+    }))
+    .on('error', next)
+    // Minify Any HTML
+    .pipe($.if('*.html', $.minifyHtml()))
+    .on('error', next)
+    // Output Files
+    .pipe(gulp.dest(CFG.build))
+    .pipe($.size({title: 'inlined'}));
+})
 
 // Optimize Images
 gulp.task('images', function (next) {
@@ -46,13 +64,12 @@ gulp.task('styles', function (next) {
 
 gulp.task('html', function (next) {
   var assets = $.useref.assets(CFG.useref)
-  // var src = [].slice.call(CFG.html.src)
-  // src.push(CFG.tmp + '/**/*.html')
 
   return gulp.src(CFG.html.src)
     .pipe(assets)
     // Concatenate And Minify JavaScript
     .on('error', next)
+    .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.if('*.js', $.uglify(CFG.uglify)))
     .on('error', next)
     // Remove Any Unused CSS
@@ -65,8 +82,13 @@ gulp.task('html', function (next) {
     .pipe($.useref())
     .on('error', next)
     // Minify Any HTML
-    .pipe($.if('*.html', $.minifyHtml()))
+    .pipe($.if('*.html', $.minifyHtml({
+      empty: true,
+      quotes: true,
+      spare: true
+    })))
     .on('error', next)
+    .pipe($.sourcemaps.write('./maps'))
     // Output Files
     .pipe(gulp.dest(CFG.build))
     .pipe($.size({title: 'html'}));

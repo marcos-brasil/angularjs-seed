@@ -44,7 +44,7 @@ gulp.task('dev', function(next){
 
 // TODO: add comments
 gulp.task('build', function(next){
-  runSequence('dev', ['jshint', 'images', 'copy', 'styles', 'html'], 'reload', next)
+  runSequence('dev', ['jshint', 'images', 'copy', 'styles', 'html', 'inline'], 'reload', next)
 })
 
 // Lint JavaScript
@@ -96,14 +96,6 @@ gulp.task('reload', function(next){
 gulp.task('restart', function(){
   log(red(':: restarting ::'))
   process.exit(0)
-})
-
-// // TODO: add comments
-gulp.task('watch:optmize', function(next){
-
-
-
-  next()
 })
 
 // // TODO: add comments

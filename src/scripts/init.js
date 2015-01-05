@@ -23,5 +23,3 @@ import { main } from './main';
 
 console.log(readFileSync('./LICENSE', 'utf8'));
 main(document);
-
-

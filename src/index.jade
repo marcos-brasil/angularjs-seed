@@ -1,7 +1,7 @@
 extends ./partials/base.jade
 
 block head
-  link(rel='stylesheet', href='styles/main.css')
+  link(inline rel='stylesheet', href='styles/main.css')
   //- script(src='./shims.js')
 
 block body
@@ -35,7 +35,7 @@ block body
       a(href='styleguide.html') Style Guide.
 
   // build:js(dev) scripts/main.min.js
-  script(src='scripts/init.js')
+  script(inline src='scripts/init.js')
   // endbuild
 
   // Built with love using Web Starter Kit
