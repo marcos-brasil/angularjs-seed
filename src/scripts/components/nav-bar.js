@@ -9,7 +9,7 @@ export function navBar () {
   }
 
   return {
-    template:  `
+    template: `
       <nav class="navdrawer-container promote-layer">
         <h4>Navigation</h4>
         <ul>

@@ -1,4 +1,5 @@
 'use strict';
+
 import * as fs from 'fs';
 import { queryDom, $body } from 'globals';
 
@@ -6,7 +7,6 @@ export function mainContent () {
   return {
     restrict: 'E',
     template () {
-      console.log('RRRR', Math.random());
       return fs.readFileSync('./src/scripts/components/main-content.html', 'utf8');
     },
 
