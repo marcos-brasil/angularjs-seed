@@ -5,12 +5,10 @@ block head
   script(inline src='./shims.js')
 
 block body
-
-  header-bar
-  nav-bar
-  main-content
+  root-app
 
   script(inline src='angular.js')
+  script(inline src='angular-route.js')
   // build:js(dev) scripts/bundle.js
   script(inline src='scripts/index.js')
   // endbuild

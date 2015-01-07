@@ -19,33 +19,28 @@
 
 'use strict';
 import * as fs from 'fs'
+import co from 'co'
 import { angular, queryDom, $body } from 'globals';
 
-export { navBar } from './nav-bar'
-export { mainContent } from './main-content'
-export { rootApp } from './root-app'
 
-export function headerBar () {
+
+export function mainContent () {
   return {
-    template: fs.readFileSync('./src/scripts/components/header-bar.html', 'utf8'),
     restrict: 'E',
-  }
-}
+    template () {
+      console.log('RRRR', Math.random())
+      return fs.readFileSync('./src/scripts/components/main-content.html', 'utf8')
+    },
 
-export function menu () {
-  return {
-    restrict: 'C',
     link (scope, elem) {
       var navdrawerContainer = queryDom('.navdrawer-container');
       var appbarElement = queryDom('.app-bar');
 
       elem.bind('click', function onClick (scope, elem, attr) {
-        $body.classList.toggle('open');
-        appbarElement.classList.toggle('open');
-        navdrawerContainer.classList.toggle('open');
-        navdrawerContainer.classList.add('opened');
+        $body.classList.remove('open');
+        appbarElement.classList.remove('open');
+        navdrawerContainer.classList.remove('open');
       })
     },
   }
 }
-

@@ -116,11 +116,19 @@ function depsMiddleware (req, res, next) {
   if ('/tests/tests' === dir) {
     req.url = path.join('/tests', base)
   }
+    if ('/tests/maps/tests' === dir) {
+    req.url = path.join('/maps/tests', base)
+  }
 
   switch (base) {
     case 'angular.js':
       res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
       res.end(fs.readFileSync('node_modules/angular/angular.js', 'utf8'))
+      break
+
+    case 'angular-route.js':
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+      res.end(fs.readFileSync('node_modules/angular-route/angular-route.js', 'utf8'))
       break
 
     // case 'react.js':
