@@ -2,40 +2,17 @@ extends ./partials/base.jade
 
 block head
   link(inline rel='stylesheet', href='styles/main.css')
-  //- script(src='./shims.js')
+  script(inline src='./shims.js')
 
 block body
-  header.app-bar.promote-layer
-    .app-bar-container
-      button.menu
-        img(src='images/hamburger.svg', alt='Menu')
-      h1.logo
-        | Web 
-        strong Starter Kit
-      section.app-bar-actions
-        // Put App Bar Buttons Here
-        // e.g <button><i class="icon icon-star"></i></button>
-  nav.navdrawer-container.promote-layer
-    h4 Navigation
-    ul
-      li
-        a(href='#hello') Hello
-      li
-        a(href='#get-started') Get Started
-      li
-        a(href='styleguide.html') Style Guide
-  main
-    h1#hello Hello!
-    p Welcome to Web Starter Kit.
-    h2#get-started Get Started.
-    p
-      | Read how to 
-      a(href='https://developers.google.com/web/starter-kit') Get Started
-      |  or check out the 
-      a(href='styleguide.html') Style Guide.
 
-  // build:js(dev) scripts/main.min.js
-  script(inline src='scripts/init.js')
+  header-bar
+  nav-bar
+  main-content
+
+  script(inline src='angular.js')
+  // build:js(dev) scripts/bundle.js
+  script(inline src='scripts/index.js')
   // endbuild
 
   // Built with love using Web Starter Kit

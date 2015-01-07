@@ -18,18 +18,19 @@
  */
 
 'use strict';
-export function close ($doc) {
 
-  var body = $doc.body;
-  var querySelector = $doc.querySelector.bind($doc);
-  var navdrawerContainer = querySelector('.navdrawer-container');
-  var appbarElement = querySelector('.app-bar');
+import * as fs from 'fs';
 
-  return () => {
-    body.classList.remove('open');
-    appbarElement.classList.remove('open');
-    navdrawerContainer.classList.remove('open');
-  };
-}
+import { angular, documentReady } from 'globals';
+import { headerBar, navBar, mainContent, menu} from './components';
+
+console.log(fs.readFileSync('./LICENSE', 'utf8'));
+
+export var APP = angular.module('app.init', [])
+  .directive('headerBar', headerBar)
+  .directive('navBar', navBar)
+  .directive('mainContent', mainContent)
+  .directive('menu', menu)
+
 
 

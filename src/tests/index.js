@@ -6,6 +6,10 @@
 'use strict';
 
 import { readFileSync } from 'fs';
+import co from 'co'
+import { angular, queryDom, documentReady, $win, $doc, $body } from 'globals';
+import { APP } from '../scripts'
+
 console.log(readFileSync('./LICENSE', 'utf8'));
 
 mocha.setup('bdd');
@@ -13,15 +17,22 @@ mocha.reporter('html');
 
 var {expect} = chai;
 
-import { main } from '../scripts/main';
-import { close } from '../scripts/close';
-import { toggle } from '../scripts/toggle';
+co(function *() {
+  yield new Promise((res, rej) => documentReady(res))
+  mocha.run();
+})
 
-describe('basic tests', () => {
+describe('basic globals tests', () => {
   it('should be functions', () => {
-    expect(main).to.be.instanceof(Function);
-    expect(close).to.be.instanceof(Function);
-    expect(toggle).to.be.instanceof(Function);
+    expect(queryDom).to.be.instanceof(Function);
+    expect(documentReady).to.be.instanceof(Function);
+  });
+
+  it('should be objects', () => {
+    expect(angular).to.be.instanceof(Object);
+    expect($win).to.be.deep.equal(window);
+    expect($doc).to.be.deep.equal(document);
+    expect($body).to.be.deep.equal(document.body);
   });
 
   it('should use spy', () => {
@@ -35,4 +46,3 @@ describe('basic tests', () => {
 });
 
 
-mocha.run();

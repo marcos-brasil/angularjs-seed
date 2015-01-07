@@ -28,6 +28,7 @@ body {
   background-color: #fff;
   box-sizing: border-box;
   min-height: 100%;
+  overflow:hidden
 }
 
 body.open {
@@ -312,9 +313,9 @@ main {
     min-height: initial;
   }
 
-  body {
-    overflow-y: scroll;
-  }
+  // body {
+  //   overflow-y: scroll;
+  // }
 }
 
 @font-face {

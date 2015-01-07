@@ -17,6 +17,8 @@ CFG.src = SRC
 CFG.build = BUILD
 CFG.public = PUBLIC
 
+var ROOT_PATH = './node_modules/'
+
 CFG.cssBrowserPrefix = [
   'ie >= 10',
   'ie_mob >= 10',
@@ -29,75 +31,137 @@ CFG.cssBrowserPrefix = [
   'bb >= 10'
 ]
 
-CFG.browserSync = {
-  server: {
-    baseDir: [
-      CFG.build,
-      CFG.dev,
-      CFG.public,
-      CFG.src,
-    ],
-    middleware: [
-      function (req, res, next) {
-        // TODO: explain the reason for this middleware
+function mochaMiddleware (req, res, next) {
+  // TODO: explain the reason for this middleware
 
-        if ('GET' !== req.method && 'HEAD' !== req.method ) {
-          return next()
-        }
+  if ('GET' !== req.method && 'HEAD' !== req.method ) {
+    return next()
+  }
 
-        var base = path.basename(req.url)
-        var dir = path.dirname(req.url)
+  var base = path.basename(req.url)
+  var dir = path.dirname(req.url)
 
-        if ('/tests/tests' === dir) {
-          req.url = path.join('/tests', base)
-        }
+  // need to find a better way. this is a hack!
+  if ('/tests/tests' === dir) {
+    req.url = path.join('/tests', base)
+  }
 
-        if ('mocha.css' === base) {
-          res.setHeader('Content-Type', 'text/css; charset=utf-8')
-          res.end(fs.readFileSync('./node_modules/mocha/mocha.css', 'utf8'))
-        }
+  switch (base) {
+    case 'mocha.css':
+      res.setHeader('Content-Type', 'text/css; charset=utf-8')
+      res.end(fs.readFileSync(ROOT_PATH +'/mocha/mocha.css', 'utf8'))
+      break
 
-        if ('mocha.js' === base) {
-          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
-          res.end(fs.readFileSync('./node_modules/mocha/mocha.js', 'utf8'))
-        }
+    case 'mocha.js':
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+      res.end(fs.readFileSync(ROOT_PATH +'/mocha/mocha.js', 'utf8'))
+      break
 
-        if ('chai.js' === base) {
-          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
-          res.end(fs.readFileSync('./node_modules/chai/chai.js', 'utf8'))
-        }
+    case 'chai.js':
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+      res.end(fs.readFileSync(ROOT_PATH +'/chai/chai.js', 'utf8'))
+      break
 
-        if ('sinon-chai.js' === base) {
-          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
-          res.end(fs.readFileSync('./node_modules/sinon-chai/lib/sinon-chai.js', 'utf8'))
-        }
+    case 'sinon-chai.js':
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+      res.end(fs.readFileSync(ROOT_PATH +'/sinon-chai/lib/sinon-chai.js', 'utf8'))
+      break
 
-        if ('sinon.js' === base) {
-          res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
-          res.end(fs.readFileSync('./node_modules/sinon/pkg/sinon.js', 'utf8'))
-        }
+    case 'sinon.js':
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+      res.end(fs.readFileSync(ROOT_PATH +'/sinon/pkg/sinon.js', 'utf8'))
+      break
+  }
 
-        next()
-      },
-    ],
-  },
-  logFileChanges: true,
-  // reloadDelay: 5000,
-  ghostMode: false,
-  notify: false,
-  port: 3000,
-  browser: 'skip',
-  // browser: 'chrome',
-
-  // forces full page reload on css changes.
-  injectChanges: false,
-
-  // Run as an https by uncommenting 'https: true'
-  // Note: this uses an unsigned certificate which on first access
-  //       will present a certificate warning in the browser.
-  // https: true,
+  next()
 
 }
+
+function polyfillMiddleware (req, res, next) {
+  // TODO: explain the reason for this middleware
+
+  if ('GET' !== req.method && 'HEAD' !== req.method ) {
+    return next()
+  }
+
+  var base = path.basename(req.url)
+  var dir = path.dirname(req.url)
+
+  // need to find a better way. this is a hack!
+  if ('/tests/tests' === dir) {
+    req.url = path.join('/tests', base)
+  }
+
+  switch (base) {
+    case 'shims.js':
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+      res.end(fs.readFileSync(ROOT_PATH +'/6to5/browser-polyfill.js', 'utf8'))
+      break
+  }
+
+  next()
+}
+
+function depsMiddleware (req, res, next) {
+  // TODO: explain the reason for this middleware
+
+  if ('GET' !== req.method && 'HEAD' !== req.method ) {
+    return next()
+  }
+
+  var base = path.basename(req.url)
+  var dir = path.dirname(req.url)
+
+  // need to find a better way. this is a hack!
+  if ('/tests/tests' === dir) {
+    req.url = path.join('/tests', base)
+  }
+
+  switch (base) {
+    case 'angular.js':
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+      res.end(fs.readFileSync('node_modules/angular/angular.js', 'utf8'))
+      break
+
+    // case 'react.js':
+    //   res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
+    //   res.end(fs.readFileSync('node_modules/react/dist/react-with-addons.min.js', 'utf8'))
+    //   break
+  }
+
+  next()
+}
+
+CFG.browserSync = {
+    server: {
+      baseDir: [
+        './build',
+        './dev',
+        './public',
+        './src',
+      ],
+      middleware: [
+        polyfillMiddleware,
+        mochaMiddleware,
+        depsMiddleware,
+      ],
+    },
+    logFileChanges: true,
+    // reloadDelay: 5000,
+    ghostMode: false,
+    notify: false,
+    port: 3000,
+    browser: 'skip',
+    // browser: 'chrome',
+
+    // forces full page reload on css changes.
+    injectChanges: false,
+
+    // Run as an https by uncommenting 'https: true'
+    // Note: this uses an unsigned certificate which on first access
+    //       will present a certificate warning in the browser.
+    // https: true,
+  }
 
 module.exports = assign(CFG, {
   tasks: {
@@ -115,12 +179,14 @@ module.exports = assign(CFG, {
       // standalone: 'APP',
       entries: [
         CFG.src +'/index.js',
-        CFG.src +'/scripts/init.js',
+        CFG.src +'/scripts/index.js',
         CFG.src +'/tests/index.js',
       ],
       sourcemaps: true,
       dest: CFG.dev,
-      aliases: {},
+      aliases: {
+        globals: CFG.src +"/scripts/globals.js"
+      },
     },
   },
   sass: {
@@ -177,8 +243,7 @@ module.exports = assign(CFG, {
     },
   },
   useref:{searchPath: '{'+ CFG.dev +','+ CFG.src +'}'},
-  uglify: {
-  },
+  uglify: {},
   uncss: {
     html: [
       CFG.src +'/**/*.html',

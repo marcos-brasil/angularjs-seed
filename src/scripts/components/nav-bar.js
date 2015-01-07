@@ -18,17 +18,23 @@
  */
 
 'use strict';
-export function toggle($doc) {
 
-  var body = $doc.body;
-  var querySelector = $doc.querySelector.bind($doc);
-  var navdrawerContainer = querySelector('.navdrawer-container');
-  var appbarElement = querySelector('.app-bar');
-
-  return () => {
-    body.classList.toggle('open');
-    appbarElement.classList.toggle('open');
-    navdrawerContainer.classList.toggle('open');
-    navdrawerContainer.classList.add('opened');
-  };
+export function navBar () {
+  var hrefs = ['#hello',  'styleguide', '/']
+  return {
+    template:  `
+      <nav class="navdrawer-container promote-layer">
+        <h4>Navigation</h4>
+        <ul>
+          ${[
+            'Hello',
+            'Style Guide',
+            `${Math.random()}`,
+          ].map((v,k) => `<li><a href="${hrefs[k]}">${v}</a></li>` )
+          .join('\n')}
+        </ul>
+      </nav>
+      `,
+    restrict: 'E',
+  }
 }
