@@ -1,40 +1,22 @@
-/*!
- *
- *  Web Starter Kit
- *  Copyright 2014 Google Inc. All rights reserved.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *    https://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License
- *
- */
-
 'use strict';
 
 export function navBar () {
-  var hrefs = ['#hello',  'styleguide', '/']
+  var hrefs = ['#hello',  'styleguide', '/',];
+  var list = ['Hello', 'Style Guide', `${Math.random()}`,];
+
+  function iterator (v, k) {
+    return `<li><a href="${hrefs[k]}">${v}</a></li>`;
+  }
+
   return {
     template:  `
       <nav class="navdrawer-container promote-layer">
         <h4>Navigation</h4>
         <ul>
-          ${[
-            'Hello',
-            'Style Guide',
-            `${Math.random()}`,
-          ].map((v,k) => `<li><a href="${hrefs[k]}">${v}</a></li>` )
-          .join('\n')}
+          ${list.map(iterator).join('\n')}
         </ul>
       </nav>
       `,
     restrict: 'E',
-  }
+  };
 }

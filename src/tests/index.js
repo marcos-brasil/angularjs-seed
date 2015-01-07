@@ -6,9 +6,9 @@
 'use strict';
 
 import { readFileSync } from 'fs';
-import co from 'co'
+import co from 'co';
 import { angular, queryDom, documentReady, $win, $doc, $body } from 'globals';
-import { APP } from '../scripts'
+import '../scripts';
 
 console.log(readFileSync('./LICENSE', 'utf8'));
 
@@ -18,9 +18,9 @@ mocha.reporter('html');
 var {expect} = chai;
 
 co(function *() {
-  yield new Promise((res, rej) => documentReady(res))
+  yield new Promise((res, rej) => documentReady(res));
   mocha.run();
-})
+});
 
 describe('basic globals tests', () => {
   it('should be functions', () => {
