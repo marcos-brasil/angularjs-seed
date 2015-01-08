@@ -155,7 +155,7 @@
 <script type="text/javascript">
 	// js source http://codepen.io/moklick/pen/zKleC  
 
-	var Application = ( function () {
+	( function () {
         var canvas;
         var ctx;
         var imgData;
@@ -187,10 +187,7 @@
             ctx.putImageData(imgData, 0, 0);
         };
 
-        return {
-            init: init
-        };
+   		init();
     }());
 
-    Application.init();
 </script>
