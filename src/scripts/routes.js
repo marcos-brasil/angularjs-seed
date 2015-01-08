@@ -35,7 +35,12 @@ export function routerConfig ($locationProvider, $stateProvider, $urlRouterProvi
         },
         template: '<test></test>'
       })
+      .state({
+        name: 'styleguide',
+        url: '/styleguide',
+        templateUrl: '/styleguide.html'
 
+      })
       .state('404', {
         url: '/{base}',
         template: `<b>404</b>`
