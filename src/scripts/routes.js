@@ -19,7 +19,8 @@ function indexCtrl ($scope, $root, $q, $sce, $state) {
 routerConfig.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
 export function routerConfig ($locationProvider, $stateProvider, $urlRouterProvider) {
     $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('/404');
+    $urlRouterProvider.otherwise('/');
+
 
     $stateProvider
       .state('index', Object.assign({}, _indexState, {url: '/'}))
@@ -36,7 +37,7 @@ export function routerConfig ($locationProvider, $stateProvider, $urlRouterProvi
       })
 
       .state('404', {
-        url: '/404',
+        url: '/{base}',
         template: `<b>404</b>`
       });
 }
