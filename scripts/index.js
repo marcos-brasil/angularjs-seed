@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t16", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t17", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -534,6 +534,9 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     url: "/seed/styleguide",
     templateUrl: "/seed/styleguide.html"
 
+  }).state("404", {
+    url: "{base}",
+    template: "<b>hello 404</b>"
   }).state("404", {
     url: "seed/{base}",
     template: "<b>hello 404</b>"
