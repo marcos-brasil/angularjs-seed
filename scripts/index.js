@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t11", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t12", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -516,11 +516,12 @@ function indexCtrl($scope, $root, $q, $sce, $state) {
 routerConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
-  // $urlRouterProvider.otherwise('/seed');
+  $urlRouterProvider.otherwise("/seed");
 
-  $urlRouterProvider.when("/", "/seed");
+  $urlRouterProvider.when("/", "index");
+  $urlRouterProvider.when("/seed/", "index");
 
-  $stateProvider.state("seed", Object.assign({}, _indexState, { url: "/seed" })).state({
+  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state({
     name: "tests",
     url: "/seed/tests",
     controller: function controller() {
@@ -534,7 +535,7 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     templateUrl: "/seed/styleguide.html"
 
   }).state("404", {
-    url: "seed/*",
+    url: "seed/{base}",
     template: "<b>hello 404</b>"
   });
 }
