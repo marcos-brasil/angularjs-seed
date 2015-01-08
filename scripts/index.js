@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t42", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t44", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -495,21 +495,6 @@ var _indexState = {
   controller: indexCtrl,
   template: "<root-app/>" };
 
-indexCtrl.$inject = ["$scope", "$rootScope", "$q", "$sce", "$state"];
-function indexCtrl($scope, $root, $q, $sce, $state) {
-  co(regeneratorRuntime.mark(function callee$1$0() {
-    return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-      while (1) switch (context$2$0.prev = context$2$0.next) {
-        case 0:
-          context$2$0.next = 2;
-          return new Promise(setImmediate);
-        case 2:
-        case "end":
-          return context$2$0.stop();
-      }
-    }, callee$1$0, this);
-  }));
-}
 
 routerConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
@@ -534,33 +519,56 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
 
   }).state("404", {
     url: "/seed/{base}",
-    controller: function () {
-      var canvas = document.getElementById("canvas");
-      var ctx = canvas.getContext("2d");
-
-      ctx.fillStyle = "white";
-      ctx.fillRect(0, 0, WIDTH, HEIGHT);
-      ctx.fill();
-
-      var imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
-      var pix = imgData.data;
-      var WIDTH = canvas.width = 700;
-      var HEIGHT = canvas.height = 500;
-
-      function flickering() {
-        for (var i = 0; i < pix.length; i += 4) {
-          var color = Math.random() * 255 + 50;
-          pix[i] = color;
-          pix[i + 1] = color;
-          pix[i + 2] = color;
-        }
-        ctx.putImageData(imgData, 0, 0);
-      };
-
-      flickerInterval = setInterval(flickering, 30);
-    },
-    templateUrl: "/seed/404.html"
+    templateUrl: "/seed/404.html",
+    controller: fourOhFour
   });
+}
+
+
+indexCtrl.$inject = ["$scope", "$rootScope", "$q", "$sce", "$state"];
+function indexCtrl($scope, $root, $q, $sce, $state) {
+  co(regeneratorRuntime.mark(function callee$1$0() {
+    return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
+      while (1) switch (context$2$0.prev = context$2$0.next) {
+        case 0:
+          context$2$0.next = 2;
+          return new Promise(setImmediate);
+        case 2:
+        case "end":
+          return context$2$0.stop();
+      }
+    }, callee$1$0, this);
+  }));
+}
+
+function fourOhFour() {
+  var canvas;
+  var ctx;
+  var imgData;
+  var pix;
+  var WIDTH;
+  var HEIGHT;
+
+  function flickering() {
+    for (var i = 0; i < pix.length; i += 4) {
+      var color = Math.random() * 255 + 50;
+      pix[i] = color;
+      pix[i + 1] = color;
+      pix[i + 2] = color;
+    }
+    ctx.putImageData(imgData, 0, 0);
+  };
+
+  canvas = document.getElementById("canvas");
+  ctx = canvas.getContext("2d");
+  canvas.width = WIDTH = 700;
+  canvas.height = HEIGHT = 500;
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+  ctx.fill();
+  imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
+  pix = imgData.data;
+  flickerInterval = setInterval(flickering, 30);
 }
 
 },{}]},{},[7])
