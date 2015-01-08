@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t0", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t1", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -516,10 +516,10 @@ function indexCtrl($scope, $root, $q, $sce, $state) {
 routerConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/seed");
+  $urlRouterProvider.when("/", "index");
 
-
-  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/" })).state("hello", Object.assign({}, _indexState, { url: "/hello" })).state({
+  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state("hello", Object.assign({}, _indexState, { url: "/hello" })).state({
     name: "tests",
     url: "/tests",
     controller: function controller() {
