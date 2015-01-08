@@ -3829,36 +3829,24 @@ canvas {
   100% {
     top: 100%; } }
 
-/* line 459, /Volumes/proton/suite/seed/src/styles/main.scss */
-#fourOfFour h1 {
-  z-index: 3;
-  position: absolute;
-  font: bold 200px/200px Arial, sans-serif;
-  left: 50%;
-  top: 50%;
-  margin-top: -100px;
-  width: 100%;
-  margin-left: -50%;
-  height: 200px;
-  text-align: center;
-  color: transparent;
-  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  animation: asdd 2s linear infinite; }
+/* line 458, /Volumes/proton/suite/seed/src/styles/main.scss */
+h1 {
+  z-index: 3; }
 
 @keyframes asdd {
-  /* line 478, /Volumes/proton/suite/seed/src/styles/main.scss */
+  /* line 476, /Volumes/proton/suite/seed/src/styles/main.scss */
   0% {
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
 
-  /* line 481, /Volumes/proton/suite/seed/src/styles/main.scss */
+  /* line 479, /Volumes/proton/suite/seed/src/styles/main.scss */
   33% {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
 
-  /* line 484, /Volumes/proton/suite/seed/src/styles/main.scss */
+  /* line 482, /Volumes/proton/suite/seed/src/styles/main.scss */
   66% {
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
 
-  /* line 487, /Volumes/proton/suite/seed/src/styles/main.scss */
+  /* line 485, /Volumes/proton/suite/seed/src/styles/main.scss */
   100% {
     text-shadow: 0 0 40px rgba(0, 0, 0, 0.8); } }
 
