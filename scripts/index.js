@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t7", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t8", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -516,7 +516,7 @@ function indexCtrl($scope, $root, $q, $sce, $state) {
 routerConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise("/seed");
+  // $urlRouterProvider.otherwise('/seed');
 
   $urlRouterProvider.when("/", "index");
   // $urlRouterProvider.when('/seed/', 'index');
