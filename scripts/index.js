@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t44", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t45", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -548,6 +548,7 @@ function fourOhFour() {
   var pix;
   var WIDTH;
   var HEIGHT;
+  var flickerInterval;
 
   function flickering() {
     for (var i = 0; i < pix.length; i += 4) {
