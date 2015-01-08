@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t19", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t20", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -519,7 +519,7 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/seed");
 
   $urlRouterProvider.when("/", "index");
-  $urlRouterProvider.when("seed/{base}", "index");
+  $urlRouterProvider.when("seed/", "index");
 
   $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state({
     name: "tests",
@@ -535,7 +535,7 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     templateUrl: "/seed/styleguide.html"
 
   }).state("404", {
-    url: "{base}",
+    url: "seed/{base}",
     template: "<b>hello 404</b>"
   });
 }
