@@ -38,7 +38,7 @@ export function routerConfig ($locationProvider, $stateProvider, $urlRouterProvi
       .state({
         name: 'styleguide',
         url: '/styleguide',
-        templateUrl: '/styleguide.html'
+        templateUrl: '/styleguide-inlined.html'
 
       })
       .state('404', {
