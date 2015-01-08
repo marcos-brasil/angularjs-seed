@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t48", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t49", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -519,9 +519,8 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
 
   }).state("404", {
     url: "/seed/{base}",
-    template: "\n          <div id=\"fourOhFour\">\n            <h1 >404</h1>\n          </div>\n\n          <div class=\"frame\">\n            <div></div>\n            <div></div>\n            <div></div>\n          </div>\n          <canvas id=\"canvas\"></canvas>\n        ",
-    controller: fourOhFour
-  });
+    templateUrl: "/seed/404.html",
+    controller: fourOhFour });
 }
 
 
