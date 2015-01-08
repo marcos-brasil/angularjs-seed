@@ -308,7 +308,7 @@ function navBar() {
   var list = ["Hello", "Style Guide", "Tests", "{{rand}}"];
 
   function iterator(v, k) {
-    return "<li><a href=\"" + hrefs[k] + "\">" + v + "</a></li>";
+    return "<li><a href=\"seed/" + hrefs[k] + "\">" + v + "</a></li>";
   }
 
   return {
@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t1", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t5", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -519,9 +519,9 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/seed");
   $urlRouterProvider.when("/", "index");
 
-  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state("hello", Object.assign({}, _indexState, { url: "/hello" })).state({
+  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state({
     name: "tests",
-    url: "/tests",
+    url: "/seed/tests",
     controller: function controller() {
       // forcing a hard page reload
       window.location.reload(true);
@@ -529,12 +529,12 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
     template: "<test></test>"
   }).state({
     name: "styleguide",
-    url: "/styleguide",
-    templateUrl: "/styleguide-inlined.html"
+    url: "/seed/styleguide",
+    templateUrl: "/seed/styleguide-inlined.html"
 
   }).state("404", {
-    url: "/{base}",
-    template: "<b>404</b>"
+    url: "/seed/{base}",
+    template: "<b>hello 404</b>"
   });
 }
 
