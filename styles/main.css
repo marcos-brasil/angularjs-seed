@@ -3821,7 +3821,7 @@ main {
     top: 100%; } }
 
 /* line 448, /Volumes/proton/suite/seed/src/styles/main.scss */
-h1 {
+#fourOhFour h1 {
   z-index: 3;
   position: absolute;
   font: bold 200px/200px Arial, sans-serif;
