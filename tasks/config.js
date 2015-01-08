@@ -126,9 +126,10 @@ function depsMiddleware (req, res, next) {
       res.end(fs.readFileSync('node_modules/angular/angular.js', 'utf8'))
       break
 
-    case 'angular-route.js':
+
+    case 'ui-route.js':
       res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
-      res.end(fs.readFileSync('node_modules/angular-route/angular-route.js', 'utf8'))
+      res.end(fs.readFileSync('node_modules/angular-ui-router/release/angular-ui-router.js', 'utf8'))
       break
 
     // case 'react.js':

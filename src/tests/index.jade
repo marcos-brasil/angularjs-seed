@@ -1,19 +1,24 @@
-extends ../partials/base.jade
+extends ../base.jade
 
 block head
+  base(href='/')
+  //- link(inline rel='stylesheet', href='styles/main.css')
   link(rel='stylesheet', href='./mocha.css')
   script(src='./shims.js')
 
 block body
+
   #mocha
+  test-app
+
   script(src='./angular.js')
-  script(src='./angular-route.js')
+  script(src='./ui-route.js')
   script(src='./mocha.js')
   script(src='./chai.js')
   script(src='./sinon-chai.js')
   script(src='./sinon.js')
 
+  script(src='../scripts/index.js')
   // build:js(./dev/tests) ./tests/index.js
-  script(src='./index.js')
+  script(src='./tests/index.js')
   // endbuild
-

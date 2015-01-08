@@ -1,16 +1,21 @@
-extends ./partials/base.jade
+extends ./base.jade
 
 block head
+  base(href='/')
   link(inline rel='stylesheet', href='styles/main.css')
-  script(inline src='./shims.js')
+  link(rel='stylesheet', href='./mocha.css')
+
+  script(inline src='shims.js')
 
 block body
-  root-app
+  ui-view
 
   script(inline src='angular.js')
-  script(inline src='angular-route.js')
+  script(inline src='ui-route.js')
+
   // build:js(dev) scripts/bundle.js
   script(inline src='scripts/index.js')
   // endbuild
+
 
   // Built with love using Web Starter Kit

@@ -1,15 +1,16 @@
 'use strict';
 
 import * as fs from 'fs';
-
-import { angular } from 'globals';
-import { headerBar, navBar, mainContent, menu, rootApp} from './components';
+import { angular} from 'globals';
+import * as components from './components';
+import { routerConfig } from './routes';
 
 console.log(fs.readFileSync('./LICENSE', 'utf8'));
 
-export var APP = angular.module('app.init', ['ngRoute'])
-  .directive('headerBar', headerBar)
-  .directive('navBar', navBar)
-  .directive('mainContent', mainContent)
-  .directive('menu', menu)
-  .directive('rootApp', rootApp);
+export var APP = angular.module('app', ['ui.router']);
+
+APP.config(routerConfig);
+
+for (let item in components) {
+  APP.directive(item, components[item]);
+}

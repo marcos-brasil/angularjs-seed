@@ -10,8 +10,8 @@ export { navBar, mainContent, rootApp };
 
 export function headerBar () {
   return {
-    template: fs.readFileSync('./src/scripts/components/header-bar.html', 'utf8'),
     restrict: 'E',
+    template: fs.readFileSync('./src/scripts/components/header-bar.html', 'utf8'),
   };
 }
 

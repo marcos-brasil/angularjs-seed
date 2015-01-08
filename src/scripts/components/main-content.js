@@ -20,5 +20,6 @@ export function mainContent () {
         navdrawerContainer.classList.remove('open');
       });
     },
+
   };
 }
