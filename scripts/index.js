@@ -249,7 +249,7 @@ exports.rootApp = rootApp;
 function headerBar() {
   return {
     restrict: "E",
-    template: "\n<header class=\"app-bar promote-layer\">\n  <div class=\"app-bar-container\">\n    <button class=\"menu\"><img src=\"images/hamburger.svg\" alt=\"Menu\"></button>\n    <h1 class=\"logo\">Web <strong>Starter Kit</strong></h1>\n    <section class=\"app-bar-actions\">\n      <!-- Put App Bar Buttons Here-->\n      <button><i class=\"icon icon-star\"></i></button>\n      <button><i class=\"icon icon-cog\"></i></button>\n    </section>\n  </div>\n</header>\n" };
+    template: "\n<header class=\"app-bar promote-layer\">\n  <div class=\"app-bar-container\">\n    <button class=\"menu\"><img src=\"/seed/images/hamburger.svg\" alt=\"Menu\"></button>\n    <h1 class=\"logo\">Web <strong>Starter Kit</strong></h1>\n    <section class=\"app-bar-actions\">\n      <!-- Put App Bar Buttons Here-->\n      <button><i class=\"icon icon-star\"></i></button>\n      <button><i class=\"icon icon-cog\"></i></button>\n    </section>\n  </div>\n</header>\n" };
 }
 
 function menu() {
@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t10", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t11", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
