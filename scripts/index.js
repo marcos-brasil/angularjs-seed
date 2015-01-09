@@ -249,7 +249,7 @@ exports.rootApp = rootApp;
 function headerBar() {
   return {
     restrict: "E",
-    template: "\n<header class=\"app-bar promote-layer\">\n  <div class=\"app-bar-container\">\n    <button class=\"menu\"><img src=\"seed/images/hamburger.svg\" alt=\"Menu\"></button>\n    <h1 class=\"logo\">Web <strong>Starter Kit</strong></h1>\n    <section class=\"app-bar-actions\">\n      <!-- Put App Bar Buttons Here-->\n      <button><i class=\"icon icon-star\"></i></button>\n      <button><i class=\"icon icon-cog\"></i></button>\n    </section>\n  </div>\n</header>\n" };
+    template: "\n<header class=\"app-bar promote-layer\">\n  <div class=\"app-bar-container\">\n    <button class=\"menu\"><img src=\"images/hamburger.svg\" alt=\"Menu\"></button>\n    <h1 class=\"logo\">Web <strong>Starter Kit</strong></h1>\n    <section class=\"app-bar-actions\">\n      <!-- Put App Bar Buttons Here-->\n      <button><i class=\"icon icon-star\"></i></button>\n      <button><i class=\"icon icon-cog\"></i></button>\n    </section>\n  </div>\n</header>\n" };
 }
 
 function menu() {
@@ -308,7 +308,7 @@ function navBar() {
   var list = ["Hello", "Style Guide", "Tests", "{{rand}}"];
 
   function iterator(v, k) {
-    return "<li><a href=\"seed/" + hrefs[k] + "\">" + v + "</a></li>";
+    return "<li><a href=\"" + hrefs[k] + "\">" + v + "</a></li>";
   }
 
   return {
@@ -400,7 +400,7 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t49", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t8", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
@@ -493,37 +493,7 @@ var co = _interopRequire(_dereq_(1));
 var _indexState = {
   url: "",
   controller: indexCtrl,
-  template: "<root-app/>" };
-
-
-routerConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
-function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
-  $locationProvider.html5Mode(true);
-
-  $urlRouterProvider.when("/", "index");
-  $urlRouterProvider.when("/seed/", "index");
-  $urlRouterProvider.otherwise("/seed");
-
-  $stateProvider
-    .state("index", Object.assign({}, _indexState, { url: "/seed" })).state({
-      name: "tests",
-      url: "/seed/tests",
-      controller: function controller() {
-        // forcing a hard page reload
-        window.location.reload(true);
-      },
-      template: "<test></test>"
-    }).state({
-      name: "styleguide",
-      url: "/seed/styleguide",
-      templateUrl: "/seed/styleguide.html"
-
-    }).state("404", {
-      url: "/seed/{base}",
-      templateUrl: "/seed/404.html",
-      controller: fourOhFour });
-}
-
+  template: " <root-app/>" };
 
 indexCtrl.$inject = ["$scope", "$rootScope", "$q", "$sce", "$state"];
 function indexCtrl($scope, $root, $q, $sce, $state) {
@@ -541,6 +511,38 @@ function indexCtrl($scope, $root, $q, $sce, $state) {
   }));
 }
 
+routerConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
+function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
+  $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise("/");
+
+  $urlRouterProvider.when("/", "index");
+  $urlRouterProvider.when("/seed/", "index");
+  $urlRouterProvider.otherwise("/seed");
+
+  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state({
+    name: "tests",
+    url: "/seed/tests",
+    controller: function controller() {
+      // forcing a hard page reload
+      window.location.reload(true);
+    } }).state({
+    name: "styleguide",
+    url: "/seed/styleguide",
+    templateUrl: "/seed/styleguide.html"
+  }).state({
+    name: "404",
+    url: "/seed/{base}",
+    templateUrl: "/seed/404.html",
+    controller: fourOhFour,
+    onExit: function () {
+      return clearInterval(flickerIntervalId);
+    } });
+}
+
+// TODO: use ui-route state managment instead of globals
+var flickerIntervalId;
+
 function fourOhFour() {
   var canvas;
   var ctx;
@@ -548,7 +550,6 @@ function fourOhFour() {
   var pix;
   var WIDTH;
   var HEIGHT;
-  var flickerInterval;
 
   function flickering() {
     for (var i = 0; i < pix.length; i += 4) {
@@ -558,7 +559,7 @@ function fourOhFour() {
       pix[i + 2] = color;
     }
     ctx.putImageData(imgData, 0, 0);
-  };
+  }
 
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
@@ -569,7 +570,7 @@ function fourOhFour() {
   ctx.fill();
   imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
   pix = imgData.data;
-  flickerInterval = setInterval(flickering, 30);
+  flickerIntervalId = setInterval(flickering, 30);
 }
 
 },{}]},{},[7])
