@@ -232,9 +232,6 @@ function isObject(val) {
 
 },{}],2:[function(_dereq_,module,exports){
 "use strict";
-
-exports.documentReady = documentReady;
-"use strict";
 var $doc = exports.$doc = document;
 var $win = exports.$win = window;
 var $body = exports.$body = $doc.body;
@@ -242,22 +239,22 @@ var $body = exports.$body = $doc.body;
 var angular = exports.angular = $win.angular;
 var queryDom = exports.queryDom = $doc.querySelector.bind($doc);
 
-function documentReady(next) {
+var documentReady = exports.documentReady = new Promise(function (resolve, reject) {
   if ($doc.readyState === "complete") {
-    return next();
+    return resolve();
   }
 
-  function _loaded() {
+  function loaded() {
     // after DOM loaded, cleanup
-    $doc.removeEventListener("DOMContentLoaded", _loaded, false);
-    $win.removeEventListener("load", _loaded, false);
-    next();
+    $doc.removeEventListener("DOMContentLoaded", loaded, false);
+    $win.removeEventListener("load", loaded, false);
+    resolve();
   }
 
   // making double sure we get the document load event
-  $doc.addEventListener("DOMContentLoaded", _loaded, false);
-  $win.addEventListener("load", _loaded, false);
-}
+  $doc.addEventListener("DOMContentLoaded", loaded, false);
+  $win.addEventListener("load", loaded, false);
+});
 
 },{}],3:[function(_dereq_,module,exports){
 "use strict";
@@ -284,6 +281,11 @@ var $doc = _dereq_(2).$doc;
 var $body = _dereq_(2).$body;
 
 
+// empty module def
+angular.module("app", []);
+
+console.log("dddddd");
+
 mocha.setup("bdd");
 mocha.reporter("html");
 
@@ -295,9 +297,7 @@ co(regeneratorRuntime.mark(function callee$0$0() {
     while (1) switch (context$1$0.prev = context$1$0.next) {
       case 0:
         context$1$0.next = 2;
-        return new Promise(function (res, rej) {
-          return documentReady(res);
-        });
+        return documentReady;
       case 2:
         mocha.run();
       case 3:
@@ -308,8 +308,6 @@ co(regeneratorRuntime.mark(function callee$0$0() {
 }));
 
 angular.module("app").directive("testApp", testsApp);
-
-
 
 function testsApp() {
   return {
@@ -322,7 +320,10 @@ function testAppCtrl() {
   describe("basic globals tests", function () {
     it("should be functions", function () {
       expect(queryDom).to.be["instanceof"](Function);
-      expect(documentReady).to.be["instanceof"](Function);
+    });
+
+    it("should be Promise", function () {
+      expect(documentReady).to.be["instanceof"](Promise);
     });
 
     it("should be objects", function () {
