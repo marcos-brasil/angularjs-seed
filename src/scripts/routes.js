@@ -10,7 +10,6 @@ var _indexState = {
   elements: {},
   scope: {
     some: 'data',
-    // rand: (Math.random() * Math.pow(10,7)|0),
     get rand () {
       /*jslint bitwise: true */
       return (Math.random() * Math.pow(10,7)|0);
@@ -70,8 +69,12 @@ export function routerConfig ($locationProvider, $stateProvider, $urlRouterProvi
         url: '/{base}',
         templateUrl: '/404.html',
         controller: _404,
+        onExit: () => clearInterval(flickerIntervalId),
       });
 }
+
+var flickerIntervalId;
+
 
 function _404 () {
   var canvas;
@@ -80,7 +83,6 @@ function _404 () {
   var pix;
   var WIDTH;
   var HEIGHT;
-  var flickerInterval;
 
   function flickering () {
     for (var i = 0; i < pix.length; i += 4) {
@@ -101,7 +103,7 @@ function _404 () {
   ctx.fill();
   imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
   pix = imgData.data;
-  flickerInterval = setInterval(flickering, 30);
+  flickerIntervalId = setInterval(flickering, 30);
 }
 
           // $state.transitionTo($state.current, $state.params, {
