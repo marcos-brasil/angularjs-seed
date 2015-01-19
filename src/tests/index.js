@@ -4,9 +4,15 @@
 /* jshint -W030 */
 
 'use strict';
+import * as fs from 'fs';
 
 import co from 'co';
 import { angular, queryDom, documentReady, $win, $doc, $body } from 'globals';
+
+console.log(fs.readFileSync('./LICENSE', 'utf8'));
+
+// empty module def
+angular.module('app', [])
 
 mocha.setup('bdd');
 mocha.reporter('html');
