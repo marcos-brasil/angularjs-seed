@@ -6,10 +6,10 @@ import co from 'co';
 var _t0 = new Date();
 var _cnt = 0;
 
-export function rootApp () {
+export function app () {
   return {
     restrict: 'EA',
-    controller: rootAppCtrl,
+    controller: appCtrl,
     template: `
       <header-bar></header-bar>
       <nav-bar></nav-bar>
@@ -18,8 +18,8 @@ export function rootApp () {
   };
 }
 
-rootAppCtrl.$inject = ['$scope',  '$state'];
-function rootAppCtrl ($scope, $state) {
+appCtrl.$inject = ['$scope',  '$state'];
+function appCtrl ($scope, $state) {
   co(function * () {
     // defering execution to "nextTick"
     yield new Promise(setImmediate);
@@ -61,5 +61,4 @@ function * _waitNextFrame (FPS) {
   // }
 
   _t0 = new Date();
-
 }

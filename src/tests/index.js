@@ -12,7 +12,7 @@ import { angular, queryDom, documentReady, $win, $doc, $body } from 'globals';
 console.log(fs.readFileSync('./LICENSE', 'utf8'));
 
 // empty module def
-angular.module('app', [])
+angular.module('app', []);
 
 mocha.setup('bdd');
 mocha.reporter('html');

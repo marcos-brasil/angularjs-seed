@@ -6,7 +6,7 @@ var _indexState = {
   onEnter () {
 
   },
-  template: `<root-app/>`,
+  template: `<app/>`,
   elements: {},
   scope: {
     some: 'data',
@@ -22,7 +22,6 @@ var firstLoad = true;
 indexRouteCtrl.$inject = ['$state', '$rootScope', '$body'];
 function indexRouteCtrl ($state, $rootScope, $body) {
 
-
   // console.log($state.opened)
 
   if (firstLoad) {
@@ -31,17 +30,6 @@ function indexRouteCtrl ($state, $rootScope, $body) {
   }
 
   if ($state.opened) {}
-
-  // var { appBar, navdrawerContainer } = $state.elements
-  // $body.removeClass('open');
-  // appBar.removeClass('open')
-  // navdrawerContainer.removeClass('open')
-  // $state.current.opened = false
-  // co(function * (){
-  //   yield new Promise(setImmediate);
-  // });
-
-
 }
 
 routerConfig.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
