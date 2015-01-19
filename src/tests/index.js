@@ -14,14 +14,12 @@ mocha.reporter('html');
 var {expect} = chai;
 
 co(function *() {
-  yield new Promise((res, rej) => documentReady(res));
+  yield documentReady;
   mocha.run();
 });
 
 angular.module('app')
   .directive('testApp', testsApp);
-
-
 
 export function testsApp () {
   return {
@@ -35,7 +33,10 @@ function testAppCtrl () {
   describe('basic globals tests', () => {
     it('should be functions', () => {
       expect(queryDom).to.be.instanceof(Function);
-      expect(documentReady).to.be.instanceof(Function);
+    });
+
+    it('should be Promise', () => {
+      expect(documentReady).to.be.instanceof(Promise);
     });
 
     it('should be objects', () => {

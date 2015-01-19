@@ -1,19 +1,47 @@
 'use strict';
-
 import co from 'co';
 
 var _indexState = {
-  url: '',
-  controller: indexCtrl,
-  template: ` <root-app/>`,
+  url: '/',
+  controller: indexRouteCtrl,
+  onEnter () {
+
+  },
+  template: `<root-app/>`,
+  elements: {},
+  scope: {
+    some: 'data',
+    // rand: (Math.random() * Math.pow(10,7)|0),
+    get rand () {
+      return (Math.random() * Math.pow(10,7)|0)
+    },
+  },
 };
 
-indexCtrl.$inject = ['$scope', '$rootScope', '$q', '$sce', '$state'];
-function indexCtrl ($scope, $root, $q, $sce, $state) {
-  co(function * (){
-    yield new Promise(setImmediate);
-    console.log('indexStateCtrl');
-  });
+var firstLoad = true
+indexRouteCtrl.$inject = ['$state', '$rootScope', '$body'];
+function indexRouteCtrl ($state, $rootScope, $body) {
+
+
+  // console.log($state.opened)
+
+  if (firstLoad) {
+    firstLoad = false
+    return
+  }
+
+  if ($state.opened) {}
+
+  // var { appBar, navdrawerContainer } = $state.elements
+  // $body.removeClass('open');
+  // appBar.removeClass('open')
+  // navdrawerContainer.removeClass('open')
+  // $state.current.opened = false
+  // co(function * (){
+  //   yield new Promise(setImmediate);
+  // });
+
+
 }
 
 routerConfig.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
@@ -22,31 +50,29 @@ export function routerConfig ($locationProvider, $stateProvider, $urlRouterProvi
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('index', Object.assign({}, _indexState, {url: '/'}))
+      .state(Object.assign({name: 'index'}, _indexState, {url: '/'}))
 
-      .state({
-        name: 'tests',
-        url: '/tests',
-        controller () {
-          // forcing a hard page reload
-          window.location.reload(true);
-        },
-        template: '<test></test>'
-      })
       .state({
         name: 'styleguide',
         url: '/styleguide',
         templateUrl: '/styleguide.html'
-
+      })
+      .state({
+        name: 'tests',
+        url: '/tests',
+        controller: ['$window', ($window) => {
+          $window.location.reload(true);
+        }],
+        template: ''
       })
       .state('404', {
         url: '/{base}',
         templateUrl: '/404.html',
-        controller: fourOhFour,
+        controller: _404,
       });
 }
 
-function fourOhFour () {
+function _404 () {
   var canvas;
   var ctx;
   var imgData;
@@ -76,4 +102,10 @@ function fourOhFour () {
   pix = imgData.data;
   flickerInterval = setInterval(flickering, 30);
 }
+
+          // $state.transitionTo($state.current, $state.params, {
+          //   reload: true,
+          //   inherit: false,
+          //   notify: true,
+          // })
 

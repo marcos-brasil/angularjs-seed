@@ -8,7 +8,7 @@ var _cnt = 0;
 
 export function rootApp () {
   return {
-    restrict: 'E',
+    restrict: 'EA',
     controller: rootAppCtrl,
     template: `
       <header-bar></header-bar>
@@ -18,11 +18,12 @@ export function rootApp () {
   };
 }
 
-rootAppCtrl.$inject = ['$scope', '$q', '$sce', '$state'];
-function rootAppCtrl ($scope, $q, $sce, $state) {
+rootAppCtrl.$inject = ['$scope',  '$state'];
+function rootAppCtrl ($scope, $state) {
   co(function * () {
-
+    // defering execution to "nextTick"
     yield new Promise(setImmediate);
+
     var offset = 2;
     var FPS = 30 + offset;
 
@@ -31,13 +32,16 @@ function rootAppCtrl ($scope, $q, $sce, $state) {
 
       // sleeping
       yield* _waitNextFrame(FPS);
-
-      // fake 10 millisec async op
+      // and faking 10 millisec async op
       yield new Promise((res) => setTimeout(res, 10));
-      $scope.rand = Math.random();
-      $scope.$digest();
+
+      Object.assign($scope, $state.current.scope)
+      $scope.$digest()
+
     }
-  });
+  }).catch((err)=>{
+    console.log('EE:', err)
+  })
 }
 
 function * _waitNextFrame (FPS) {
