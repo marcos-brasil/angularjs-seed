@@ -1,5 +1,4 @@
 'use strict';
-import co from 'co';
 
 var _indexState = {
   url: '/',
@@ -13,12 +12,14 @@ var _indexState = {
     some: 'data',
     // rand: (Math.random() * Math.pow(10,7)|0),
     get rand () {
-      return (Math.random() * Math.pow(10,7)|0)
+      /*jslint bitwise: true */
+      return (Math.random() * Math.pow(10,7)|0);
+      /*jslint bitwise: false */
     },
   },
 };
 
-var firstLoad = true
+var firstLoad = true;
 indexRouteCtrl.$inject = ['$state', '$rootScope', '$body'];
 function indexRouteCtrl ($state, $rootScope, $body) {
 
@@ -26,8 +27,8 @@ function indexRouteCtrl ($state, $rootScope, $body) {
   // console.log($state.opened)
 
   if (firstLoad) {
-    firstLoad = false
-    return
+    firstLoad = false;
+    return;
   }
 
   if ($state.opened) {}

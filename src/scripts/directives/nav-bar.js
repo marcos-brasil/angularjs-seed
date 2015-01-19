@@ -1,6 +1,8 @@
 'use strict';
+/*jslint bitwise: true */
+var rand = (Math.random() * Math.pow(10,7)|0).toString(36);
+/*jslint bitwise: true */
 
-var rand = (Math.random() * Math.pow(10,7)|0).toString(36)
 var hrefs = ['/',  'styleguide', 'tests', rand,];
 var list = ['Home', 'Style Guide', 'Tests',  `{{rand}}`,];
 
@@ -8,7 +10,7 @@ function iterator (v, k) {
   return `<li><a href="${hrefs[k]}">${v}</a></li>`;
 }
 
-navBar.$inject = ['$state', 'closeNavdrawer']
+navBar.$inject = ['$state', 'closeNavdrawer'];
 export function navBar ($state, closeNavdrawer) {
 
   return {
@@ -27,19 +29,19 @@ export function navBar ($state, closeNavdrawer) {
       elem.bind('click', (evt) => {
         if ('/' === evt.target.pathname) {
           // TODO: learn css ng-animation, then use $state.transitionTo
-          setImmediate(closeNavdrawer)
+          setImmediate(closeNavdrawer);
         }
-      })
+      });
     },
   };
 }
 
-navdrawerContainer.$inject = ['$state']
+navdrawerContainer.$inject = ['$state'];
 export function navdrawerContainer ($state) {
   return {
     restrict: 'C',
     link (scope, elem, attr) {
-      $state.elements.navdrawerContainer = elem
+      $state.elements.navdrawerContainer = elem;
     },
-  }
+  };
 }

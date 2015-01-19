@@ -19,5 +19,5 @@ for (let item in services) {
 }
 
 APP.config(routerConfig).run(['$state', ($state) => {
-  $state.elements = {}
+  $state.elements = {};
 }]);

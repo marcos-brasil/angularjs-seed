@@ -35,13 +35,11 @@ function rootAppCtrl ($scope, $state) {
       // and faking 10 millisec async op
       yield new Promise((res) => setTimeout(res, 10));
 
-      Object.assign($scope, $state.current.scope)
-      $scope.$digest()
+      Object.assign($scope, $state.current.scope);
+      $scope.$digest();
 
     }
-  }).catch((err)=>{
-    console.log('EE:', err)
-  })
+  }).catch((err)=>{ console.log('EE:', err); });
 }
 
 function * _waitNextFrame (FPS) {

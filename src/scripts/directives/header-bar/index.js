@@ -8,23 +8,23 @@ export function headerBar () {
   };
 }
 
-menu.$inject = ['$state', '$body', 'openNavdrawer']
+menu.$inject = ['$state', '$body', 'openNavdrawer'];
 export function menu ($state, $body, openNavdrawer) {
   return {
     restrict: 'C',
     link (scope, elem, attr) {
-      if ($state.opened) { setImmediate(openNavdrawer) }
+      if ($state.opened) { setImmediate(openNavdrawer); }
       elem.bind('click', openNavdrawer);
     },
   };
 }
 
-appBar.$inject = ['$state']
+appBar.$inject = ['$state'];
 export function appBar ($state) {
   return {
     restrict: 'C',
     link (scope, elem, attr) {
-      $state.elements.appBar = elem
+      $state.elements.appBar = elem;
     },
-  }
+  };
 }

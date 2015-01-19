@@ -19,4 +19,4 @@ export var documentReady = new Promise((resolve, reject) => {
   // making double sure we get the document load event
   $doc.addEventListener('DOMContentLoaded', loaded, false);
   $win.addEventListener('load', loaded, false);
-})
+});
