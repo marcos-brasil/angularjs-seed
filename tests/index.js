@@ -284,8 +284,6 @@ var $body = _dereq_(2).$body;
 // empty module def
 angular.module("app", []);
 
-console.log("dddddd");
-
 mocha.setup("bdd");
 mocha.reporter("html");
 
