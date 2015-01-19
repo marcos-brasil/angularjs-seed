@@ -328,7 +328,6 @@ function navBar($state, closeNavdrawer) {
     }],
     link: function link(scope, elem, attr) {
       elem.bind("click", function (evt) {
-        console.log(evt.target.pathname.match(/^\/seeds/));
         if (evt.target.pathname.match(/^\/seed/)) {
           // TODO: learn css ng-animation, then use $state.transitionTo
           setImmediate(closeNavdrawer);
@@ -426,7 +425,7 @@ function rootAppCtrl($scope, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t4", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t0", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
