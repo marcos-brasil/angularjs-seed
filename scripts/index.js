@@ -235,92 +235,117 @@ function isObject(val) {
 
 exports.headerBar = headerBar;
 exports.menu = menu;
+exports.appBar = appBar;
 "use strict";
 
 
-var queryDom = _dereq_(6).queryDom;
-var $body = _dereq_(6).$body;
-var navBar = _dereq_(4).navBar;
-var mainContent = _dereq_(3).mainContent;
-var rootApp = _dereq_(5).rootApp;
-exports.navBar = navBar;
-exports.mainContent = mainContent;
-exports.rootApp = rootApp;
 function headerBar() {
   return {
-    restrict: "E",
+    restrict: "EA",
     template: "\n<header class=\"app-bar promote-layer\">\n  <div class=\"app-bar-container\">\n    <button class=\"menu\"><img src=\"/seed/images/hamburger.svg\" alt=\"Menu\"></button>\n    <h1 class=\"logo\">Web <strong>Starter Kit</strong></h1>\n    <section class=\"app-bar-actions\">\n      <!-- Put App Bar Buttons Here-->\n      <button><i class=\"icon icon-star\"></i></button>\n      <button><i class=\"icon icon-cog\"></i></button>\n    </section>\n  </div>\n</header>\n" };
 }
 
-function menu() {
+menu.$inject = ["$state", "$body", "openNavdrawer"];
+function menu($state, $body, openNavdrawer) {
   return {
     restrict: "C",
-    link: function link(scope, elem) {
-      var navdrawerContainer = queryDom(".navdrawer-container");
-      var appbarElement = queryDom(".app-bar");
+    link: function link(scope, elem, attr) {
+      if ($state.opened) {
+        setImmediate(openNavdrawer);
+      }
+      elem.bind("click", openNavdrawer);
+    } };
+}
 
-      elem.bind("click", function onClick(scope, elem, attr) {
-        $body.classList.toggle("open");
-        appbarElement.classList.toggle("open");
-        navdrawerContainer.classList.toggle("open");
-        navdrawerContainer.classList.add("opened");
-      });
+appBar.$inject = ["$state"];
+function appBar($state) {
+  return {
+    restrict: "C",
+    link: function link(scope, elem, attr) {
+      $state.elements.appBar = elem;
     } };
 }
 
 },{}],3:[function(_dereq_,module,exports){
 "use strict";
+/*jshint -W030 */
+/*jshint -W033 */
+/*jshint -W117 */
+
+exports.mainContent = _dereq_(4).mainContent;
+exports.rootApp = _dereq_(6).rootApp;
+exports.headerBar = _dereq_(2).headerBar;
+exports.menu = _dereq_(2).menu;
+exports.appBar = _dereq_(2).appBar;
+exports.navBar = _dereq_(5).navBar;
+exports.navdrawerContainer = _dereq_(5).navdrawerContainer;
+
+},{}],4:[function(_dereq_,module,exports){
+"use strict";
 
 exports.mainContent = mainContent;
 "use strict";
 
 
 
-var queryDom = _dereq_(6).queryDom;
-var $body = _dereq_(6).$body;
-function mainContent() {
+mainContent.$inject = ["$state", "$body", "closeNavdrawer"];
+function mainContent($state, $body, closeNavdrawer) {
   return {
-    restrict: "E",
+    restrict: "EA",
     template: function template() {
-      return "<main>\n  <h1 id=\"hello\">Hello!</h1>\n  <p>Welcome to my <a href=\"https://developers.google.com/web/starter-kit/\">Web Starter Kit</a> fork.</p>\n  <h3 id=\"get-started\">Features :</h3>\n  <ul>\n    <li><a href=\"https://6to5.org/\"> ES6 </a> </li>\n    <li><a href=\"https://angularjs.org/\">Angular</a> » <a href=\"https://github.com/angular-ui/ui-router\">ui-router</a> </li>\n    <li><a href=\"http://mochajs.org/\">Mocha</a> » <a href=\"http://chaijs.com/\">chai</a> - <a href=\"http://sinonjs.org/\">sinon</a> </li>\n    <li><a href=\"http://browserify.org/\">Browserify</a>\n    <li><a href=\"http://gulpjs.com/\">Gulp</a></li>\n    <li><a href=\"http://nodejs.org/\">Nodejs</a></li>\n  </ul>\n  <!-- <p>Read how to <a href=\"https://developers.google.com/web/starter-kit\">Get Started</a> or check out the <a href=\"styleguide.html\">Style Guide.</a></p> -->\n</main>\n";
+      return "<main>\n  <h1 id=\"hello\">Hello!</h1>\n  <p>Welcome to my <a href=\"https://developers.google.com/web/starter-kit/\">Web Starter Kit</a> fork. <small>{{rand}}</small></p>\n  <h3 id=\"get-started\">Features :</h3>\n\n  <ul>\n    <li><a href=\"https://6to5.org/\"> ES6 </a> </li>\n    <li><a href=\"https://angularjs.org/\">Angular</a> <small>» <a href=\"https://github.com/angular-ui/ui-router\">ui-router</small></a> </li>\n    <li><a href=\"http://mochajs.org/\">Mocha</a> <small>» <a href=\"http://chaijs.com/\">chai</a> - <a href=\"http://sinonjs.org/\">sinon</a></small> </li>\n    <li><a href=\"http://browserify.org/\">Browserify</a>\n    <li><a href=\"http://gulpjs.com/\">Gulp</a></li>\n    <li><a href=\"http://nodejs.org/\">Nodejs</a></li>\n  </ul>\n  <!-- <p>Read how to <a href=\"https://developers.google.com/web/starter-kit\">Get Started</a> or check out the <a href=\"styleguide.html\">Style Guide.</a></p> -->\n</main>\n";
     },
-
     link: function link(scope, elem) {
-      var navdrawerContainer = queryDom(".navdrawer-container");
-      var appbarElement = queryDom(".app-bar");
+      elem.bind("click", closeNavdrawer);
+    } };
+}
 
-      elem.bind("click", function onClick(scope, elem, attr) {
-        $body.classList.remove("open");
-        appbarElement.classList.remove("open");
-        navdrawerContainer.classList.remove("open");
+},{}],5:[function(_dereq_,module,exports){
+"use strict";
+
+exports.navBar = navBar;
+exports.navdrawerContainer = navdrawerContainer;
+"use strict";
+/*jslint bitwise: true */
+var rand = (Math.random() * Math.pow(10, 7) | 0).toString(36);
+/*jslint bitwise: true */
+
+var hrefs = ["/", "styleguide", "tests", rand];
+var list = ["Home", "Style Guide", "Tests", "{{rand}}"];
+
+function iterator(v, k) {
+  return "<li><a href=\"/seed/" + hrefs[k] + "\">" + v + "</a></li>";
+}
+
+navBar.$inject = ["$state", "closeNavdrawer"];
+function navBar($state, closeNavdrawer) {
+  return {
+    restrict: "EA",
+    scope: {},
+    template: "\n      <nav class=\"navdrawer-container promote-layer\">\n        <h4>Navigation</h4>\n        <ul>\n          " + list.map(iterator).join("\n") + "\n        </ul>\n      </nav>\n    ",
+    controller: ["$scope", function ($scope) {
+      return $scope.rand = rand;
+    }],
+    link: function link(scope, elem, attr) {
+      elem.bind("click", function (evt) {
+        if ("/" === evt.target.pathname) {
+          // TODO: learn css ng-animation, then use $state.transitionTo
+          setImmediate(closeNavdrawer);
+        }
       });
     } };
 }
 
-},{}],4:[function(_dereq_,module,exports){
-"use strict";
-
-exports.navBar = navBar;
-"use strict";
-
-function navBar() {
-  var hrefs = ["hello", "styleguide", "tests", "/"];
-  var list = ["Hello", "Style Guide", "Tests", "{{rand}}"];
-
-  function iterator(v, k) {
-    return "<li><a href=\"/seed/" + hrefs[k] + "\">" + v + "</a></li>";
-  }
-
+navdrawerContainer.$inject = ["$state"];
+function navdrawerContainer($state) {
   return {
-    restrict: "E",
-    template: "\n      <nav class=\"navdrawer-container promote-layer\">\n        <h4>Navigation</h4>\n        <ul>\n          " + list.map(iterator).join("\n") + "\n        </ul>\n      </nav>\n      ",
-    controller: ["$scope", function ($scope) {
-      return $scope.rand = Math.random();
-    }]
-  };
+    restrict: "C",
+    link: function link(scope, elem, attr) {
+      $state.elements.navdrawerContainer = elem;
+    } };
 }
 
-},{}],5:[function(_dereq_,module,exports){
+},{}],6:[function(_dereq_,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) {
@@ -378,13 +403,13 @@ var _cnt = 0;
 
 function rootApp() {
   return {
-    restrict: "E",
+    restrict: "EA",
     controller: rootAppCtrl,
     template: "\n      <header-bar></header-bar>\n      <nav-bar></nav-bar>\n      <main-content></main-content>\n    " };
 }
 
-rootAppCtrl.$inject = ["$scope", "$q", "$sce", "$state"];
-function rootAppCtrl($scope, $q, $sce, $state) {
+rootAppCtrl.$inject = ["$scope", "$state"];
+function rootAppCtrl($scope, $state) {
   co(regeneratorRuntime.mark(function callee$1$0() {
     var offset, FPS;
     return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
@@ -400,15 +425,18 @@ function rootAppCtrl($scope, $q, $sce, $state) {
             context$2$0.next = 12;
             break;
           }
-          return context$2$0.delegateYield(_waitNextFrame(FPS), "t11", 6);
+          return context$2$0.delegateYield(_waitNextFrame(FPS), "t0", 6);
         case 6:
           context$2$0.next = 8;
           return new Promise(function (res) {
             return setTimeout(res, 10);
           });
         case 8:
-          $scope.rand = Math.random();
+
+
+          Object.assign($scope, $state.current.scope);
           $scope.$digest();
+
           context$2$0.next = 4;
           break;
         case 12:
@@ -416,22 +444,22 @@ function rootAppCtrl($scope, $q, $sce, $state) {
           return context$2$0.stop();
       }
     }, callee$1$0, this);
-  }));
+  }))["catch"](function (err) {
+    console.log("EE:", err);
+  });
 }
+
+// defering execution to "nextTick"
+
 
 // event loop
 
 
 // sleeping
-
-
-// fake 10 millisec async op
+// and faking 10 millisec async op
 // time left on this cycle
 
-},{}],6:[function(_dereq_,module,exports){
-"use strict";
-
-exports.documentReady = documentReady;
+},{}],7:[function(_dereq_,module,exports){
 "use strict";
 var $doc = exports.$doc = document;
 var $win = exports.$win = window;
@@ -440,77 +468,104 @@ var $body = exports.$body = $doc.body;
 var angular = exports.angular = $win.angular;
 var queryDom = exports.queryDom = $doc.querySelector.bind($doc);
 
-function documentReady(next) {
+var documentReady = exports.documentReady = new Promise(function (resolve, reject) {
   if ($doc.readyState === "complete") {
-    return next();
+    return resolve();
   }
 
-  function _loaded() {
+  function loaded() {
     // after DOM loaded, cleanup
-    $doc.removeEventListener("DOMContentLoaded", _loaded, false);
-    $win.removeEventListener("load", _loaded, false);
-    next();
+    $doc.removeEventListener("DOMContentLoaded", loaded, false);
+    $win.removeEventListener("load", loaded, false);
+    resolve();
   }
 
   // making double sure we get the document load event
-  $doc.addEventListener("DOMContentLoaded", _loaded, false);
-  $win.addEventListener("load", _loaded, false);
-}
+  $doc.addEventListener("DOMContentLoaded", loaded, false);
+  $win.addEventListener("load", loaded, false);
+});
 
-},{}],7:[function(_dereq_,module,exports){
+},{}],8:[function(_dereq_,module,exports){
 "use strict";
 
 
 
-var angular = _dereq_(6).angular;
-var components = _dereq_(2);
+var angular = _dereq_(7).angular;
+var directives = _dereq_(3);
 
-var routerConfig = _dereq_(8).routerConfig;
+var services = _dereq_(10);
+
+var routerConfig = _dereq_(9).routerConfig;
 
 
 console.log("\nThe MIT License (MIT)\n\nCopyright (c) 2014, markuz-brasil\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\n");
 
 var APP = exports.APP = angular.module("app", ["ui.router"]);
 
-APP.config(routerConfig);
-
-for (var item in components) {
-  APP.directive(item, components[item]);
+for (var item in directives) {
+  APP.directive(item, directives[item]);
 }
 
-},{}],8:[function(_dereq_,module,exports){
-"use strict";
+for (var item in services) {
+  APP.factory(item, services[item]);
+}
 
-var _interopRequire = function (obj) {
-  return obj && (obj["default"] || obj);
-};
+APP.config(routerConfig).run(["$state", function ($state) {
+  $state.elements = {};
+}]);
+
+},{}],9:[function(_dereq_,module,exports){
+"use strict";
 
 exports.routerConfig = routerConfig;
 "use strict";
 
-var co = _interopRequire(_dereq_(1));
-
 var _indexState = {
-  url: "",
-  controller: indexCtrl,
-  template: " <root-app/>" };
-
-indexCtrl.$inject = ["$scope", "$rootScope", "$q", "$sce", "$state"];
-function indexCtrl($scope, $root, $q, $sce, $state) {
-  co(regeneratorRuntime.mark(function callee$1$0() {
-    return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
-      while (1) switch (context$2$0.prev = context$2$0.next) {
-        case 0:
-          context$2$0.next = 2;
-          return new Promise(setImmediate);
-        case 2:
-        case "end":
-          return context$2$0.stop();
+  url: "/",
+  controller: indexRouteCtrl,
+  onEnter: function onEnter() {},
+  template: "<root-app/>",
+  elements: {},
+  scope: (function (_scope) {
+    Object.defineProperties(_scope, {
+      rand: {
+        get: function () {
+          /*jslint bitwise: true */
+          return Math.random() * Math.pow(10, 7) | 0;
+          /*jslint bitwise: false */
+        },
+        enumerable: true
       }
-    }, callee$1$0, this);
-  }));
-}
+    });
 
+    return _scope;
+  })({
+    some: "data" }) };
+
+var firstLoad = true;
+indexRouteCtrl.$inject = ["$state", "$rootScope", "$body"];
+function indexRouteCtrl($state, $rootScope, $body) {
+
+
+  // console.log($state.opened)
+
+  if (firstLoad) {
+    firstLoad = false;
+    return;
+  }
+
+  if ($state.opened) {}
+
+  // var { appBar, navdrawerContainer } = $state.elements
+  // $body.removeClass('open');
+  // appBar.removeClass('open')
+  // navdrawerContainer.removeClass('open')
+  // $state.current.opened = false
+  // co(function * (){
+  //   yield new Promise(setImmediate);
+  // });
+
+}
 routerConfig.$inject = ["$locationProvider", "$stateProvider", "$urlRouterProvider"];
 function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
@@ -521,20 +576,21 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/seed");
 
   $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state({
-    name: "tests",
-    url: "/seed/tests",
-    controller: function controller() {
-      // forcing a hard page reload
-      window.location.reload(true);
-    } }).state({
     name: "styleguide",
     url: "/seed/styleguide",
     templateUrl: "/seed/styleguide.html"
   }).state({
+    name: "tests",
+    url: "/seed/tests",
+    controller: ["$window", function ($window) {
+      $window.location.reload(true);
+    }],
+    template: ""
+  }).state({
     name: "404",
     url: "/seed/{base}",
     templateUrl: "/seed/404.html",
-    controller: fourOhFour,
+    controller: _404,
     onExit: function () {
       return clearInterval(flickerIntervalId);
     } });
@@ -543,7 +599,7 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
 // TODO: use ui-route state managment instead of globals
 var flickerIntervalId;
 
-function fourOhFour() {
+function _404() {
   var canvas;
   var ctx;
   var imgData;
@@ -573,7 +629,52 @@ function fourOhFour() {
   flickerIntervalId = setInterval(flickering, 30);
 }
 
-},{}]},{},[7])
+},{}],10:[function(_dereq_,module,exports){
+"use strict";
+
+exports.$jq = $jq;
+exports.$body = $body;
+exports.closeNavdrawer = closeNavdrawer;
+exports.openNavdrawer = openNavdrawer;
+"use strict";
+
+var body = _dereq_(7).$body;
+var angular = _dereq_(7).angular;
+function $jq() {
+  return angular.element;
+}
+
+$body.$inject = ["$jq"];
+function $body($jq) {
+  return $jq(body);
+}
+
+closeNavdrawer.$inject = ["$state", "$body"];
+function closeNavdrawer($state, $body) {
+  return function closeNavdrawerService() {
+    var appBar = $state.elements.appBar;
+    var navdrawerContainer = $state.elements.navdrawerContainer;
+    $body.removeClass("open");
+    appBar.removeClass("open");
+    navdrawerContainer.removeClass("open");
+    $state.opened = false;
+  };
+}
+
+openNavdrawer.$inject = ["$state", "$body"];
+function openNavdrawer($state, $body) {
+  return function openNavdrawerService() {
+    var appBar = $state.elements.appBar;
+    var navdrawerContainer = $state.elements.navdrawerContainer;
+    $body.toggleClass("open");
+    appBar.toggleClass("open");
+    navdrawerContainer.toggleClass("open");
+    navdrawerContainer.addClass("opened");
+    $state.opened = true;
+  };
+}
+
+},{}]},{},[8])
 
 
 //# sourceMappingURL=maps/index.js.map
