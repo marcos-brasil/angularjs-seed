@@ -242,7 +242,7 @@ exports.appBar = appBar;
 function headerBar() {
   return {
     restrict: "EA",
-    template: "\n<header class=\"app-bar promote-layer\">\n  <div class=\"app-bar-container\">\n    <button class=\"menu\"><img src=\"/seed/images/hamburger.svg\" alt=\"Menu\"></button>\n    <h1 class=\"logo\">Web <strong>Starter Kit</strong></h1>\n    <section class=\"app-bar-actions\">\n      <!-- Put App Bar Buttons Here-->\n      <button><i class=\"icon icon-star\"></i></button>\n      <button><i class=\"icon icon-cog\"></i></button>\n    </section>\n  </div>\n</header>\n" };
+    template: "\n<header class=\"app-bar promote-layer\">\n  <div class=\"app-bar-container\">\n    <button class=\"menu\"><img src=\"/angularjs-seed/images/hamburger.svg\" alt=\"Menu\"></button>\n    <h1 class=\"logo\">Web <strong>Starter Kit</strong></h1>\n    <section class=\"app-bar-actions\">\n      <!-- Put App Bar Buttons Here-->\n      <button><i class=\"icon icon-star\"></i></button>\n      <button><i class=\"icon icon-cog\"></i></button>\n    </section>\n  </div>\n</header>\n" };
 }
 
 menu.$inject = ["$state", "$body", "openNavdrawer"];
@@ -314,7 +314,7 @@ var hrefs = ["/", "styleguide", "tests", rand];
 var list = ["Home", "Style Guide", "Tests", "{{rand}}"];
 
 function iterator(v, k) {
-  return "<li><a href=\"/seed/" + hrefs[k] + "\">" + v + "</a></li>";
+  return "<li><a href=\"/angularjs-seed/" + hrefs[k] + "\">" + v + "</a></li>";
 }
 
 navBar.$inject = ["$state", "closeNavdrawer"];
@@ -328,7 +328,7 @@ function navBar($state, closeNavdrawer) {
     }],
     link: function link(scope, elem, attr) {
       elem.bind("click", function (evt) {
-        if (evt.target.pathname.match(/^\/seed/)) {
+        if (evt.target.pathname.match(/^\/angularjs-seed/)) {
           // TODO: learn css ng-animation, then use $state.transitionTo
           setImmediate(closeNavdrawer);
         }
@@ -572,24 +572,24 @@ function routerConfig($locationProvider, $stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");
 
   $urlRouterProvider.when("/", "index");
-  $urlRouterProvider.when("/seed/", "index");
-  $urlRouterProvider.otherwise("/seed");
+  $urlRouterProvider.when("/angularjs-seed/", "index");
+  $urlRouterProvider.otherwise("/angularjs-seed");
 
-  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/seed" })).state({
+  $stateProvider.state("index", Object.assign({}, _indexState, { url: "/angularjs-seed" })).state({
     name: "styleguide",
-    url: "/seed/styleguide",
-    templateUrl: "/seed/styleguide.html"
+    url: "/angularjs-seed/styleguide",
+    templateUrl: "/angularjs-seed/styleguide.html"
   }).state({
     name: "tests",
-    url: "/seed/tests",
+    url: "/angularjs-seed/tests",
     controller: ["$window", function ($window) {
       $window.location.reload(true);
     }],
     template: ""
   }).state({
     name: "404",
-    url: "/seed/{base}",
-    templateUrl: "/seed/404.html",
+    url: "/angularjs-seed/{base}",
+    templateUrl: "/angularjs-seed/404.html",
     controller: _404,
     onExit: function () {
       return clearInterval(flickerIntervalId);

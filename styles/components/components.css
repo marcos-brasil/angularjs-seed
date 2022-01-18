@@ -17,7 +17,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 9, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 9, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -29,7 +29,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 19, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 19, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 body {
   margin: 0; }
 
@@ -40,7 +40,7 @@ body {
  * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 42, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 42, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
   display: block; }
 
@@ -48,7 +48,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 54, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 54, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 audio, canvas, progress, video {
   display: inline-block;
   /* 1 */
@@ -59,7 +59,7 @@ audio, canvas, progress, video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 64, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 64, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -68,7 +68,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 75, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 75, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 [hidden], template {
   display: none; }
 
@@ -77,14 +77,14 @@ audio:not([controls]) {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 86, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 86, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 a {
   background: transparent; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 95, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 95, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 a:active, a:hover {
   outline: 0; }
 
@@ -93,28 +93,28 @@ a:active, a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 106, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 106, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 115, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 115, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 b, strong {
   font-weight: bold; }
 
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 123, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 123, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 dfn {
   font-style: italic; }
 
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 132, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 132, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 mark {
   background: #ff0;
   color: #000; }
@@ -122,18 +122,18 @@ mark {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 143, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 143, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
-/* line 150, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 150, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 sup {
   top: -0.5em; }
 
-/* line 154, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 154, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 sub {
   bottom: -0.25em; }
 
@@ -142,14 +142,14 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 165, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 165, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 img {
   border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 173, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 173, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -158,14 +158,14 @@ svg:not(:root) {
 /**
  * Remove margin
  */
-/* line 184, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 184, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 figure {
   margin: 0; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 192, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 192, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -174,14 +174,14 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 202, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 202, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 pre {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 213, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 213, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em; }
@@ -198,7 +198,7 @@ code, kbd, pre, samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 237, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 237, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 button, input, optgroup, select, textarea {
   color: inherit;
   /* 1 */
@@ -210,7 +210,7 @@ button, input, optgroup, select, textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 247, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 247, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 button {
   overflow: visible; }
 
@@ -220,7 +220,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 259, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 259, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 button, select {
   text-transform: none; }
 
@@ -231,7 +231,7 @@ button, select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 274, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 274, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -241,14 +241,14 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 284, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 284, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 button[disabled], html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 293, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 293, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -257,7 +257,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 303, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 303, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 input {
   line-height: normal; }
 
@@ -268,7 +268,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 316, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 316, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
@@ -280,7 +280,7 @@ input[type="checkbox"], input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 328, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 328, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
@@ -289,7 +289,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 338, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 338, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -303,7 +303,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 352, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 352, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
@@ -311,7 +311,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 361, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 361, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 legend {
   border: 0;
   /* 1 */
@@ -321,7 +321,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 370, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 370, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 textarea {
   overflow: auto; }
 
@@ -329,7 +329,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 379, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 379, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 optgroup {
   font-weight: bold; }
 
@@ -338,18 +338,18 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 390, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 390, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 396, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 396, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 td, th {
   padding: 0; }
 
 /* Blockquote
    ========================================================================== */
-/* line 403, /Volumes/proton/suite/seed-ghpages/src/styles/components/_normalize */
+/* line 403, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_normalize */
 blockquote {
   margin: 0; }
 
@@ -358,17 +358,17 @@ blockquote {
 * Global
 *
 **/
-/* line 9, /Volumes/proton/suite/seed-ghpages/src/styles/components/_global */
+/* line 9, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_global */
 *, *::before, *::after {
   box-sizing: border-box; }
 
-/* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_global */
+/* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_global */
 html, body, button {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased; }
 
-/* line 21, /Volumes/proton/suite/seed-ghpages/src/styles/components/_global */
+/* line 21, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_global */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -377,7 +377,7 @@ body {
   font-weight: 300;
   color: #404040;
   position: relative; }
-  /* line 154, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 154, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   body::after {
     content: '';
     position: absolute;
@@ -390,17 +390,17 @@ body {
     display: none;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%);
     background-size: 100% 26px; }
-  /* line 170, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 170, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   body.debug::after {
     display: block;
     pointer-events: none; }
 
-/* line 31, /Volumes/proton/suite/seed-ghpages/src/styles/components/_global */
+/* line 31, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_global */
 pre {
   background: #f0f0f0;
   padding: 13px; }
 
-/* line 36, /Volumes/proton/suite/seed-ghpages/src/styles/components/_global */
+/* line 36, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_global */
 .main-container {
   box-sizing: content-box;
   position: relative;
@@ -419,7 +419,7 @@ pre {
       padding-right: 4.4%;
       max-width: 864px; } }
 
-/* line 40, /Volumes/proton/suite/seed-ghpages/src/styles/components/_global */
+/* line 40, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_global */
 .container {
   box-sizing: content-box;
   position: relative;
@@ -479,7 +479,7 @@ pre {
 @media only screen and (min-width: 800px) {
   .content {
     margin-right: 25.9%; }
-    /* line 60, /Volumes/proton/suite/seed-ghpages/src/styles/components/_global */
+    /* line 60, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_global */
     .content pre {
       margin-right: -25.9%; } }
 
@@ -490,7 +490,7 @@ pre {
   font-weight: normal;
   font-style: normal; }
 
-/* line 13, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 13, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon {
   font-family: 'icons';
   display: inline-block;
@@ -505,99 +505,99 @@ pre {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* line 30, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 30, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-bullet::before, ul li::before, ul.list-links a::before, .list-anchor a::before {
   content: "\e001"; }
 
-/* line 35, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 35, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-chevron-down::before {
   content: '\e002'; }
 
-/* line 40, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 40, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-chevron-large::before {
   content: '\e003'; }
 
-/* line 45, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 45, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-chevron-left::before, .article-nav-link--prev::before {
   content: '\e004'; }
 
-/* line 50, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 50, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-chevron-right::before, .article-nav-link--next::before, ul.list-links.list-links--primary a::before {
   content: '\e005'; }
 
-/* line 55, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 55, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-chevron-up::before {
   content: '\e006'; }
 
-/* line 60, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 60, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-close::before {
   content: '\e007'; }
 
-/* line 65, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 65, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-cog::before {
   content: '\e008'; }
 
-/* line 70, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 70, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-diamond::before {
   content: '\e009'; }
 
-/* line 75, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 75, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-exclamation::before {
   content: '\e00a'; }
 
-/* line 80, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 80, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-google-dev::before {
   content: '\e00b'; }
 
-/* line 85, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 85, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-hash::before {
   content: '\e00c'; }
 
-/* line 90, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 90, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-introduction-to-media::before {
   content: '\e00d'; }
 
-/* line 95, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 95, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-lessons::before {
   content: '\e00e'; }
 
-/* line 100, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 100, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-menu::before {
   content: '\e00f'; }
 
-/* line 105, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 105, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-minus::before {
   content: '\e010'; }
 
-/* line 110, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 110, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-multi-device-layouts::before {
   content: '\e011'; }
 
-/* line 115, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 115, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-performance::before {
   content: '\e012'; }
 
-/* line 120, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 120, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-plus::before {
   content: '\e013'; }
 
-/* line 125, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 125, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-question::before {
   content: '\e014'; }
 
-/* line 130, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 130, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-slash::before {
   content: '\e015'; }
 
-/* line 135, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 135, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-star::before {
   content: '\e016'; }
 
-/* line 140, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 140, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-tick::before {
   content: '\e017'; }
 
-/* line 145, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icons */
+/* line 145, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icons */
 .icon-user-input::before {
   content: '\e018'; }
 
@@ -615,13 +615,13 @@ pre {
 * Highlight
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module {
   overflow: hidden;
   margin-top: 52px;
   margin-bottom: 26px;
   position: relative; }
-  /* line 13, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 13, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module::after {
     background: #f0f0f0;
     content: '';
@@ -633,11 +633,11 @@ pre {
     width: 100%;
     right: 0;
     left: 0; }
-  /* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module ul, .highlight-module ol {
     padding-left: 0; }
 
-/* line 32, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 32, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module__container {
   box-sizing: content-box;
   padding-left: 5%;
@@ -657,7 +657,7 @@ pre {
       padding-left: 4.4%;
       padding-right: 4.4%;
       max-width: 864px; } }
-  /* line 371, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 371, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   .highlight-module__container::before {
     display: none; }
     @media only screen and (min-width: 620px) {
@@ -673,7 +673,7 @@ pre {
         height: 100%;
         width: 30.3%;
         color: #ffffff; } }
-    /* line 389, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+    /* line 389, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
     .highlight-module--left .highlight-module__container::before {
       right: auto;
       left: 45px; }
@@ -682,7 +682,7 @@ pre {
         top: 134px;
         width: 22.2%;
         font-size: 180px; }
-        /* line 399, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+        /* line 399, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
         .highlight-module--large .highlight-module__container::before {
           font-size: 430px; } }
   @media only screen and (min-width: 620px) {
@@ -692,7 +692,7 @@ pre {
     .highlight-module__container {
       min-height: 208px; } }
 
-/* line 47, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 47, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module__title {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 68px;
@@ -730,40 +730,40 @@ pre {
           padding-top: 0.3824em;
           padding-bottom: 0; } } }
 
-/* line 56, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 56, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module__cta {
   display: block; }
 
 /*==========  LEARNING  ==========*/
-/* line 62, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 62, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module--learning {
   color: #ffffff; }
-  /* line 65, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 65, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--learning::after {
     background-color: #da2e75; }
-  /* line 69, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 69, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--learning a {
     color: #ffffff;
     text-decoration: underline; }
 
 /*==========  REMEMBER  ==========*/
-/* line 77, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 77, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module--remember {
   color: #ffffff; }
-  /* line 80, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 80, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--remember::after {
     background-color: #09829a; }
-  /* line 84, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 84, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--remember a {
     color: #ffffff;
     text-decoration: underline; }
 
 /*==========  CODE  ==========*/
-/* line 92, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 92, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module--code {
   overflow: visible;
   margin-bottom: 52px; }
-  /* line 96, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 96, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--code pre {
     margin: 0;
     padding-top: 26px;
@@ -772,21 +772,21 @@ pre {
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0; }
-    /* line 105, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+    /* line 105, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
     .highlight-module--code pre span {
       margin: 0;
       padding: 0;
       display: inline-block; }
-  /* line 112, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 112, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--code code {
     margin: 0;
     padding: 0;
     word-spacing: -2px;
     display: block; }
-  /* line 119, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 119, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--code .highlight-module__container {
     padding-bottom: 0; }
-  /* line 123, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 123, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--code .highlight-module__cta {
     position: absolute;
     bottom: -26px; }
@@ -808,18 +808,18 @@ pre {
     left: 0; } }
 
 /*==========  INLINE  ==========*/
-/* line 162, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 162, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 .highlight-module--inline {
   color: #404040;
   overflow: visible;
   margin: 26px 0 0; }
-  /* line 167, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 167, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--inline .highlight-module__container {
     padding-bottom: 0; }
-    /* line 170, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+    /* line 170, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
     .highlight-module--inline .highlight-module__container::before {
       display: none; }
-  /* line 175, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 175, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--inline .highlight-module__content {
     border-color: #e0e0e0;
     border-style: solid;
@@ -828,7 +828,7 @@ pre {
     border-right-width: 0;
     margin-bottom: -2px;
     padding: 0 0 26px; }
-  /* line 185, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 185, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--inline .highlight-module__title {
     font-size: 20px;
     font-weight: 300;
@@ -845,28 +845,28 @@ pre {
         /* 26px */
         padding-top: 1em;
         padding-bottom: 0; } }
-  /* line 191, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 191, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--inline.highlight-module--remember .highlight-module__title, .highlight-module--inline.highlight-module--remember li::before {
     color: #09829a; }
-  /* line 198, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 198, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--inline.highlight-module--learning .highlight-module__title, .highlight-module--inline.highlight-module--learning li::before {
     color: #da2e75; }
-  /* line 203, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+  /* line 203, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
   .highlight-module--inline::after {
     display: none !important; }
 
 /*==========  COLORS  ==========*/
-/* line 210, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 210, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code, code .highlight {
   background: transparent; }
 
-/* line 211, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 211, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .c, code .highlight .c {
   color: #999988;
   font-style: italic; }
 
 /* Comment */
-/* line 212, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 212, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .err, code .highlight .err {
   color: #a61717;
   background-color: #e3d2d2; }
@@ -874,85 +874,85 @@ div.highlight > pre > code .err, code .highlight .err {
 /* Error */
 /* Keyword */
 /* Operator */
-/* line 215, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 215, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .cm, code .highlight .cm {
   color: #999988;
   font-style: italic; }
 
 /* Comment.Multiline */
-/* line 216, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 216, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .cp, code .highlight .cp {
   color: rgba(0, 0, 0, 0.54); }
 
 /* Comment.Preproc */
-/* line 217, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 217, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .c1, code .highlight .c1 {
   color: #999988;
   font-style: italic; }
 
 /* Comment.Single */
-/* line 218, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 218, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .cs, code .highlight .cs {
   color: rgba(0, 0, 0, 0.54);
   font-style: italic; }
 
 /* Comment.Special */
-/* line 219, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 219, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gs, code .highlight .gd {
   color: #000000;
   background-color: #ffdddd; }
 
 /* Generic.Deleted */
-/* line 220, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 220, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gd .x, code .highlight .gd .x {
   color: #000000;
   background-color: #ffaaaa; }
 
 /* Generic.Deleted.Specific */
-/* line 221, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 221, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .ge, code .highlight .ge {
   font-style: italic; }
 
 /* Generic.Emph */
-/* line 222, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 222, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gr, code .highlight .gr {
   color: #aa0000; }
 
 /* Generic.Error */
-/* line 223, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 223, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gh, code .highlight .gh {
   color: rgba(0, 0, 0, 0.54); }
 
 /* Generic.Heading */
-/* line 224, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 224, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gi, code .highlight .gi {
   color: #000000;
   background-color: #ddffdd; }
 
 /* Generic.Inserted */
-/* line 225, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 225, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gi .x, code .highlight .gi .x {
   color: #000000;
   background-color: #aaffaa; }
 
 /* Generic.Inserted.Specific */
-/* line 226, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 226, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .go, code .highlight .go {
   color: #888888; }
 
 /* Generic.Output */
-/* line 227, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 227, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gp, code .highlight .gp {
   color: #555555; }
 
 /* Generic.Prompt */
 /* Generic.Strong */
-/* line 229, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 229, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gu, code .highlight .gu {
   color: #aaaaaa; }
 
 /* Generic.Subheading */
-/* line 230, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 230, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .gt, code .highlight .gt {
   color: #aa0000; }
 
@@ -961,173 +961,173 @@ div.highlight > pre > code .gt, code .highlight .gt {
 /* Keyword.Declaration */
 /* Keyword.Pseudo */
 /* Keyword.Reserved */
-/* line 235, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 235, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .kt, code .highlight .kt {
   color: #445588; }
 
 /* Keyword.Type */
-/* line 236, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 236, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .m, code .highlight .m {
   color: #009999; }
 
 /* Literal.Number */
-/* line 237, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 237, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .s, code .highlight .s {
   color: #da2e75; }
 
 /* Literal.String */
-/* line 238, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 238, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .na, code .highlight .na {
   color: #008080; }
 
 /* Name.Attribute */
-/* line 239, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 239, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .nb, code .highlight .nb {
   color: #0086B3; }
 
 /* Name.Builtin */
-/* line 240, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 240, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .nc, code .highlight .nc {
   color: #445588; }
 
 /* Name.Class */
-/* line 241, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 241, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .no, code .highlight .no {
   color: #008080; }
 
 /* Name.Constant */
-/* line 242, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 242, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .ni, code .highlight .ni {
   color: #800080; }
 
 /* Name.Entity */
-/* line 243, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 243, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .ne, code .highlight .ne {
   color: #990000; }
 
 /* Name.Exception */
-/* line 244, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 244, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .nf, code .highlight .nf {
   color: #990000; }
 
 /* Name.Function */
-/* line 245, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 245, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .nn, code .highlight .nn {
   color: #555555; }
 
 /* Name.Namespace */
-/* line 246, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 246, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .nt, code .highlight .nt {
   color: #09829a; }
 
 /* Name.Tag */
-/* line 247, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 247, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .nv, code .highlight .nv {
   color: #008080; }
 
 /* Name.Variable */
 /* Operator.Word */
-/* line 249, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 249, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .w, code .highlight .w {
   color: #bbbbbb; }
 
 /* Text.Whitespace */
-/* line 250, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 250, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .mf, code .highlight .mf {
   color: #009999; }
 
 /* Literal.Number.Float */
-/* line 251, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 251, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .mh, code .highlight .mh {
   color: #009999; }
 
 /* Literal.Number.Hex */
-/* line 252, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 252, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .mi, code .highlight .mi {
   color: #009999; }
 
 /* Literal.Number.Integer */
-/* line 253, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 253, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .mo, code .highlight .mo {
   color: #009999; }
 
 /* Literal.Number.Oct */
-/* line 254, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 254, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .sb, code .highlight .sb {
   color: #da2e75; }
 
 /* Literal.String.Backtick */
-/* line 255, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 255, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .sc, code .highlight .sc {
   color: #da2e75; }
 
 /* Literal.String.Char */
-/* line 256, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 256, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .sd, code .highlight .sd {
   color: #da2e75; }
 
 /* Literal.String.Doc */
-/* line 257, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 257, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .s2, code .highlight .s2 {
   color: #da2e75; }
 
 /* Literal.String.Double */
-/* line 258, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 258, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .se, code .highlight .se {
   color: #da2e75; }
 
 /* Literal.String.Escape */
-/* line 259, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 259, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .sh, code .highlight .sh {
   color: #da2e75; }
 
 /* Literal.String.Heredoc */
-/* line 260, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 260, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .si, code .highlight .si {
   color: #da2e75; }
 
 /* Literal.String.Interpol */
-/* line 261, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 261, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .sx, code .highlight .sx {
   color: #da2e75; }
 
 /* Literal.String.Other */
-/* line 262, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 262, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .sr, code .highlight .sr {
   color: #009926; }
 
 /* Literal.String.Regex */
-/* line 263, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 263, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .s1, code .highlight .s1 {
   color: #da2e75; }
 
 /* Literal.String.Single */
-/* line 264, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 264, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .ss, code .highlight .ss {
   color: #990073; }
 
 /* Literal.String.Symbol */
-/* line 265, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 265, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .bp, code .highlight .bp {
   color: rgba(0, 0, 0, 0.54); }
 
 /* Name.Builtin.Pseudo */
-/* line 266, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 266, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .vc, code .highlight .vc {
   color: #008080; }
 
 /* Name.Variable.Class */
-/* line 267, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 267, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .vg, code .highlight .vg {
   color: #008080; }
 
 /* Name.Variable.Global */
-/* line 268, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 268, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .vi, code .highlight .vi {
   color: #008080; }
 
 /* Name.Variable.Instance */
-/* line 269, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_highlight */
+/* line 269, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_highlight */
 div.highlight > pre > code .il, code .highlight .il {
   color: #009999; }
 
@@ -1137,19 +1137,19 @@ div.highlight > pre > code .il, code .highlight .il {
 * Editorial Header
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
 .editorial-header {
   overflow: hidden; }
-  /* line 10, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+  /* line 10, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
   .editorial-header .breadcrumbs {
     color: #3372df; }
-    /* line 13, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+    /* line 13, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
     .editorial-header .breadcrumbs a {
       color: #3372df; }
   @media only screen and (min-width: 620px) {
     .editorial-header .container {
       position: relative; }
-      /* line 24, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+      /* line 24, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
       .editorial-header .container::before {
         content: '\e003';
         font-family: 'icons';
@@ -1162,7 +1162,7 @@ div.highlight > pre > code .il, code .highlight .il {
         color: #f0f0f0;
         margin: 168px -35px 0 0; } }
 
-/* line 41, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+/* line 41, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
 .editorial-header__excerpt {
   font-size: 20px;
   font-weight: 300;
@@ -1172,11 +1172,11 @@ div.highlight > pre > code .il, code .highlight .il {
   padding-bottom: 0;
   font-family: 'Roboto Condensed', Helvetica, sans-serif; }
 
-/* line 46, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+/* line 46, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
 .editorial-header .tag {
   padding-top: 52px; }
 
-/* line 50, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+/* line 50, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
 .editorial-header__subtitle {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 42px;
@@ -1201,17 +1201,17 @@ div.highlight > pre > code .il, code .highlight .il {
       padding-top: 0;
       padding-bottom: 26px; } }
 
-/* line 60, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+/* line 60, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
 .editorial-header__toc {
   margin-top: 26px; }
-  /* line 63, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+  /* line 63, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
   .editorial-header__toc ol {
     padding-top: 0; }
     @media only screen and (min-width: 620px) {
       .editorial-header__toc ol {
         padding-top: 0; } }
 
-/* line 72, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_editorial-header */
+/* line 72, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_editorial-header */
 .editorial-header__toc-title {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   border-bottom: 1px solid #e0e0e0;
@@ -1224,22 +1224,22 @@ div.highlight > pre > code .il, code .highlight .il {
 * Editorial Header
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_summary-header */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_summary-header */
 .summary-header {
   background-color: #3372df;
   padding-bottom: 78px;
   color: #ffffff;
   margin-bottom: 26px;
   box-shadow: inset 0 2px 0 0 #fff; }
-  /* line 14, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_summary-header */
+  /* line 14, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_summary-header */
   .summary-header .breadcrumbs__link {
     color: #ffffff; }
 
-/* line 20, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_summary-header */
+/* line 20, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_summary-header */
 .summary-header__anchor-list {
   margin-top: 52px; }
 
-/* line 26, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_summary-header */
+/* line 26, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_summary-header */
 .summary-header__anchors-item a {
   color: #ffffff; }
 
@@ -1248,21 +1248,21 @@ div.highlight > pre > code .il, code .highlight .il {
 * Related items
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_related-guides */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_related-guides */
 .related-guides {
   margin-top: 78px;
   padding-bottom: 50px;
   border-top: 2px solid #e0e0e0;
   padding-top: 50px; }
 
-/* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_related-guides */
+/* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_related-guides */
 .related-guides__list .list-links {
   padding-top: 0; }
-/* line 19, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_related-guides */
+/* line 19, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_related-guides */
 .related-guides__list a {
   display: block; }
 
-/* line 24, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_related-guides */
+/* line 24, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_related-guides */
 .related-guides__title {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 26px;
@@ -1285,10 +1285,10 @@ div.highlight > pre > code .il, code .highlight .il {
     .related-guides__title {
       padding-top: 0; } }
 
-/* line 33, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_related-guides */
+/* line 33, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_related-guides */
 .related-guides__main-link {
   text-transform: uppercase; }
-  /* line 36, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_related-guides */
+  /* line 36, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_related-guides */
   .related-guides__main-link::before {
     content: '#';
     display: inline-block;
@@ -1299,11 +1299,11 @@ div.highlight > pre > code .il, code .highlight .il {
 * In this guide
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_in-this-guide */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_in-this-guide */
 .in-this-guide {
   margin-top: -78px; }
 
-/* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_in-this-guide */
+/* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_in-this-guide */
 .in-this-guide__title {
   font-size: 20px;
   font-weight: 300;
@@ -1319,26 +1319,26 @@ div.highlight > pre > code .il, code .highlight .il {
 * Articles section
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_articles-section */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_articles-section */
 .articles-section {
   background: #f0f0f0;
   text-align: center;
   padding: 26px 0 104px; }
 
-/* line 13, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_articles-section */
+/* line 13, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_articles-section */
 .articles-count {
   color: #3372df;
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-weight: 400; }
 
-/* line 19, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_articles-section */
+/* line 19, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_articles-section */
 .article-section__icon {
   top: -26px; }
   @media only screen and (min-width: 620px) {
     .article-section__icon {
       top: -39px; } }
 
-/* line 1, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_guides-section */
+/* line 1, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_guides-section */
 .guides-section {
   background: #f0f0f0;
   text-align: center;
@@ -1349,26 +1349,26 @@ div.highlight > pre > code .il, code .highlight .il {
 * Page header
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_page-header */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_page-header */
 .page-header {
   text-align: center; }
-  /* line 10, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_page-header */
+  /* line 10, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_page-header */
   .page-header .breadcrumbs {
     text-align: left;
     color: #3372df; }
-    /* line 14, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_page-header */
+    /* line 14, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_page-header */
     .page-header .breadcrumbs a {
       color: #3372df; }
-  /* line 19, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_page-header */
+  /* line 19, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_page-header */
   .page-header h3 {
     color: rgba(0, 0, 0, 0.87);
     padding-top: 52px; }
 
-/* line 25, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_page-header */
+/* line 25, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_page-header */
 .page-header__excerpt {
   position: relative;
   padding-top: 0; }
-  /* line 29, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_page-header */
+  /* line 29, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_page-header */
   .page-header__excerpt:last-child {
     padding-bottom: 78px; }
 
@@ -1377,7 +1377,7 @@ div.highlight > pre > code .il, code .highlight .il {
 * Editorial Header
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_featured-section */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_featured-section */
 .featured-section {
   background: #f0f0f0; }
 
@@ -1386,24 +1386,24 @@ div.highlight > pre > code .il, code .highlight .il {
 * Editorial Header
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_featured-spotlight */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_featured-spotlight */
 .featured-spotlight {
   background: rgba(0, 0, 0, 0.87);
   color: #ffffff;
   overflow: hidden;
   padding-bottom: 77px;
   margin-top: 52px; }
-  /* line 14, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_featured-spotlight */
+  /* line 14, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_featured-spotlight */
   .featured-spotlight p {
     padding-bottom: 26px; }
-  /* line 18, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_featured-spotlight */
+  /* line 18, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_featured-spotlight */
   .featured-spotlight .cta--primary {
     color: #ffffff; }
-    /* line 21, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_featured-spotlight */
+    /* line 21, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_featured-spotlight */
     .featured-spotlight .cta--primary:hover {
       color: #ffffff; }
 
-/* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_featured-spotlight */
+/* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_featured-spotlight */
 .featured-spotlight__container {
   position: relative; }
 
@@ -1415,7 +1415,7 @@ div.highlight > pre > code .il, code .highlight .il {
     overflow: hidden;
     position: relative;
     width: 100%; } }
-/* line 41, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_featured-spotlight */
+/* line 41, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_featured-spotlight */
 .featured-spotlight__img img {
   margin: 0 auto;
   display: block;
@@ -1438,7 +1438,7 @@ div.highlight > pre > code .il, code .highlight .il {
 * Quote
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_quote */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_quote */
 .quote__content {
   position: relative;
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
@@ -1461,14 +1461,14 @@ div.highlight > pre > code .il, code .highlight .il {
     .quote__content {
       padding-top: 52px;
       padding-left: 0; } }
-  /* line 19, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_quote */
+  /* line 19, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_quote */
   .quote__content p {
     border-top: 1px solid #e0e0e0;
     text-align: right;
     font-weight: 500;
     margin-top: 12px;
     padding-top: 13px; }
-  /* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_quote */
+  /* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_quote */
   .quote__content::before {
     content: open-quote;
     display: block;
@@ -1490,11 +1490,11 @@ div.highlight > pre > code .il, code .highlight .il {
 * Article nav
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
 .article-nav {
   overflow: hidden;
   position: relative; }
-  /* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+  /* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
   .article-nav::before {
     content: '';
     border-left: 2px solid #e0e0e0;
@@ -1503,13 +1503,13 @@ div.highlight > pre > code .il, code .highlight .il {
     top: 0;
     left: 50%; }
 
-/* line 21, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+/* line 21, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
 .article-nav-link {
   padding: 26px 32px;
   float: left;
   width: 50%;
   position: relative; }
-  /* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+  /* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
   .article-nav-link::before {
     position: absolute;
     top: 21px;
@@ -1525,15 +1525,15 @@ div.highlight > pre > code .il, code .highlight .il {
         color: #ffffff;
         background: #3372df; } }
 
-/* line 45, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+/* line 45, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
 .article-nav p {
   padding: 0;
   margin: 0; }
 
-/* line 50, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+/* line 50, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
 .article-nav-link--prev {
   text-align: right; }
-  /* line 54, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+  /* line 54, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
   .article-nav-link--prev::before {
     font-family: 'icons';
     left: 32px; }
@@ -1541,7 +1541,7 @@ div.highlight > pre > code .il, code .highlight .il {
     .article-nav-link--prev p {
       padding-left: 52px; } }
 
-/* line 70, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+/* line 70, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
 .article-nav-link--next::before {
   font-family: 'icons';
   right: 32px; }
@@ -1549,7 +1549,7 @@ div.highlight > pre > code .il, code .highlight .il {
   .article-nav-link--next p {
     padding-right: 52px; } }
 
-/* line 83, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_article-nav */
+/* line 83, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_article-nav */
 .article-nav-count {
   font-size: 20px;
   font-weight: 300;
@@ -1579,11 +1579,11 @@ div.highlight > pre > code .il, code .highlight .il {
 @media only screen and (min-width: 620px) {
   .did-you-know ol {
     padding-top: 0 !important; } }
-/* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_did-you-know */
+/* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_did-you-know */
 .did-you-know .cta--primary {
   margin-top: 26px;
   font-weight: 500; }
-/* line 20, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_did-you-know */
+/* line 20, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_did-you-know */
 .did-you-know > .g--half {
   position: relative;
   padding-left: 0; }
@@ -1591,13 +1591,13 @@ div.highlight > pre > code .il, code .highlight .il {
     .did-you-know > .g--half {
       padding-left: 32px; } }
 
-/* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_did-you-know */
+/* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_did-you-know */
 .did-you-know__symbol {
   padding-bottom: 312px; }
   @media only screen and (min-width: 620px) {
     .did-you-know__symbol {
       padding-bottom: 26px; } }
-  /* line 31, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_did-you-know */
+  /* line 31, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_did-you-know */
   .did-you-know__symbol::after {
     content: '\e014';
     color: #3372df;
@@ -1626,7 +1626,7 @@ div.highlight > pre > code .il, code .highlight .il {
 * Table of contents
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_toc */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_toc */
 .toc__title {
   font-size: 16px;
   line-height: 1.625em;
@@ -1650,17 +1650,17 @@ div.highlight > pre > code .il, code .highlight .il {
       padding-bottom: 13px;
       margin-bottom: 13px; } }
 
-/* line 20, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_toc */
+/* line 20, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_toc */
 .toc__list {
   padding-top: 0;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 12px;
   margin-bottom: 13px; }
-  /* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_toc */
+  /* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_toc */
   .toc__list a {
     display: block; }
 
-/* line 32, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_toc */
+/* line 32, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_toc */
 .toc__sublist {
   padding-top: 0; }
 
@@ -1669,7 +1669,7 @@ div.highlight > pre > code .il, code .highlight .il {
 * Next Lessons
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_next-lessons */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_next-lessons */
 .next-lessons {
   background: rgba(0, 0, 0, 0.87);
   padding: 26px 26px 52px;
@@ -1679,7 +1679,7 @@ div.highlight > pre > code .il, code .highlight .il {
   @media only screen and (min-width: 620px) {
     .next-lessons h3 i {
       display: none; } }
-  /* line 23, /Volumes/proton/suite/seed-ghpages/src/styles/components/_modules/_next-lessons */
+  /* line 23, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_modules/_next-lessons */
   .next-lessons::before, .next-lessons::after {
     color: rgba(255, 255, 255, 0.5);
     position: absolute;
@@ -1726,166 +1726,166 @@ div.highlight > pre > code .il, code .highlight .il {
 *
 **/
 @media only screen and (min-width: 620px) and (max-width: 799px) {
-  /* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--1 {
     float: left;
     margin-right: 4.5%;
     width: 30.3%; }
 
-  /* line 18, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 18, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--push-1 {
     margin-left: 34.8%; }
 
-  /* line 21, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 21, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--pull-1 {
     margin-right: 34.8%; }
 
-  /* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--2 {
     float: left;
     margin-right: 4.5%;
     width: 65.1%; }
 
-  /* line 18, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 18, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--push-2 {
     margin-left: 69.6%; }
 
-  /* line 21, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 21, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--pull-2 {
     margin-right: 69.6%; }
 
-  /* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--3 {
     float: left;
     margin-right: 4.5%;
     width: 99.9%;
     margin-right: 0; }
 
-  /* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--full {
     float: left;
     margin-right: 4.5%;
     margin-right: 0;
     width: 100%; }
 
-  /* line 33, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 33, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g--third {
     float: left;
     margin-right: 4.5%;
     width: 30.3%; }
 
-  /* line 39, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 39, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g--half, .g-medium--half {
     float: left;
     margin-right: 4.5%;
     width: 47.75%; }
 
-  /* line 44, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 44, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--last {
     margin-right: 0; }
 
-  /* line 45, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 45, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-medium--last + .g-medium--half {
     clear: left; }
 
-  /* line 47, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 47, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g--pull-half {
     margin-right: 52.25%; }
  }
 
 @media only screen and (min-width: 800px) {
-  /* line 54, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 54, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--1 {
     float: left;
     margin-right: 3.7%;
     width: 22.2%; }
 
-  /* line 61, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 61, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--push-1 {
     margin-left: 25.9%; }
 
-  /* line 64, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 64, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--pull-1 {
     margin-right: 25.9%; }
 
-  /* line 54, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 54, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--2 {
     float: left;
     margin-right: 3.7%;
     width: 48.1%; }
 
-  /* line 61, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 61, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--push-2 {
     margin-left: 51.8%; }
 
-  /* line 64, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 64, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--pull-2 {
     margin-right: 51.8%; }
 
-  /* line 54, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 54, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--3 {
     float: left;
     margin-right: 3.7%;
     width: 74%; }
 
-  /* line 61, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 61, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--push-3 {
     margin-left: 77.7%; }
 
-  /* line 64, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 64, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--pull-3 {
     margin-right: 77.7%; }
 
-  /* line 54, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 54, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--4 {
     float: left;
     margin-right: 3.7%;
     width: 99.9%;
     margin-right: 0; }
 
-  /* line 70, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 70, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--last {
     margin-right: 0; }
 
-  /* line 72, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 72, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g-wide--full {
     float: left;
     margin-right: 3.7%;
     margin-right: 0;
     width: 100%; }
 
-  /* line 78, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 78, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g--third {
     float: left;
     margin-right: 3.7%;
     width: 30.8%; }
 
-  /* line 84, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 84, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g--half, .g-wide--half {
     float: left;
     margin-right: 3.7%;
     width: 48.15%; }
 
-  /* line 89, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 89, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .g--pull-half {
     margin-right: 51.85%; }
  }
 
-/* line 99, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+/* line 99, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
 .g--last {
   margin-right: 0; }
 
-/* line 103, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+/* line 103, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
 .g--centered {
   float: none;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 112, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+/* line 112, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
 .grid-overlay {
   display: none;
   pointer-events: none; }
-  /* line 118, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+  /* line 118, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
   .debug .grid-overlay {
     box-sizing: content-box;
     position: relative;
@@ -1910,12 +1910,12 @@ div.highlight > pre > code .il, code .highlight .il {
         padding-left: 4.4%;
         padding-right: 4.4%;
         max-width: 864px; } }
-    /* line 129, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+    /* line 129, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
     .debug .grid-overlay [class*="g-"] {
       height: 100%;
       background-color: rgba(89, 89, 89, 0.2); }
     @media only screen and (min-width: 620px) and (max-width: 799px) {
-      /* line 135, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_grid */
+      /* line 135, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_grid */
       .debug .grid-overlay .g-wide--last {
         display: none; }
  }
@@ -1928,11 +1928,11 @@ div.highlight > pre > code .il, code .highlight .il {
 * Typography
 *
 **/
-/* line 9, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 9, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 h1, h2, h3, h4, h5, p {
   margin: 0; }
 
-/* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 .small, small {
   font-size: 13px;
   line-height: 2em;
@@ -1940,7 +1940,7 @@ h1, h2, h3, h4, h5, p {
   padding-top: 2em;
   padding-bottom: 0; }
 
-/* line 22, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 22, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 .base, p, ul, ol {
   font-size: 16px;
   line-height: 1.625em;
@@ -1948,7 +1948,7 @@ h1, h2, h3, h4, h5, p {
   padding-top: 1.625em;
   padding-bottom: 0; }
 
-/* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 .medium, h4 {
   font-size: 16px;
   line-height: 1.625em;
@@ -1964,7 +1964,7 @@ h1, h2, h3, h4, h5, p {
       padding-top: 1.3em;
       padding-bottom: 0; } }
 
-/* line 32, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 32, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 .large, h3 {
   font-size: 20px;
   font-weight: 300;
@@ -1982,7 +1982,7 @@ h1, h2, h3, h4, h5, p {
       padding-top: 1em;
       padding-bottom: 0; } }
 
-/* line 36, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 36, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 .xlarge, h2 {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 26px;
@@ -2001,7 +2001,7 @@ h1, h2, h3, h4, h5, p {
       padding-top: 0.619em;
       padding-bottom: 0; } }
 
-/* line 41, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 41, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 .xxlarge, h1 {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 42px;
@@ -2020,7 +2020,7 @@ h1, h2, h3, h4, h5, p {
       padding-top: 0.3824em;
       padding-bottom: 0; } }
 
-/* line 45, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 45, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 .huge {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   font-size: 68px;
@@ -2039,7 +2039,7 @@ h1, h2, h3, h4, h5, p {
       padding-top: 0.2364em;
       padding-bottom: 0; } }
 
-/* line 50, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_typography */
+/* line 50, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_typography */
 li > p {
   padding-top: 0; }
 
@@ -2048,7 +2048,7 @@ li > p {
 * Button
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_button */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_button */
 .button, .button--primary, .button--secondary, .button--secondary-variation {
   display: inline-block;
   padding: 12px 32px;
@@ -2061,26 +2061,26 @@ li > p {
   text-decoration: none;
   outline: 0;
   transition: none; }
-  /* line 24, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_button */
+  /* line 24, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_button */
   .button:hover, .button--primary:hover, .button--secondary:hover, .button--secondary-variation:hover {
     background: #4d4d4d;
     color: #ffffff;
     border: 1px solid #4d4d4d;
     text-decoration: none; }
 
-/* line 43, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_button */
+/* line 43, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_button */
 .button--primary {
   background: #4285f4;
   color: #ffffff;
   border: 1px solid #1266f1; }
 
-/* line 48, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_button */
+/* line 48, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_button */
 .button--secondary {
   background: #ffffff;
   color: #3372df;
   border: 1px solid #e6e6e6; }
 
-/* line 53, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_button */
+/* line 53, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_button */
 .button--secondary-variation {
   background: #ffffff;
   color: #3372df;
@@ -2092,7 +2092,7 @@ li > p {
 * List
 *
 **/
-/* line 8, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 8, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ul, ol {
   list-style: none;
   margin: 0; }
@@ -2100,11 +2100,11 @@ ul, ol {
     ul, ol {
       padding-left: 0; } }
 
-/* line 17, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 17, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ul li {
   position: relative;
   padding-left: 16px; }
-  /* line 309, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 309, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   ul li::before {
     font-family: 'icons';
     font-size: 13px;
@@ -2114,18 +2114,18 @@ ul li {
     top: 0;
     left: 0;
     line-height: 26px; }
-  /* line 22, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 22, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   ul li::before {
     font-size: 4px; }
 
-/* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ol {
   counter-reset: list; }
-  /* line 29, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 29, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   ol > li {
     position: relative;
     padding-left: 32px; }
-    /* line 331, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+    /* line 331, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
     ol > li::before {
       counter-increment: list;
       content: '0' counter(list);
@@ -2134,22 +2134,22 @@ ol {
       display: inline-block;
       position: absolute;
       left: 0; }
-    /* line 38, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+    /* line 38, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
     ol > li:nth-child(10n) ~ li::before, ol > li:nth-child(10n)::before {
       content: counter(list); }
 
-/* line 46, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 46, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ul ol, ol ul {
   padding-top: 0; }
 
 /*==========  LIST LINKS  ==========*/
-/* line 54, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 54, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ul.list-links li::before {
   display: none; }
-/* line 57, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 57, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ul.list-links a {
   font-weight: 400; }
-  /* line 309, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 309, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   ul.list-links a::before {
     font-family: 'icons';
     font-size: 13px;
@@ -2159,16 +2159,16 @@ ul.list-links a {
     top: 0;
     left: 0;
     line-height: 26px; }
-  /* line 60, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 60, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   ul.list-links a::before {
     font-size: 4px; }
-/* line 68, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 68, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ul.list-links.list-links--primary a {
   font-weight: 400;
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   line-height: 1;
   text-decoration: none; }
-  /* line 309, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 309, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   ul.list-links.list-links--primary a::before {
     font-family: 'icons';
     font-size: 13px;
@@ -2179,14 +2179,14 @@ ul.list-links.list-links--primary a {
     left: 0;
     line-height: 26px; }
 
-/* line 80, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 80, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ol.list-links li::before {
   display: none; }
-/* line 84, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 84, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ol.list-links li a {
   display: inline-block;
   font-weight: 300; }
-  /* line 331, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 331, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   ol.list-links li a::before {
     counter-increment: list;
     content: '0' counter(list);
@@ -2195,14 +2195,14 @@ ol.list-links li a {
     display: inline-block;
     position: absolute;
     left: 0; }
-/* line 91, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 91, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ol.list-links li:nth-child(10n) ~ li a::before, ol.list-links li:nth-child(10n) a::before {
   content: counter(list); }
-/* line 97, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 97, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 ol.list-links.list-links--secondary a::before {
   display: none; }
 
-/* line 103, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 103, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .list-links--secondary {
   font-size: 16px;
   line-height: 1.625em;
@@ -2210,15 +2210,15 @@ ol.list-links.list-links--secondary a::before {
   padding-top: 1.625em;
   padding-bottom: 0;
   padding-left: 0; }
-  /* line 107, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 107, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list-links--secondary li {
     padding-left: 0; }
 
 /*==========  ANCHOR LIST  ==========*/
-/* line 114, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 114, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .list-anchor {
   padding-left: 0; }
-  /* line 117, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 117, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list-anchor li {
     font-size: 16px;
     line-height: 1.625em;
@@ -2227,15 +2227,15 @@ ol.list-links.list-links--secondary a::before {
     padding-bottom: 0;
     padding-top: 0;
     padding-left: 0; }
-    /* line 122, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+    /* line 122, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
     .list-anchor li::before {
       display: none; }
-  /* line 128, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 128, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list-anchor a {
     line-height: 1;
     display: inline-block;
     padding-left: 16px; }
-    /* line 309, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+    /* line 309, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
     .list-anchor a::before {
       font-family: 'icons';
       font-size: 13px;
@@ -2245,7 +2245,7 @@ ol.list-links.list-links--secondary a::before {
       top: 0;
       left: 0;
       line-height: 26px; }
-    /* line 134, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+    /* line 134, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
     .list-anchor a::before {
       font-size: 4px; }
 
@@ -2260,18 +2260,18 @@ ol.list-links.list-links--secondary a::before {
     padding-top: 0; } }
 
 /*==========  CENTERED LIST  ==========*/
-/* line 154, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 154, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .list-centered {
   text-align: center;
   padding-left: 0; }
 
 /*==========  FEATURED LIST  ==========*/
-/* line 161, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 161, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .featured-list {
   padding-top: 78px;
   padding-bottom: 78px; }
 
-/* line 166, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 166, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .featured-list__item {
   background: #ffffff;
   padding-left: 0;
@@ -2282,14 +2282,14 @@ ol.list-links.list-links--secondary a::before {
     .featured-list__item {
       min-height: 338px;
       padding: 52px 32px; } }
-  /* line 179, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 179, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .featured-list__item:first-child {
     margin-top: 0; }
-  /* line 183, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 183, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .featured-list__item p {
     margin-bottom: 26px; }
 
-/* line 188, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 188, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .featured-list__img-wrapper {
   display: none;
   position: relative;
@@ -2309,7 +2309,7 @@ ol.list-links.list-links--secondary a::before {
     overflow: hidden;
     position: absolute;
     width: 100%; } }
-/* line 212, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 212, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .featured-list__img img {
   display: block;
   margin: 0 auto;
@@ -2324,7 +2324,7 @@ ol.list-links.list-links--secondary a::before {
       left: 0; } }
 
 /*==========  RELATED GUIDES LIST  ==========*/
-/* line 229, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 229, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .related-guides-list {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   padding-top: 0;
@@ -2335,18 +2335,18 @@ ol.list-links.list-links--secondary a::before {
   @media only screen and (min-width: 800px) {
     .related-guides-list {
       padding-top: 0; } }
-  /* line 242, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 242, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .related-guides-list p {
     padding-top: 0; }
-  /* line 246, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 246, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .related-guides-list .tag {
     padding-top: 0; }
-  /* line 250, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 250, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .related-guides-list li {
     padding-top: 26px;
     padding-bottom: 25px;
     border-bottom: 1px solid #e0e0e0; }
-    /* line 255, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+    /* line 255, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
     .related-guides-list li:last-child {
       border-color: transparent; }
     @media only screen and (min-width: 620px) {
@@ -2356,28 +2356,28 @@ ol.list-links.list-links--secondary a::before {
         border-color: transparent; } }
 
 /*==========  LIST RESET  ==========*/
-/* line 269, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 269, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .list--reset {
   padding-left: 0; }
-  /* line 272, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 272, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list--reset li {
     padding-left: 0; }
-  /* line 277, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 277, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list--reset.list-links a::before, .list--reset li::before {
     display: none !important; }
 
 /*==========  LESSONS  ==========*/
-/* line 284, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 284, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .list-lessons {
   padding-left: 0; }
-  /* line 287, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 287, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list-lessons a {
     color: #ffffff; }
-  /* line 293, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 293, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list-lessons .current, .list-lessons .current a {
     text-decoration: none;
     cursor: default; }
-  /* line 298, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 298, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list-lessons .current .icon {
     font-size: 13px;
     display: inline-block;
@@ -2389,13 +2389,13 @@ ol.list-links.list-links--secondary a::before {
     margin-left: 7px; }
 
 /*==========  GUIDES INTO - used on homepage  ==========*/
-/* line 314, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+/* line 314, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
 .list-guides-intro {
   margin-bottom: 52px; }
   @media only screen and (max-width: 619px) {
     .list-guides-intro {
       padding-top: 52px; } }
-  /* line 321, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+  /* line 321, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
   .list-guides-intro li {
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 51px;
@@ -2404,7 +2404,7 @@ ol.list-links.list-links--secondary a::before {
       .list-guides-intro li {
         border-color: transparent;
         padding-bottom: 0; } }
-    /* line 331, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_list */
+    /* line 331, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_list */
     .list-guides-intro li:last-child {
       border-bottom: transparent;
       margin-bottom: 0; }
@@ -2414,15 +2414,15 @@ ol.list-links.list-links--secondary a::before {
 * Link
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_link */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_link */
 a {
   color: #3372df; }
 
-/* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_link */
+/* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_link */
 a:hover {
   text-decoration: none; }
 
-/* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_link */
+/* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_link */
 .cta--primary {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   color: #3372df;
@@ -2430,10 +2430,10 @@ a:hover {
   display: inline-block;
   line-height: 1;
   text-decoration: none; }
-  /* line 350, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 350, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   .cta--primary:hover {
     color: rgba(0, 0, 0, 0.87); }
-  /* line 356, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 356, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   .cta--primary::before {
     display: inline-block;
     padding-right: 10px;
@@ -2442,14 +2442,14 @@ a:hover {
     font-size: 13px;
     content: '\e005'; }
 
-/* line 19, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_link */
+/* line 19, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_link */
 .cta--secondary {
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   color: #3372df;
   font-weight: 400;
   display: inline-block;
   line-height: 1; }
-  /* line 350, /Volumes/proton/suite/seed-ghpages/src/styles/components/_utils */
+  /* line 350, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_utils */
   .cta--secondary:hover {
     color: rgba(0, 0, 0, 0.87); }
 
@@ -2458,15 +2458,15 @@ a:hover {
 * Table
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
 table {
   margin-top: 26px;
   width: 100%; }
-  /* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   table thead {
     background: #3372df;
     color: #ffffff; }
-  /* line 16, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 16, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   table th {
     text-align: center;
     display: none;
@@ -2487,15 +2487,15 @@ table {
   @media only screen and (min-width: 620px) {
     table tr {
       border-bottom: 1px solid #ffffff; } }
-  /* line 29, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 29, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   table tbody {
     background: #f0f0f0; }
-  /* line 33, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 33, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   table td {
     display: block;
     padding-top: 13px;
     padding-bottom: 13px; }
-    /* line 39, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+    /* line 39, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
     table td::before {
       content: attr(data-th) " :";
       display: inline-block;
@@ -2516,7 +2516,7 @@ table {
       @media only screen and (min-width: 620px) {
         table td::before {
           display: none; } }
-  /* line 64, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 64, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   table th, table td {
     position: relative;
     padding-left: 140px; }
@@ -2533,7 +2533,7 @@ table {
       padding: 26px;
       padding-bottom: 25px; } }
 
-/* line 89, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+/* line 89, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
 td:last-child::after {
   content: "";
   display: block;
@@ -2547,39 +2547,39 @@ td:last-child::after {
     td:last-child::after {
       display: none; } }
 
-/* line 104, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+/* line 104, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
 .table-2 col {
   width: 344px; }
   @media only screen and (min-width: 800px) {
     .table-2 col {
       width: 432px; } }
 @media only screen and (min-width: 620px) {
-  /* line 114, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 114, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   .table-2 th:first-child, .table-2 td:first-child {
     border-right: 2px solid #ffffff; }
  }
 
-/* line 122, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+/* line 122, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
 .table-3 col {
   width: 229.3333333333px; }
   @media only screen and (min-width: 800px) {
     .table-3 col {
       width: 288px; } }
 @media only screen and (min-width: 620px) {
-  /* line 132, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 132, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   .table-3 th:nth-child(2), .table-3 td:nth-child(2) {
     border-left: 2px solid #ffffff;
     border-right: 2px solid #ffffff; }
  }
 
-/* line 141, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+/* line 141, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
 .table-4 col {
   width: 172px; }
   @media only screen and (min-width: 800px) {
     .table-4 col {
       width: 216px; } }
 @media only screen and (min-width: 620px) {
-  /* line 152, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_table */
+  /* line 152, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_table */
   .table-4 th:nth-child(2), .table-4 th:nth-child(3), .table-4 td:nth-child(2), .table-4 td:nth-child(3) {
     border-left: 2px solid #ffffff;
     border-right: 2px solid #ffffff; }
@@ -2590,11 +2590,11 @@ td:last-child::after {
 * Media - imgs/videos
 *
 **/
-/* line 9, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_media */
+/* line 9, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_media */
 img, video, object {
   max-width: 100%; }
 
-/* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_media */
+/* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_media */
 .content img {
   margin-top: 26px;
   margin-bottom: 26px; }
@@ -2604,7 +2604,7 @@ img, video, object {
 * Breadcrumb
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_breadcrumb */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_breadcrumb */
 .breadcrumbs {
   display: none;
   position: relative;
@@ -2613,7 +2613,7 @@ img, video, object {
     .breadcrumbs {
       display: block; } }
 
-/* line 17, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_breadcrumb */
+/* line 17, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_breadcrumb */
 .breadcrumbs p {
   font-size: 13px;
   line-height: 2em;
@@ -2622,7 +2622,7 @@ img, video, object {
   padding-bottom: 0;
   padding-top: 26px; }
 
-/* line 22, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_breadcrumb */
+/* line 22, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_breadcrumb */
 .breadcrumbs__link {
   font-size: 13px;
   line-height: 2em;
@@ -2641,12 +2641,12 @@ img, video, object {
 * subsection__title
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_subsection-title */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_subsection-title */
 .subsection-title {
   color: rgba(0, 0, 0, 0.87);
   margin-top: 52px; }
 
-/* line 12, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_subsection-title */
+/* line 12, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_subsection-title */
 .subsection-number {
   font-size: 16px;
   line-height: 1.625em;
@@ -2661,18 +2661,18 @@ img, video, object {
 * Articles list
 *
 **/
-/* line 7, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+/* line 7, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
 .articles-list {
   padding-left: 0; }
 
-/* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+/* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
 .articles-list__item {
   padding-bottom: 52px;
   padding-left: 0; }
-  /* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+  /* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
   .articles-list__item:last-child {
     padding-bottom: 53px; }
-  /* line 21, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+  /* line 21, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
   .articles-list__item::before {
     content: "";
     display: block;
@@ -2681,20 +2681,20 @@ img, video, object {
     box-shadow: inset 0 1px 0 0 #e0e0e0;
     margin-right: 0;
     margin-left: 30%; }
-  /* line 32, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+  /* line 32, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
   .articles-list__item h3 a:hover {
     text-decoration: none; }
-  /* line 37, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+  /* line 37, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
   .articles-list__item p {
     margin-top: 26px;
     margin-bottom: 26px; }
-  /* line 42, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+  /* line 42, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
   .articles-list__item:first-child {
     padding-top: 0; }
     @media only screen and (min-width: 620px) {
       .articles-list__item:first-child {
         padding-top: 24px; } }
-    /* line 49, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_articles-list */
+    /* line 49, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_articles-list */
     .articles-list__item:first-child::before {
       display: none; }
 
@@ -2703,7 +2703,7 @@ img, video, object {
 * Guides List
 *
 **/
-/* line 8, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+/* line 8, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
 .guides-list {
   overflow: hidden; }
   @media only screen and (min-width: 620px) {
@@ -2713,7 +2713,7 @@ img, video, object {
       flex-wrap: wrap;
       padding-top: 52px; } }
 
-/* line 20, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+/* line 20, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
 .guides-list__item {
   padding: 0;
   background: #ffffff;
@@ -2724,16 +2724,16 @@ img, video, object {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap; } }
-  /* line 32, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+  /* line 32, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
   .guides-list__item h3 {
     margin: 0 32px; }
-  /* line 36, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+  /* line 36, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
   .guides-list__item p {
     margin: 26px 32px 0; }
   @media only screen and (min-width: 620px) {
     .guides-list__item .primary-content {
       flex: 1; } }
-  /* line 46, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+  /* line 46, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
   .guides-list__item .secondary-content {
     position: relative;
     margin-top: 51px;
@@ -2741,22 +2741,22 @@ img, video, object {
     @media only screen and (min-width: 620px) {
       .guides-list__item .secondary-content {
         width: 100%; } }
-    /* line 56, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+    /* line 56, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
     .guides-list__item .secondary-content .icon-circle {
       position: absolute;
       top: -28px;
       left: 50%;
       margin-left: -21px;
       border: 2px solid #ffffff; }
-      /* line 63, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+      /* line 63, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
       .guides-list__item .secondary-content .icon-circle i {
         font-size: 23px; }
-  /* line 69, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+  /* line 69, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
   .guides-list__item ol {
     margin: 26px 0 0;
     padding: 52px 0 52px;
     margin-top: 0; }
-  /* line 75, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_guides-list */
+  /* line 75, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_guides-list */
   .guides-list__item::before {
     display: none; }
 
@@ -2765,7 +2765,7 @@ img, video, object {
 * Icon Circle
 *
 **/
-/* line 8, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+/* line 8, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
 .icon-circle, .icon-circle--large {
   height: 0;
   width: 0;
@@ -2776,7 +2776,7 @@ img, video, object {
   font-size: 0;
   padding: 22px;
   margin: 4px auto; }
-  /* line 20, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+  /* line 20, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
   .icon-circle i, .icon-circle span, .icon-circle--large i, .icon-circle--large span {
     position: absolute;
     line-height: 0px;
@@ -2786,7 +2786,7 @@ img, video, object {
     text-align: center;
     color: #ffffff;
     font-size: 26px; }
-  /* line 31, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+  /* line 31, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
   .icon-circle span, .icon-circle--large span {
     font-family: 'Roboto Condensed', Helvetica, sans-serif;
     font-size: 26px;
@@ -2795,13 +2795,13 @@ img, video, object {
       .icon-circle span, .icon-circle--large span {
         font-size: 42px; } }
 
-/* line 42, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+/* line 42, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
 .icon-circle--large {
   margin-top: 0;
   margin-bottom: 0;
   padding: 26px;
   position: relative; }
-  /* line 48, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+  /* line 48, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
   .icon-circle--large i {
     font-size: 26px; }
     @media only screen and (min-width: 620px) {
@@ -2811,19 +2811,19 @@ img, video, object {
     .icon-circle--large {
       padding: 37px;
       border: 2px solid #ffffff; }
-      /* line 60, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+      /* line 60, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
       a .icon-circle--large {
         padding: 38px;
         box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.42);
         border: 1px solid;
         transition: all 100ms linear;
         transform: translateZ(0); }
-      /* line 71, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+      /* line 71, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
       .no-touch a:hover .icon-circle--large {
         box-shadow: inset 0px 0px 0px 1px #ffffff;
         transform: scale(1.1); } }
 
-/* line 79, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+/* line 79, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
 .icon-circle--nav {
   height: 0;
   width: 0;
@@ -2839,7 +2839,7 @@ img, video, object {
       padding: 22px;
       margin-top: 4px;
       margin-bottom: 4px; } }
-  /* line 96, /Volumes/proton/suite/seed-ghpages/src/styles/components/_components/_icon-circle */
+  /* line 96, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_components/_icon-circle */
   .icon-circle--nav i {
     position: absolute;
     line-height: 1px;
@@ -2858,107 +2858,107 @@ img, video, object {
 * Themed styles
 *
 **/
-/* line 9, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 9, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--multi-device-layouts .themed {
   color: #297ea9; }
-/* line 11, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 11, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--introduction-to-media .themed {
   color: #cf423a; }
-/* line 13, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 13, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--user-input .themed {
   color: #2c8566; }
-/* line 15, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 15, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--performance .themed {
   color: #7b5294; }
 
-/* line 22, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 22, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--multi-device-layouts .themed--background, .theme--multi-device-layouts .themed--background.next-lessons::before {
   background-color: #297ea9; }
-/* line 25, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 25, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--introduction-to-media .themed--background, .theme--introduction-to-media .themed--background.next-lessons::before {
   background-color: #cf423a; }
-/* line 28, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 28, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--user-input .themed--background, .theme--user-input .themed--background.next-lessons::before {
   background-color: #2c8566; }
-/* line 31, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 31, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--performance .themed--background, .theme--performance .themed--background.next-lessons::before {
   background-color: #7b5294; }
 
-/* line 37, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 37, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--multi-device-layouts .themed--hover:hover {
   color: #297ea9; }
-/* line 39, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 39, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--introduction-to-media .themed--hover:hover {
   color: #cf423a; }
-/* line 41, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 41, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--user-input .themed--hover:hover {
   color: #2c8566; }
-/* line 43, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 43, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--performance .themed--hover:hover {
   color: #7b5294; }
 
-/* line 49, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 49, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--multi-device-layouts .themed--hover-secondary:hover {
   color: #89c4e2; }
-/* line 51, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 51, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--introduction-to-media .themed--hover-secondary:hover {
   color: #edb8b5; }
-/* line 53, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 53, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--user-input .themed--hover-secondary:hover {
   color: #78d2b3; }
-/* line 55, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 55, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .theme--performance .themed--hover-secondary:hover {
   color: #c4add2; }
 
-/* line 66, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 66, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .article--multi-device-layouts .article-container h1, .article--multi-device-layouts .article-container h2 {
   color: #297ea9; }
-/* line 68, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 68, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .article--introduction-to-media .article-container h1, .article--introduction-to-media .article-container h2 {
   color: #cf423a; }
-/* line 70, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 70, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .article--user-input .article-container h1, .article--user-input .article-container h2 {
   color: #2c8566; }
-/* line 72, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 72, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .article--performance .article-container h1, .article--performance .article-container h2 {
   color: #7b5294; }
 
-/* line 80, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 80, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--multi-device-layouts .themed--hover:hover {
   color: #297ea9; }
-/* line 82, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 82, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--introduction-to-media .themed--hover:hover {
   color: #cf423a; }
-/* line 84, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 84, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--user-input .themed--hover:hover {
   color: #2c8566; }
-/* line 86, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 86, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--performance .themed--hover:hover {
   color: #7b5294; }
 
-/* line 92, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 92, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--multi-device-layouts .themed {
   color: #297ea9; }
-/* line 94, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 94, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--introduction-to-media .themed {
   color: #cf423a; }
-/* line 96, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 96, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--user-input .themed {
   color: #2c8566; }
-/* line 98, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 98, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--performance .themed {
   color: #7b5294; }
 
-/* line 104, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 104, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--multi-device-layouts .themed--background {
   background-color: #297ea9; }
-/* line 106, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 106, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--introduction-to-media .themed--background {
   background-color: #cf423a; }
-/* line 108, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 108, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--user-input .themed--background {
   background-color: #2c8566; }
-/* line 110, /Volumes/proton/suite/seed-ghpages/src/styles/components/_themed */
+/* line 110, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_themed */
 .nav-theme--performance .themed--background {
   background-color: #7b5294; }
 
@@ -2967,49 +2967,49 @@ img, video, object {
 * Styleguide
 *
 **/
-/* line 9, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 9, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .page--styleguide .styleguide__module-title {
   margin-bottom: 26px; }
-/* line 13, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 13, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .page--styleguide section {
   margin-bottom: 52px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 77px; }
-/* line 20, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 20, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .page--styleguide .styleguide__color-list {
   text-align: center; }
-  /* line 23, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+  /* line 23, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
   .page--styleguide .styleguide__color-list li {
     border-bottom: 52px solid;
     margin-bottom: 26px;
     position: relative; }
-/* line 30, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 30, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .page--styleguide .styleguide__breadcrumb .breadcrumbs {
   display: block; }
-/* line 36, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 36, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .page--styleguide .styleguide__lists ul, .page--styleguide .styleguide__lists ol {
   margin-bottom: 26px; }
-/* line 41, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 41, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .page--styleguide .styleguide__inverted-block {
   background: #e8e8e8;
   padding: 0 13px; }
-/* line 46, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 46, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .page--styleguide .styleguide__theme-block {
   background: #297ea9;
   padding: 0 13px; }
 
-/* line 53, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 53, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .demo {
   margin-bottom: 26px;
   margin-top: 26px; }
 
-/* line 59, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+/* line 59, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
 .demo [class*="g-"] {
   background-color: rgba(0, 0, 0, 0.26);
   position: relative;
   margin-bottom: 26px;
   min-height: 156px; }
-  /* line 66, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+  /* line 66, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
   .demo [class*="g-"]::before, .demo [class*="g-"]::after {
     font-size: 13px;
     line-height: 2em;
@@ -3018,11 +3018,11 @@ img, video, object {
     padding-bottom: 0;
     display: block;
     margin: 0 10px; }
-  /* line 72, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+  /* line 72, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
   .demo [class*="g-"]::before {
     content: 'HTML classes: ';
     font-weight: 700; }
-  /* line 77, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_styleguide */
+  /* line 77, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_styleguide */
   .demo [class*="g-"]::after {
     content: attr(class);
     word-spacing: 15px; }
@@ -3032,14 +3032,14 @@ img, video, object {
 * Resources page
 *
 **/
-/* line 10, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_page-resources */
+/* line 10, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_page-resources */
 .page--resources .article-section__icon, .page--resources .articles-count, .page--resources .guides-list__item .secondary-content {
   display: none; }
-/* line 14, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_page-resources */
+/* line 14, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_page-resources */
 .page--resources .primary-content {
   padding-top: 26px;
   padding-bottom: 52px; }
-  /* line 18, /Volumes/proton/suite/seed-ghpages/src/styles/components/_pages/_page-resources */
+  /* line 18, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_pages/_page-resources */
   .page--resources .primary-content p {
     margin-top: 0; }
 
@@ -3048,129 +3048,129 @@ img, video, object {
 * Helper
 *
 **/
-/* line 10, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 10, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .clear::before, .clear::after {
   content: '';
   display: table; }
-/* line 14, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 14, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .clear::after {
   clear: both; }
 
 /*==========  COLORS  ==========*/
-/* line 22, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 22, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--blue {
   color: #3372df; }
 
-/* line 23, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 23, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--red {
   color: #cb4437; }
 
-/* line 24, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 24, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--green {
   color: #0f9d58; }
 
-/* line 25, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 25, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--yellow {
   color: #f4b400; }
 
-/* line 26, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 26, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--blue-secondary {
   color: #b7cdf4; }
 
-/* line 27, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 27, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--red-secondary {
   color: #ebb6b0; }
 
-/* line 28, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 28, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--green-secondary {
   color: #56efa5; }
 
-/* line 29, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 29, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--yellow-secondary {
   color: #ffd45b; }
 
-/* line 31, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 31, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--gray-background {
   color: #f0f0f0; }
 
-/* line 32, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 32, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--gray-keyline {
   color: #e0e0e0; }
 
-/* line 33, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 33, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--gray {
   color: rgba(0, 0, 0, 0.54); }
 
-/* line 34, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 34, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--gray-dark {
   color: rgba(0, 0, 0, 0.87); }
 
-/* line 36, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 36, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--text {
   color: #404040; }
 
-/* line 37, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 37, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--highlight {
   color: #3372df; }
 
-/* line 38, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 38, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--warning {
   color: #ffd45b; }
 
-/* line 39, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 39, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--danger {
   color: #cb4437; }
 
-/* line 40, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 40, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--muted {
   color: #737373; }
 
-/* line 42, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 42, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--remember {
   color: #09829a; }
 
-/* line 43, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 43, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--learning {
   color: #da2e75; }
 
-/* line 45, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 45, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--layouts {
   color: #297ea9; }
 
-/* line 46, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 46, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--user {
   color: #2c8566; }
 
-/* line 47, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 47, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--media {
   color: #cf423a; }
 
-/* line 48, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 48, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--performance {
   color: #7b5294; }
 
-/* line 49, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 49, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--layouts-secondary {
   color: #89c4e2; }
 
-/* line 50, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 50, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--user-secondary {
   color: #78d2b3; }
 
-/* line 51, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 51, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--media-secondary {
   color: #edb8b5; }
 
-/* line 52, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 52, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .color--performance-secondary {
   color: #c4add2; }
 
 /*==========  TEXT DIVIDER  ==========*/
-/* line 58, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 58, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .text-divider {
   position: relative;
   margin-bottom: 26px; }
-  /* line 62, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+  /* line 62, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
   .text-divider::after {
     content: '';
     display: block;
@@ -3180,32 +3180,32 @@ img, video, object {
     box-shadow: 0 1px 0 0 #e0e0e0;
     left: 30%;
     bottom: -13px; }
-  /* line 73, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+  /* line 73, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
   .text-divider.xlarge {
     margin-bottom: 52px; }
-    /* line 76, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+    /* line 76, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
     .text-divider.xlarge::after {
       bottom: -26px; }
-  /* line 81, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+  /* line 81, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
   .text-divider.xxlarge {
     margin-bottom: 78px; }
-    /* line 84, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+    /* line 84, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
     .text-divider.xxlarge::after {
       bottom: -39px; }
-  /* line 89, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+  /* line 89, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
   .text-divider.huge {
     margin-bottom: 78px; }
-    /* line 92, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+    /* line 92, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
     .text-divider.huge::after {
       bottom: -39px; }
 
 /*==========  GENERIC  ==========*/
-/* line 100, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 100, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .centered {
   text-align: center; }
 
 /*==========  TAG  ==========*/
-/* line 106, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+/* line 106, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
 .tag {
   font-size: 13px;
   line-height: 2em;
@@ -3217,10 +3217,10 @@ img, video, object {
   font-weight: 700;
   display: inline-block;
   text-decoration: none; }
-  /* line 114, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+  /* line 114, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
   .tag:hover {
     color: rgba(0, 0, 0, 0.87); }
-  /* line 118, /Volumes/proton/suite/seed-ghpages/src/styles/components/_helper */
+  /* line 118, /Volumes/proton/suite/angularjs-seed-ghpages/src/styles/components/_helper */
   .tag::before {
     content: '# ';
     display: inline-block; }
